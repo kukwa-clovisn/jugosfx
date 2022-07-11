@@ -214,6 +214,14 @@ button {
   background: rgb(51, 126, 214);
   border-radius: 15px;
 }
+
+@media screen and (max-width: 500px) {
+  .btn-large {
+    width: 95%;
+    height: fit-content;
+    padding: 10px 16px;
+  }
+}
 button:hover {
   transform: scale(0.9);
   background: #ececec;
