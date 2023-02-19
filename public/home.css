@@ -13,19 +13,15 @@ body {
   border-radius: 30px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgb(51, 126, 214);
+  background: rgb(4, 132, 237);
   border-radius: 30px;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: center;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
 }
 
 * {
@@ -38,105 +34,128 @@ h1:hover {
 
 main {
   width: 100%;
-  height: 100%;
-  padding: 0;
-  background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: 20% center;
+  height: fit-content;
 }
 
-.content {
+.main-wrapper {
   width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ececec;
+}
+
+.main-wrapper .landing-page {
+  width: 35%;
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.left-content {
-  width: 50%;
-  height: 100vh;
-  background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-attachment: fixed;
+.main-wrapper .landing-page .img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.left-content img {
+.main-wrapper .landing-page .img img {
   height: 100%;
   width: auto;
   cursor: pointer;
-  position: absolute;
-  left: -20%;
-  top: 0;
 }
 
-.right-content {
-  width: 50%;
-  padding: 0;
-  height: 100%;
-  background: rgb(51, 126, 214);
-  background: url(./assets/WhatsApp\ Image\ 2022-07-11\ at\ 12.13.59\ PM.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+.main-wrapper .landing-page a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 60px;
+  font-size: 21px;
+  font-weight: 600;
+  color: rgb(25, 35, 47);
+  font-family: "Nunito Sans", "Poppins", sans-serif;
+  text-transform: uppercase;
+  animation: getFocus 5s infinite forwards;
 }
 
-.right-content .card {
-  width: 70%;
-  height: 94vh;
-  background: #ececec;
-  box-shadow: 0 0 0.5px 1px #ececec, 10px 15px 16px rgba(70, 70, 70, 0.123);
-  border-radius: 3px;
-  position: fixed;
-  padding: 20px 10px;
-  top: 3%;
-  left: 15%;
-  overflow: hidden;
-  overflow-y: auto;
-}
-
-@media screen and (max-width: 768px) {
-  .right-content .card {
-    width: 95%;
-    left: 2.5%;
+@keyframes getFocus {
+  from {
+    background: linear-gradient(to top left, white, transparent, transparent);
+  }
+  25% {
+    background: linear-gradient(to top right, white, transparent);
+  }
+  50% {
+    background: linear-gradient(to bottom right, white, transparent);
+  }
+  to {
+    background: transparent;
+    background: linear-gradient(to bottom left, white, transparent);
   }
 }
 
-.right-content .share-btn {
+.main-wrapper .landing-page .text-wrapper {
+  position: relative;
+  width: 90%;
+  height: 50px;
+}
+
+.card {
+  width: 65%;
+  max-height: 100vh;
+  background: #ececec;
+  box-shadow: 0 0 0.5px 1px #ececec, 10px 15px 16px rgba(70, 70, 70, 0.123);
+  border-radius: 3px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.share-btn {
   position: absolute;
   right: 5%;
   top: 3%;
 }
 
-.right-content header {
+header {
   width: 100%;
   height: fit-content;
 }
-.right-content header .logo {
+header .logo {
   width: 100px;
   height: 100px;
   margin: 10px auto;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 100%;
   overflow: hidden;
   cursor: pointer;
 }
 
-.right-content header .logo img {
+header .logo img {
   width: 100%;
   height: auto;
 }
 
-.right-content header h1 {
+header h1 {
   text-align: center;
-  color: rgb(51, 126, 214);
+  color: rgb(4, 132, 237);
   padding: 10px;
-  font: 900 30px "Comic Neue", sans-serif;
   width: fit-content;
   background: #ececec;
   margin: auto;
@@ -144,7 +163,13 @@ main {
   overflow: hidden;
 }
 
-.right-content header h1::before {
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+  font: 900 30px "Comic Neue", sans-serif;
+}
+
+header h1::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -153,7 +178,7 @@ main {
   right: 0;
   background: #ececec;
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid rgb(51, 126, 214);
+  border-left: 4px solid rgb(4, 132, 237);
 }
 
 @keyframes swirl {
@@ -162,42 +187,40 @@ main {
   }
 }
 @media screen and (max-width: 400px) {
-  .right-content header h1 {
+  header h1 {
     font-size: 25px;
   }
 }
 
-.right-content header p {
+header p {
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   color: rgb(62, 61, 61);
+  font-size: 14px;
 }
 
-.right-content .btns {
-  width: fit-content;
+.btns {
+  width: 96%;
   height: fit-content;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   margin: 10px auto;
 }
 
 button {
-  width: 180px;
-  height: 70px;
-
+  width: 150px;
+  height: 60px;
   border: 9px solid #ececec;
   background: #ececec;
-  margin: 10px 20px;
+  margin: 10px;
   transition: all 0.3s ease;
 }
 
 .btn-1,
 .btn-2 {
-  border-radius: 50px;
-  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.123); */
+  border-radius: 30px;
 }
 
 .btn-1 {
@@ -211,8 +234,8 @@ button {
 .btn-large {
   width: max-content;
   padding: 0 15px;
-  background: rgb(51, 126, 214);
-  border-radius: 15px;
+  background: rgb(4, 132, 237);
+  border-radius: 30px;
 }
 
 @media screen and (max-width: 500px) {
@@ -247,7 +270,7 @@ button:active {
 }
 
 .btn-large:hover a {
-  color: rgb(51, 126, 214);
+  color: rgb(4, 132, 237);
 }
 
 button a {
@@ -259,7 +282,7 @@ button a {
   text-decoration: none;
   background: transparent;
   text-transform: capitalize;
-  font: 600 20px "Comic Neue", sans-serif;
+  font: 600 15px "Poppins", "Comic Neue", sans-serif;
   color: white;
 }
 
