@@ -4,6 +4,7 @@ html,
 body {
     position: relative;
     height: fit-content;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,7 +33,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(4, 132, 237);
+    background: rgb(77, 81, 85);
     border-radius: 30px;
 }
 
@@ -40,25 +41,12 @@ a:hover {
     transform: scale(1.1);
 }
 
-a[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    top: -150%;
-    left: 0;
-    color: white;
-    font-size: 9px;
-    visibility: visible;
+.blur-wrapper {
     width: 100%;
     height: 100%;
-    background: rgb(35, 39, 44);
-    padding: 10px;
-    display: flex;
-    font-weight: 400;
-    text-transform: capitalize;
-    justify-content: center;
-    align-items: center;
-    word-spacing: 4px;
-    letter-spacing: 1px;
-    line-height: 20px;
-    font-family: "Poppins", sans-serif;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(37, 51, 58);
 }
