@@ -70,7 +70,6 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #c52424;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +112,7 @@
     margin: 10px auto;
 }
 
-.swiper-slide .slider-content a {
+.swiper-slide .slider-content .route {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,6 +130,19 @@
     transform: scale(1.2);
 }
 
+.swiper-slide .slider-content .link {
+    text-decoration: none;
+    color: rgb(224, 222, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 35px;
+    font-size: 13px;
+    text-transform: capitalize;
+    margin: 10px auto;
+}
+
 
 
 .swiper-slide .slider-content p {
@@ -143,8 +155,9 @@
 
 #app {
     width: 100vw;
-    height: 100vh;
-    background: #ececec
+    height: fit-content;
+    background: #ececec;
+    padding-top: 40px;
 }
 
 #app h1 {
@@ -152,6 +165,42 @@
     padding: 25px;
     text-transform: uppercase;
     font-size: 50px;
+    color: rgb(28, 38, 50);
+}
+
+#app h2 {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px;
+    word-spacing: 4px;
+    color: rgb(28, 38, 50);
+}
+
+#app h2 a {
+    color: tomato;
+}
+
+#app .app-wrapper {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+#app .app-wrapper .app-video {
+    width: 300px;
+    height: fit-content;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+#app .app-wrapper .app-video iframe {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width:730px) {
@@ -168,12 +217,28 @@
         left: 35%;
     }
 
+    #app h1 {
+        font-size: 30px;
+    }
+
+    #app h2 {
+        font-size: 20px;
+    }
+
 }
 
 @media screen and (max-width:430px) {
     .swiper-slide .slider-content h1 {
         font-size: 25px;
         line-height: 45px;
+    }
+
+    #app h1 {
+        font-size: 20px;
+    }
+
+    #app h2 {
+        font-size: 17px;
     }
 }
 

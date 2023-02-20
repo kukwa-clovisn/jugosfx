@@ -68,9 +68,9 @@ main {
   margin: 20px auto;
 }
 
-.main-wrapper .landing-page a:hover {
+/* .main-wrapper .landing-page a:hover {
   animation: getFocus 5s infinite forwards;
-}
+} */
 
 @keyframes getFocus {
   from {
