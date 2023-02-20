@@ -64,6 +64,11 @@ main {
   color: rgb(25, 35, 47);
   font-family: "Nunito Sans", "Poppins", sans-serif;
   text-transform: uppercase;
+  background: white;
+  margin: 20px auto;
+}
+
+.main-wrapper .landing-page a:hover {
   animation: getFocus 5s infinite forwards;
 }
 
