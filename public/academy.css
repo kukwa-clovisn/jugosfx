@@ -1,0 +1,127 @@
+.swiper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 93%;
+    left: 30%;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+}
+
+
+
+.swiper-button-next {
+    left: 55%;
+}
+
+.swiper-button-prev {
+    left: 45%;
+}
+
+.swiper-button-next[title]:hover::after,
+.swiper-button-prev[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -150%;
+    left: 0;
+    color: white;
+    font-size: 9px;
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+    background: rgb(35, 39, 44);
+    padding: 5px;
+    display: flex;
+    font-weight: 400;
+    text-transform: capitalize;
+    justify-content: center;
+    align-items: center;
+    word-spacing: 4px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #c52424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide .img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.swiper-slide .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .slider-content {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.swiper-slide .slider-content h1 {
+    width: 85%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 80px;
+    font-size: 45px;
+    font-family: "Nunito Sans", sans-serif;
+    margin: 10px auto;
+}
+
+.swiper-slide .slider-content a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 300px;
+    height: 60px;
+    font-weight: 700;
+    background: linear-gradient(to top left, transparent, white, transparent);
+    margin: 20px auto;
+    color: rgb(36, 36, 48);
+}
+
+.swiper-slide .slider-content a:hover {
+    transform: scale(1.2);
+}
+
+
+
+.swiper-slide .slider-content p {
+    color: #ececee;
+    text-transform: capitalize;
+    padding: 10px;
+    text-align: center;
+
+}
