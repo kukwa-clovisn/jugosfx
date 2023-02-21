@@ -22,6 +22,7 @@ body {
 * {
   transition: all 0.3s ease;
   font-family: "Poppins", "Nunito Sans", sans-serif;
+  color: rgb(45, 59, 75);
 }
 
 ::-webkit-scrollbar {
@@ -77,8 +78,25 @@ header .header-wrapper .top-header .text-wrapper p {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0;
+  animation: headline 60s infinite forwards;
+  color: white;
+}
+header .header-wrapper .top-header .text-wrapper p a {
+  text-decoration: underline;
+  color: rgba(255, 99, 71, 0.856);
+  padding: 0 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@keyframes headline {
+  from {
+    transform: translateX(90%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 header .header-wrapper .bottom-header {
   width: 100%;

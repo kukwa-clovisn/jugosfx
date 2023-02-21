@@ -409,7 +409,7 @@ main #about .about-wrapper {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-bottom: 3%;
+  padding: 3%;
 }
 main #about .about-wrapper .text-wrapper {
   width: 55%;
@@ -419,8 +419,8 @@ main #about .about-wrapper .text-wrapper h1 {
   padding: 15px;
   text-transform: uppercase;
   font-size: 21px;
-  color: tomato;
-  text-decoration: underline;
+  color: rgba(255, 99, 71, 0.836);
+  font-weight: 800;
   font-family: "Nunito Sans", sans-serif;
 }
 main #about .about-wrapper .text-wrapper h2 {
@@ -495,6 +495,7 @@ main #about .about-wrapper .image-wrapper .img {
   height: 100%;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 5%;
 }
 main #about .about-wrapper .image-wrapper .img img {
   width: 100%;
@@ -503,9 +504,104 @@ main #about .about-wrapper .image-wrapper .img img {
 }
 main #about .about-wrapper-2 {
   align-items: center;
+  background: rgba(255, 99, 71, 0.808);
+  width: 100%;
 }
 main #about .about-wrapper-2 .text-wrapper {
   padding-left: 4%;
+}
+main #about .about-wrapper-2 .text-wrapper h2 span {
+  color: rgba(26, 131, 216, 0.911);
+}
+main #about .about-wrapper-2 .text-wrapper h3 {
+  color: rgb(45, 59, 75);
+}
+main #about .about-wrapper-2 .text-wrapper .btns a {
+  background: white;
+  color: tomato;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:hover {
+  background: transparent;
+  border: 1px solid #ececec;
+  color: white;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:last-child {
+  border: 1px solid #ececec;
+  color: #ececec;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
+  background: white;
+  color: tomato;
+}
+main #about .about-wrapper-2 .image-wrapper {
+  width: 35%;
+}
+main #testimonials {
+  width: 100%;
+  height: fit-content;
+  padding: 3% auto;
+}
+main #testimonials h1 {
+  font-size: 50px;
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+main #testimonials h3 {
+  text-align: center;
+  text-transform: capitalize;
+  color: tomato;
+  padding: 10px;
+  font-size: 19px;
+}
+main #testimonials .swiper {
+  width: 100%;
+  height: fit-content;
+  padding: 20px 10px;
+}
+main #testimonials .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main #testimonials .swiper .swiper-wrapper .img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 10px auto;
+  border: 5px solid tomato;
+}
+main #testimonials .swiper .swiper-wrapper .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main #testimonials .swiper .swiper-wrapper h1 {
+  font-size: 23px;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #testimonials .swiper .swiper-wrapper p {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #testimonials .swiper .swiper-wrapper .feedback {
+  width: 80%;
+  height: fit-content;
+  margin: 5px auto;
+  background: rgba(255, 99, 71, 0.623);
+  padding: 20px;
+  border-radius: 5px;
+}
+main #testimonials .swiper .swiper-wrapper .feedback p {
+  padding: 10px;
+}
+main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: tomato;
+  border-radius: 30px;
+}
+main #testimonials .swiper .swiper-pagination-progressbar {
+  background: rgb(58, 58, 58);
 }
 
 @media screen and (max-width: 768px) {
