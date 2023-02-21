@@ -65,6 +65,11 @@ main .main-wrapper .landing-page .text-wrapper p {
   text-align: center;
   font-weight: 600;
 }
+@media screen and (max-width: 800px) {
+  main .main-wrapper .landing-page {
+    display: none;
+  }
+}
 @keyframes getFocus {
   from {
     background: linear-gradient(to top left, transparent, white, transparent);
@@ -234,6 +239,12 @@ main .main-wrapper .card .media button a i:hover {
 main .main-wrapper .card .media button .beamerTrigger i {
   color: rgb(7, 225, 7);
   color: tomato;
+}
+@media screen and (max-width: 800px) {
+  main .main-wrapper .card {
+    width: 100%;
+    height: fit-content;
+  }
 }
 main .main-wrapper .share-btn {
   position: absolute;
@@ -604,11 +615,6 @@ main #testimonials .swiper .swiper-pagination-progressbar {
   background: rgb(58, 58, 58);
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
 @keyframes swirl {
   to {
     right: -140%;

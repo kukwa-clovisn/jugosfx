@@ -82,6 +82,7 @@ header .header-wrapper .top-header .text-wrapper p {
   padding: 0;
   animation: headline 60s infinite forwards;
   color: white;
+  white-space: nowrap;
 }
 header .header-wrapper .top-header .text-wrapper p a {
   text-decoration: underline;
@@ -89,6 +90,11 @@ header .header-wrapper .top-header .text-wrapper p a {
   padding: 0 10px;
   text-transform: uppercase;
   font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  header .header-wrapper .top-header .text-wrapper p {
+    font-size: 15px;
+  }
 }
 @keyframes headline {
   from {
@@ -136,6 +142,22 @@ header .header-wrapper .bottom-header .header-routes .route {
 }
 header .header-wrapper .bottom-header .header-routes .route:hover {
   color: tomato;
+}
+@media screen and (max-width: 800px) {
+  header .header-wrapper .bottom-header .logo {
+    font-size: 30px;
+  }
+  header .header-wrapper .bottom-header .header-routes .route {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 800px) and (max-width: 500px) {
+  header .header-wrapper .bottom-header .logo {
+    font-size: 25px;
+  }
+  header .header-wrapper .bottom-header .header-routes .route {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=general.css.map */
