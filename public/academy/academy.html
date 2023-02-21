@@ -7,12 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg+xml" href="/public/assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./general.css">
+  <link rel="stylesheet" href="../general/general.css">
   <link rel="stylesheet" href="./academy.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 </head>
@@ -28,9 +29,9 @@
           jugosfx
         </div>
         <nav class="header-routes">
-          <a href="./index.html" class="route">home</a>
+          <a href="../index.html" class="route">home</a>
           <a href="#courses" class="route">courses</a>
-          <a href="./about.html" class="route">about us</a>
+          <a href="../about/about.html" class="route">about us</a>
 
         </nav>
         <nav class="header-routes">
@@ -40,14 +41,14 @@
     </div>
   </header>
 
-  <div class="swiper mySwiper">
+  <div class="swiper mySwiper animate__animated animate__fadeIn" data-aos="zoom-in">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
 
         <div class="slide-wrapper">
           <div class="img">
             <div class="blur-wrapper"></div>
-            <img src="./assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
+            <img src="../assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
           </div>
         </div>
         <div class="slider-content">
@@ -63,7 +64,7 @@
 
           <div class="img">
 
-            <img src="./assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
+            <img src="../assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
           </div>
         </div>
         <div class="blur-wrapper"></div>
@@ -80,7 +81,7 @@
 
           <div class="img">
 
-            <img src="./assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
+            <img src="../assets/WhatsApp Image 2022-07-10 at 11.40.48 PM.jpeg" alt="">
 
             <div class="blur-wrapper"></div>
           </div>
@@ -106,7 +107,7 @@
     <div class="swiper-pagination"></div>
   </div>
   <div id="app">
-    <h1 class="animate__animated animate__bounce">JUGOSFX COMMUNITY</h1>
+    <h1 class="animate__animated animate__bounce animate_slower animate_repeat-4">JUGOSFX COMMUNITY</h1>
     <div class="app-wrapper">
 
       <div class="left-content">
@@ -115,9 +116,11 @@
       <div class="right-content">
       </div>
     </div>
-    <div id="courses">
-      <h2>What you'll learn...</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae consequatur amet inventore quibusdam, quas
+    <div id="courses" data-aos="fade-in-up">
+      <h2 data-aos="slide-in-left" data-aos-anchor-placement="top-bottom">What you'll learn...</h2>
+      <p data-aos="zoom-down" data-aos-offset="120">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        consequatur amet
+        inventore quibusdam, quas
         dolorum dolore doloremque? Aut natus, ab architecto obcaecati veritatis minima, libero quibusdam eveniet dolorem
         quo cupiditate distinctio qui accusantium ratione fuga accusamus sunt dicta nam dolores dolor dolorum, est
         doloremque hic vel? Molestiae praesentium numquam, magnam quaerat temporibus ex pariatur velit, hic ducimus in
@@ -155,7 +158,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script type="importmap">
       {
         "imports": {
@@ -166,7 +169,14 @@
 
 
   <script>
-
+    AOS.init({
+      offset: 90,
+      easing: "ease",
+      once: false,
+      delay: 1,
+      duration: 500,
+      mirrow: false
+    });
   </script>
 
   <script type="module">

@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
+main {
+  width: 100%;
+  height: 100vh;
+}
+main .main-wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ececec;
+}
+main .main-wrapper .landing-page {
+  width: 35%;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .main-wrapper .landing-page .img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .main-wrapper .landing-page .img img {
+  height: 100%;
+  width: auto;
+  cursor: pointer;
+}
+main .main-wrapper .landing-page a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 60px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ececec;
+  font-family: "Nunito Sans", "Poppins", sans-serif;
+  text-transform: uppercase;
+  background: rgb(25, 35, 47);
+  margin: 20px auto;
+  border-radius: 4px;
+}
+main .main-wrapper .landing-page .text-wrapper {
+  position: relative;
+  width: 100%;
+}
+main .main-wrapper .landing-page .text-wrapper p {
+  color: #ececec;
+  padding: 10px;
+  text-transform: capitalize;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  main .main-wrapper .landing-page {
+    display: none;
+  }
+}
+@keyframes getFocus {
+  from {
+    background: linear-gradient(to top left, transparent, white, transparent);
+  }
+  25% {
+    background: linear-gradient(to top right, transparent, white, transparent);
+  }
+  50% {
+    background: linear-gradient(to bottom right, transparent, white, transparent);
+  }
+  to {
+    background: transparent;
+    background: linear-gradient(to bottom left, transparent, white, transparent);
+  }
+}
+main .main-wrapper .card {
+  width: 65%;
+  height: 90vh;
+  overflow-y: scroll;
+  background: #ececec;
+  border-radius: 3px;
+  padding: 10px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+main .main-wrapper .card .header {
+  width: 100%;
+  height: fit-content;
+  padding: 10px auto;
+}
+main .main-wrapper .card .header .logo {
+  width: 110px;
+  height: 110px;
+  margin: 15px auto;
+  margin-top: 10px;
+  border-radius: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .main-wrapper .card .header .logo img {
+  width: 100%;
+  height: auto;
+}
+main .main-wrapper .card .header h1 {
+  text-align: center;
+  color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
+  padding: 10px;
+  width: fit-content;
+  background: #ececec;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+}
+main .main-wrapper .card .header h1 a {
+  text-decoration: none;
+  color: inherit;
+  font: 700 33px "Nunito Sans", "Comic Neue", sans-serif;
+}
+main .main-wrapper .card .header h1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ececec;
+  animation: swirl 7s infinite linear alternate forwards;
+  border-left: 4px solid rgb(45, 59, 75);
+}
+main .main-wrapper .card .header p {
+  text-align: center;
+  padding: 5px;
+  color: rgb(62, 61, 61);
+  font-size: 14px;
+}
+main .main-wrapper .card .btns {
+  width: 96%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+main .main-wrapper .card .btns button {
+  width: 150px;
+  height: 70px;
+  border: 9px solid #ececec;
+  background: #ececec;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+main .main-wrapper .card .btns button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: transparent;
+  text-transform: capitalize;
+  font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
+  color: white;
+}
+main .main-wrapper .card .btns button:hover {
+  transform: scale(0.9);
+  background: #ececec;
+  border-radius: 50px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
+  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.123),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.123); */
+}
+main .main-wrapper .card .btns button:hover a {
+  color: green;
+  color: tomato;
+}
+main .main-wrapper .card .btns button:active {
+  transform: scale(0.8);
+}
+main .main-wrapper .card .btns .btn-1,
+main .main-wrapper .card .btns .btn-2 {
+  border-radius: 30px;
+}
+main .main-wrapper .card .btns .btn-1,
+main .main-wrapper .card .btns .btn-2 {
+  background: rgb(1, 171, 1);
+  background: tomato;
+}
+main .main-wrapper .card .btns .btn-large {
+  width: max-content;
+  padding: 0 15px;
+  background: rgb(4, 132, 237);
+  background: rgb(45, 59, 75);
+  border-radius: 30px;
+}
+main .main-wrapper .card .btns .btn-large:hover a {
+  color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
+}
+main .main-wrapper .card .media {
+  width: fit-content;
+  min-height: 15%;
+  margin: auto;
+}
+main .main-wrapper .card .media button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  margin: 10px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
+}
+main .main-wrapper .card .media button a i {
+  font-size: 25px;
+  color: rgb(54, 53, 53);
+}
+main .main-wrapper .card .media button a i:hover {
+  color: tomato;
+}
+main .main-wrapper .card .media button .beamerTrigger i {
+  color: rgb(7, 225, 7);
+  color: tomato;
+}
+@media screen and (max-width: 800px) {
+  main .main-wrapper .card {
+    width: 100%;
+    height: fit-content;
+  }
+}
+main .main-wrapper .share-btn {
+  position: absolute;
+  right: 5%;
+  top: 1%;
+  color: white;
+}
+main .main-wrapper .share-btn .st-total span {
+  color: white;
+  font-size: 15px;
+}
+main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
+  border-radius: 10%;
+  background: rgba(255, 99, 71, 0.418);
+}
+main .main-wrapper .animations-2 {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+main .main-wrapper .animations-1 {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main .main-wrapper canvas {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: tomato;
+  position: absolute;
+  bottom: 0;
+}
+main .main-wrapper .b1,
+main .main-wrapper .b2,
+main .main-wrapper .b3,
+main .main-wrapper .b4 {
+  left: 0;
+}
+main .main-wrapper .c1,
+main .main-wrapper .c2,
+main .main-wrapper .c3,
+main .main-wrapper .c4 {
+  right: 0;
+}
+main .main-wrapper .b1 {
+  animation: b1 5s infinite linear alternate forwards;
+  background: tomato;
+}
+main .main-wrapper .b2 {
+  animation: b2 5s infinite linear alternate forwards;
+  background: rgb(149, 208, 58);
+}
+main .main-wrapper .b3 {
+  animation: b3 5s infinite linear alternate forwards;
+  background: rgb(5, 153, 241);
+}
+main .main-wrapper .b4 {
+  animation: b4 5s infinite linear alternate forwards;
+  background: rgb(50, 62, 76);
+}
+main .main-wrapper .c1 {
+  animation: c1 5s infinite linear alternate forwards;
+  background: tomato;
+}
+main .main-wrapper .c2 {
+  animation: c2 5s infinite linear alternate forwards;
+  background: rgb(149, 208, 58);
+}
+main .main-wrapper .c3 {
+  animation: c3 5s infinite linear alternate forwards;
+  background: rgb(5, 153, 241);
+}
+main .main-wrapper .c4 {
+  animation: c4 5s infinite linear alternate forwards;
+  background: rgb(50, 62, 76);
+}
+@keyframes b1 {
+  to {
+    left: 5vw;
+    bottom: 20vh;
+  }
+}
+@keyframes b2 {
+  to {
+    left: 5vw;
+    bottom: 30;
+  }
+}
+@keyframes b3 {
+  to {
+    left: 5vw;
+    bottom: 40vh;
+  }
+}
+@keyframes b4 {
+  to {
+    left: 0;
+    bottom: 60vh;
+  }
+}
+@keyframes c1 {
+  to {
+    right: 5vw;
+    bottom: 20vh;
+  }
+}
+@keyframes c2 {
+  to {
+    right: 5vw;
+    bottom: 30;
+  }
+}
+@keyframes c3 {
+  to {
+    right: 5vw;
+    bottom: 40vh;
+  }
+}
+@keyframes c4 {
+  to {
+    right: 0;
+    bottom: 60vh;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .main-wrapper .media {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  main .main-wrapper .main-wrapper {
+    flex-direction: column;
+  }
+  main .main-wrapper .main-wrapper .landing-page,
+  main .main-wrapper .main-wrapper .card {
+    width: 100%;
+  }
+  main .main-wrapper .main-wrapper .landing-page {
+    height: 70vh;
+  }
+  main .main-wrapper .main-wrapper .landing-page.img {
+    justify-content: flex-start;
+  }
+  main .main-wrapper .main-wrapper .landing-page .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  main .main-wrapper .main-wrapper .card {
+    height: fit-content;
+  }
+}
+main #about {
+  width: 100vw;
+  height: fit-content;
+  padding-top: 5%;
+  background: #ffffff;
+}
+main #about .about-wrapper {
+  width: 90%;
+  min-height: 50vh;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 3%;
+}
+main #about .about-wrapper .text-wrapper {
+  width: 55%;
+}
+main #about .about-wrapper .text-wrapper h1 {
+  text-align: right;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: rgba(255, 99, 71, 0.836);
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #about .about-wrapper .text-wrapper h2 {
+  padding: 20px 10px;
+  text-transform: capitalize;
+  font-size: 50px;
+  font-family: "Nunito Sans", sans-serif;
+  word-spacing: 3px;
+  text-align: left;
+}
+main #about .about-wrapper .text-wrapper h2 span {
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  color: tomato;
+  text-transform: uppercase;
+}
+main #about .about-wrapper .text-wrapper h3 {
+  font-size: 20px;
+  padding: 10px;
+  color: tomato;
+  text-transform: capitalize;
+}
+main #about .about-wrapper .text-wrapper p {
+  padding: 10px;
+  font-size: 16px;
+}
+main #about .about-wrapper .text-wrapper .btns {
+  width: 95%;
+  height: fit-content;
+  margin: 10px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main #about .about-wrapper .text-wrapper .btns a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: fit-content;
+  height: 50px;
+  background: tomato;
+  color: white;
+  border-radius: 4px;
+  text-transform: capitalize;
+  padding: 3px 15px;
+}
+main #about .about-wrapper .text-wrapper .btns a:hover {
+  background: transparent;
+  color: tomato;
+  border: 1px solid tomato;
+}
+main #about .about-wrapper .text-wrapper .btns a:last-child {
+  background: transparent;
+  border: 1px solid tomato;
+  color: tomato;
+}
+main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
+  background: tomato;
+  color: white;
+}
+main #about .about-wrapper .image-wrapper {
+  width: 40%;
+  height: fit-content;
+}
+main #about .about-wrapper .image-wrapper .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5%;
+}
+main #about .about-wrapper .image-wrapper .img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+main #about .about-wrapper-2 {
+  align-items: center;
+  background: rgba(255, 99, 71, 0.808);
+  width: 100%;
+}
+main #about .about-wrapper-2 .text-wrapper {
+  padding-left: 4%;
+}
+main #about .about-wrapper-2 .text-wrapper h2 span {
+  color: rgba(26, 131, 216, 0.911);
+}
+main #about .about-wrapper-2 .text-wrapper h3 {
+  color: rgb(45, 59, 75);
+}
+main #about .about-wrapper-2 .text-wrapper .btns a {
+  background: white;
+  color: tomato;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:hover {
+  background: transparent;
+  border: 1px solid #ececec;
+  color: white;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:last-child {
+  border: 1px solid #ececec;
+  color: #ececec;
+}
+main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
+  background: white;
+  color: tomato;
+}
+main #about .about-wrapper-2 .image-wrapper {
+  width: 35%;
+}
+main #testimonials {
+  width: 100%;
+  height: fit-content;
+  padding: 3% auto;
+}
+main #testimonials h1 {
+  font-size: 50px;
+  padding: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+main #testimonials h3 {
+  text-align: center;
+  text-transform: capitalize;
+  color: tomato;
+  padding: 10px;
+  font-size: 19px;
+}
+main #testimonials .swiper {
+  width: 100%;
+  height: fit-content;
+  padding: 20px 10px;
+}
+main #testimonials .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main #testimonials .swiper .swiper-wrapper .img {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin: 10px auto;
+  border: 5px solid tomato;
+}
+main #testimonials .swiper .swiper-wrapper .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+main #testimonials .swiper .swiper-wrapper h1 {
+  font-size: 23px;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #testimonials .swiper .swiper-wrapper p {
+  font-size: 16px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #testimonials .swiper .swiper-wrapper .feedback {
+  width: 80%;
+  height: fit-content;
+  margin: 5px auto;
+  background: rgba(255, 99, 71, 0.623);
+  padding: 20px;
+  border-radius: 5px;
+}
+main #testimonials .swiper .swiper-wrapper .feedback p {
+  padding: 10px;
+}
+main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: tomato;
+  border-radius: 30px;
+}
+main #testimonials .swiper .swiper-pagination-progressbar {
+  background: rgb(58, 58, 58);
+}
+
+@keyframes swirl {
+  to {
+    right: -140%;
+  }
+}
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn-large {
+    width: 95%;
+    height: fit-content;
+    padding: 10px 16px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
