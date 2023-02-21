@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
 main {
   width: 100%;
   height: 100vh;
@@ -13,7 +14,7 @@ main .main-wrapper {
 main .main-wrapper .landing-page {
   width: 35%;
   position: relative;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,13 +44,14 @@ main .main-wrapper .landing-page a {
   align-items: center;
   width: 250px;
   height: 60px;
-  font-size: 19px;
-  font-weight: 800;
-  color: rgb(25, 35, 47);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ececec;
   font-family: "Nunito Sans", "Poppins", sans-serif;
   text-transform: uppercase;
-  background: white;
+  background: rgb(25, 35, 47);
   margin: 20px auto;
+  border-radius: 4px;
 }
 main .main-wrapper .landing-page .text-wrapper {
   position: relative;
@@ -80,51 +82,53 @@ main .main-wrapper .landing-page .text-wrapper p {
 }
 main .main-wrapper .card {
   width: 65%;
-  height: 100vh;
+  height: 90vh;
   overflow-y: scroll;
   background: #ececec;
-  box-shadow: 0 0 0.5px 1px #ececec, 10px 15px 16px rgba(70, 70, 70, 0.123);
   border-radius: 3px;
   padding: 10px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
-main .main-wrapper .share-btn {
-  position: absolute;
-  right: 5%;
-  top: 3%;
-}
-main .main-wrapper header {
+main .main-wrapper .card .header {
   width: 100%;
   height: fit-content;
+  padding: 10px auto;
 }
-main .main-wrapper header .logo {
-  width: 100px;
-  height: 100px;
-  margin: 10px auto;
+main .main-wrapper .card .header .logo {
+  width: 110px;
+  height: 110px;
+  margin: 15px auto;
   margin-top: 10px;
   border-radius: 100%;
   overflow: hidden;
   cursor: pointer;
 }
-main .main-wrapper header .logo img {
+main .main-wrapper .card .header .logo img {
   width: 100%;
   height: auto;
 }
-main .main-wrapper header h1 {
+main .main-wrapper .card .header h1 {
   text-align: center;
   color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
   padding: 10px;
   width: fit-content;
   background: #ececec;
-  margin: auto;
+  margin: 10px auto;
   position: relative;
   overflow: hidden;
 }
-main .main-wrapper header h1 a {
+main .main-wrapper .card .header h1 a {
   text-decoration: none;
   color: inherit;
-  font: 900 30px "Comic Neue", sans-serif;
+  font: 700 33px "Nunito Sans", "Comic Neue", sans-serif;
 }
-main .main-wrapper header h1::before {
+main .main-wrapper .card .header h1::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -133,32 +137,32 @@ main .main-wrapper header h1::before {
   right: 0;
   background: #ececec;
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid rgb(4, 132, 237);
+  border-left: 4px solid rgb(45, 59, 75);
 }
-main .main-wrapper header p {
+main .main-wrapper .card .header p {
   text-align: center;
   padding: 5px;
   color: rgb(62, 61, 61);
   font-size: 14px;
 }
-main .main-wrapper header .btns {
+main .main-wrapper .card .btns {
   width: 96%;
-  height: fit-content;
+  min-height: 10%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 10px auto;
 }
-main .main-wrapper header .btns button {
+main .main-wrapper .card .btns button {
   width: 150px;
-  height: 60px;
+  height: 70px;
   border: 9px solid #ececec;
   background: #ececec;
   margin: 10px;
   transition: all 0.3s ease;
 }
-main .main-wrapper header .btns button a {
+main .main-wrapper .card .btns button a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -167,10 +171,10 @@ main .main-wrapper header .btns button a {
   text-decoration: none;
   background: transparent;
   text-transform: capitalize;
-  font: 600 15px "Poppins", "Comic Neue", sans-serif;
+  font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
   color: white;
 }
-main .main-wrapper header .btns button:hover {
+main .main-wrapper .card .btns button:hover {
   transform: scale(0.9);
   background: #ececec;
   border-radius: 50px;
@@ -180,52 +184,70 @@ main .main-wrapper header .btns button:hover {
   inset -10px -10px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 15px rgba(70, 70, 70, 0.123); */
 }
-main .main-wrapper header .btns button:hover a {
+main .main-wrapper .card .btns button:hover a {
   color: green;
+  color: tomato;
 }
-main .main-wrapper header .btns button:active {
+main .main-wrapper .card .btns button:active {
   transform: scale(0.8);
 }
-main .main-wrapper header .btns .btn-1,
-main .main-wrapper header .btns .btn-2 {
+main .main-wrapper .card .btns .btn-1,
+main .main-wrapper .card .btns .btn-2 {
   border-radius: 30px;
 }
-main .main-wrapper header .btns .btn-1 {
+main .main-wrapper .card .btns .btn-1,
+main .main-wrapper .card .btns .btn-2 {
   background: rgb(1, 171, 1);
+  background: tomato;
 }
-main .main-wrapper header .btns .btn-2 {
-  background: rgb(211, 2, 2);
-}
-main .main-wrapper header .btns .btn-2:hover a {
-  color: crimson;
-}
-main .main-wrapper header .btns .btn-large {
+main .main-wrapper .card .btns .btn-large {
   width: max-content;
   padding: 0 15px;
   background: rgb(4, 132, 237);
+  background: rgb(45, 59, 75);
   border-radius: 30px;
 }
-main .main-wrapper header .btns .btn-large:hover a {
+main .main-wrapper .card .btns .btn-large:hover a {
   color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
 }
-main .main-wrapper header .media {
+main .main-wrapper .card .media {
   width: fit-content;
-  height: fit-content;
+  min-height: 15%;
   margin: auto;
 }
-main .main-wrapper header .media button {
+main .main-wrapper .card .media button {
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  border: none;
   margin: 10px;
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
 }
-main .main-wrapper header .media button a i {
+main .main-wrapper .card .media button a i {
   font-size: 25px;
   color: rgb(54, 53, 53);
 }
-main .main-wrapper header .media button .beamerTrigger i {
+main .main-wrapper .card .media button a i:hover {
+  color: tomato;
+}
+main .main-wrapper .card .media button .beamerTrigger i {
   color: rgb(7, 225, 7);
+  color: tomato;
+}
+main .main-wrapper .share-btn {
+  position: absolute;
+  right: 5%;
+  top: 1%;
+  color: white;
+}
+main .main-wrapper .share-btn .st-total span {
+  color: white;
+  font-size: 15px;
+}
+main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
+  border-radius: 10%;
+  background: rgba(255, 99, 71, 0.418);
 }
 main .main-wrapper .animations-2 {
   width: auto;
@@ -372,6 +394,118 @@ main .main-wrapper .c4 {
   main .main-wrapper .main-wrapper .card {
     height: fit-content;
   }
+}
+main #about {
+  width: 100vw;
+  height: fit-content;
+  padding-top: 5%;
+  background: #ffffff;
+}
+main #about .about-wrapper {
+  width: 90%;
+  min-height: 50vh;
+  margin: 25px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 3%;
+}
+main #about .about-wrapper .text-wrapper {
+  width: 55%;
+}
+main #about .about-wrapper .text-wrapper h1 {
+  text-align: right;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 21px;
+  color: tomato;
+  text-decoration: underline;
+  font-family: "Nunito Sans", sans-serif;
+}
+main #about .about-wrapper .text-wrapper h2 {
+  padding: 20px 10px;
+  text-transform: capitalize;
+  font-size: 50px;
+  font-family: "Nunito Sans", sans-serif;
+  word-spacing: 3px;
+  text-align: left;
+}
+main #about .about-wrapper .text-wrapper h2 span {
+  font-size: 60px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  color: tomato;
+  text-transform: uppercase;
+}
+main #about .about-wrapper .text-wrapper h3 {
+  font-size: 20px;
+  padding: 10px;
+  color: tomato;
+  text-transform: capitalize;
+}
+main #about .about-wrapper .text-wrapper p {
+  padding: 10px;
+  font-size: 16px;
+}
+main #about .about-wrapper .text-wrapper .btns {
+  width: 95%;
+  height: fit-content;
+  margin: 10px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main #about .about-wrapper .text-wrapper .btns a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: fit-content;
+  height: 50px;
+  background: tomato;
+  color: white;
+  border-radius: 4px;
+  text-transform: capitalize;
+  padding: 3px 15px;
+}
+main #about .about-wrapper .text-wrapper .btns a:hover {
+  background: transparent;
+  color: tomato;
+  border: 1px solid tomato;
+}
+main #about .about-wrapper .text-wrapper .btns a:last-child {
+  background: transparent;
+  border: 1px solid tomato;
+  color: tomato;
+}
+main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
+  background: tomato;
+  color: white;
+}
+main #about .about-wrapper .image-wrapper {
+  width: 40%;
+  height: fit-content;
+}
+main #about .about-wrapper .image-wrapper .img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+main #about .about-wrapper .image-wrapper .img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+main #about .about-wrapper-2 {
+  align-items: center;
+}
+main #about .about-wrapper-2 .text-wrapper {
+  padding-left: 4%;
 }
 
 @media screen and (max-width: 768px) {
