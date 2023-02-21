@@ -49,7 +49,7 @@ main .main-wrapper .landing-page a {
   color: #ececec;
   font-family: "Nunito Sans", "Poppins", sans-serif;
   text-transform: uppercase;
-  background: rgb(25, 35, 47);
+  background: #19232f;
   margin: 20px auto;
   border-radius: 4px;
 }
@@ -70,24 +70,9 @@ main .main-wrapper .landing-page .text-wrapper p {
     display: none;
   }
 }
-@keyframes getFocus {
-  from {
-    background: linear-gradient(to top left, transparent, white, transparent);
-  }
-  25% {
-    background: linear-gradient(to top right, transparent, white, transparent);
-  }
-  50% {
-    background: linear-gradient(to bottom right, transparent, white, transparent);
-  }
-  to {
-    background: transparent;
-    background: linear-gradient(to bottom left, transparent, white, transparent);
-  }
-}
 main .main-wrapper .card {
   width: 65%;
-  height: 90vh;
+  min-height: 90vh;
   overflow-y: scroll;
   background: #ececec;
   border-radius: 3px;
@@ -119,8 +104,8 @@ main .main-wrapper .card .header .logo img {
 }
 main .main-wrapper .card .header h1 {
   text-align: center;
-  color: rgb(4, 132, 237);
-  color: rgb(45, 59, 75);
+  color: #0484ed;
+  color: #2d3b4b;
   padding: 10px;
   width: fit-content;
   background: #ececec;
@@ -142,12 +127,12 @@ main .main-wrapper .card .header h1::before {
   right: 0;
   background: #ececec;
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid rgb(45, 59, 75);
+  border-left: 4px solid #2d3b4b;
 }
 main .main-wrapper .card .header p {
   text-align: center;
   padding: 5px;
-  color: rgb(62, 61, 61);
+  color: #3e3d3d;
   font-size: 14px;
 }
 main .main-wrapper .card .btns {
@@ -202,19 +187,19 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: rgb(1, 171, 1);
+  background: #01ab01;
   background: tomato;
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
   padding: 0 15px;
-  background: rgb(4, 132, 237);
-  background: rgb(45, 59, 75);
+  background: #0484ed;
+  background: #2d3b4b;
   border-radius: 30px;
 }
 main .main-wrapper .card .btns .btn-large:hover a {
-  color: rgb(4, 132, 237);
-  color: rgb(45, 59, 75);
+  color: #0484ed;
+  color: #2d3b4b;
 }
 main .main-wrapper .card .media {
   width: fit-content;
@@ -231,13 +216,13 @@ main .main-wrapper .card .media button {
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
-  color: rgb(54, 53, 53);
+  color: #363535;
 }
 main .main-wrapper .card .media button a i:hover {
   color: tomato;
 }
 main .main-wrapper .card .media button .beamerTrigger i {
-  color: rgb(7, 225, 7);
+  color: #07e107;
   color: tomato;
 }
 @media screen and (max-width: 800px) {
@@ -300,15 +285,15 @@ main .main-wrapper .b1 {
 }
 main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
-  background: rgb(149, 208, 58);
+  background: #95d03a;
 }
 main .main-wrapper .b3 {
   animation: b3 5s infinite linear alternate forwards;
-  background: rgb(5, 153, 241);
+  background: #0599f1;
 }
 main .main-wrapper .b4 {
   animation: b4 5s infinite linear alternate forwards;
-  background: rgb(50, 62, 76);
+  background: #323e4c;
 }
 main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
@@ -316,15 +301,15 @@ main .main-wrapper .c1 {
 }
 main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
-  background: rgb(149, 208, 58);
+  background: #95d03a;
 }
 main .main-wrapper .c3 {
   animation: c3 5s infinite linear alternate forwards;
-  background: rgb(5, 153, 241);
+  background: #0599f1;
 }
 main .main-wrapper .c4 {
   animation: c4 5s infinite linear alternate forwards;
-  background: rgb(50, 62, 76);
+  background: #323e4c;
 }
 @keyframes b1 {
   to {
@@ -388,7 +373,7 @@ main .main-wrapper .c4 {
     flex-direction: column;
   }
   main .main-wrapper .main-wrapper .landing-page,
-  main .main-wrapper .main-wrapper .card {
+main .main-wrapper .main-wrapper .card {
     width: 100%;
   }
   main .main-wrapper .main-wrapper .landing-page {
@@ -410,7 +395,7 @@ main #about {
   width: 100vw;
   height: fit-content;
   padding-top: 5%;
-  background: #ffffff;
+  background: #ececec;
 }
 main #about .about-wrapper {
   width: 90%;
@@ -418,7 +403,7 @@ main #about .about-wrapper {
   margin: 25px auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   padding: 3%;
 }
@@ -497,6 +482,23 @@ main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
   background: tomato;
   color: white;
 }
+@media screen and (max-width: 1000px) {
+  main #about .about-wrapper .text-wrapper {
+    width: 100%;
+  }
+  main #about .about-wrapper .text-wrapper h1 {
+    text-align: center;
+  }
+  main #about .about-wrapper .text-wrapper h2 {
+    font-size: 30px;
+  }
+  main #about .about-wrapper .text-wrapper h2 span {
+    font-size: 45px;
+  }
+  main #about .about-wrapper .text-wrapper h3 {
+    font-size: 20px;
+  }
+}
 main #about .about-wrapper .image-wrapper {
   width: 40%;
   height: fit-content;
@@ -513,6 +515,21 @@ main #about .about-wrapper .image-wrapper .img img {
   height: auto;
   object-fit: cover;
 }
+@media screen and (max-width: 1000px) {
+  main #about .about-wrapper .image-wrapper {
+    display: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  main #about .about-wrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1300px) and (max-width: 1000px) {
+  main #about .about-wrapper {
+    width: 95%;
+  }
+}
 main #about .about-wrapper-2 {
   align-items: center;
   background: rgba(255, 99, 71, 0.808);
@@ -525,7 +542,7 @@ main #about .about-wrapper-2 .text-wrapper h2 span {
   color: rgba(26, 131, 216, 0.911);
 }
 main #about .about-wrapper-2 .text-wrapper h3 {
-  color: rgb(45, 59, 75);
+  color: #2d3b4b;
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
   background: white;
@@ -612,7 +629,7 @@ main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-pro
   border-radius: 30px;
 }
 main #testimonials .swiper .swiper-pagination-progressbar {
-  background: rgb(58, 58, 58);
+  background: #3a3a3a;
 }
 
 @keyframes swirl {
