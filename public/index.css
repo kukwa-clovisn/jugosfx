@@ -1,20 +1,8 @@
-body {
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-}
-
-h1:hover {
-  transform: scale(0.9);
-}
-
 main {
   width: 100%;
   height: 100vh;
 }
-
-.main-wrapper {
+main .main-wrapper {
   width: 100%;
   height: fit-content;
   display: flex;
@@ -22,8 +10,7 @@ main {
   align-items: center;
   background: #ececec;
 }
-
-.main-wrapper .landing-page {
+main .main-wrapper .landing-page {
   width: 35%;
   position: relative;
   height: 100vh;
@@ -32,8 +19,7 @@ main {
   align-items: center;
   flex-direction: column;
 }
-
-.main-wrapper .landing-page .img {
+main .main-wrapper .landing-page .img {
   width: 100%;
   height: 100%;
   display: flex;
@@ -44,14 +30,12 @@ main {
   top: 0;
   left: 0;
 }
-
-.main-wrapper .landing-page .img img {
+main .main-wrapper .landing-page .img img {
   height: 100%;
   width: auto;
   cursor: pointer;
 }
-
-.main-wrapper .landing-page a {
+main .main-wrapper .landing-page a {
   position: relative;
   text-decoration: none;
   display: flex;
@@ -67,42 +51,11 @@ main {
   background: white;
   margin: 20px auto;
 }
-
-/* .main-wrapper .landing-page a:hover {
-  animation: getFocus 5s infinite forwards;
-} */
-
-@keyframes getFocus {
-  from {
-    background: linear-gradient(to top left, transparent, white, transparent);
-  }
-
-  25% {
-    background: linear-gradient(to top right, transparent, white, transparent);
-  }
-
-  50% {
-    background: linear-gradient(to bottom right,
-        transparent,
-        white,
-        transparent);
-  }
-
-  to {
-    background: transparent;
-    background: linear-gradient(to bottom left,
-        transparent,
-        white,
-        transparent);
-  }
-}
-
-.main-wrapper .landing-page .text-wrapper {
+main .main-wrapper .landing-page .text-wrapper {
   position: relative;
   width: 100%;
 }
-
-.main-wrapper .landing-page .text-wrapper p {
+main .main-wrapper .landing-page .text-wrapper p {
   color: #ececec;
   padding: 10px;
   text-transform: capitalize;
@@ -110,8 +63,22 @@ main {
   text-align: center;
   font-weight: 600;
 }
-
-.card {
+@keyframes getFocus {
+  from {
+    background: linear-gradient(to top left, transparent, white, transparent);
+  }
+  25% {
+    background: linear-gradient(to top right, transparent, white, transparent);
+  }
+  50% {
+    background: linear-gradient(to bottom right, transparent, white, transparent);
+  }
+  to {
+    background: transparent;
+    background: linear-gradient(to bottom left, transparent, white, transparent);
+  }
+}
+main .main-wrapper .card {
   width: 65%;
   height: 100vh;
   overflow-y: scroll;
@@ -120,25 +87,16 @@ main {
   border-radius: 3px;
   padding: 10px;
 }
-
-@media screen and (max-width: 768px) {
-  .card {
-    width: 100%;
-  }
-}
-
-.share-btn {
+main .main-wrapper .share-btn {
   position: absolute;
   right: 5%;
   top: 3%;
 }
-
-header {
+main .main-wrapper header {
   width: 100%;
   height: fit-content;
 }
-
-header .logo {
+main .main-wrapper header .logo {
   width: 100px;
   height: 100px;
   margin: 10px auto;
@@ -147,13 +105,11 @@ header .logo {
   overflow: hidden;
   cursor: pointer;
 }
-
-header .logo img {
+main .main-wrapper header .logo img {
   width: 100%;
   height: auto;
 }
-
-header h1 {
+main .main-wrapper header h1 {
   text-align: center;
   color: rgb(4, 132, 237);
   padding: 10px;
@@ -163,14 +119,12 @@ header h1 {
   position: relative;
   overflow: hidden;
 }
-
-header h1 a {
+main .main-wrapper header h1 a {
   text-decoration: none;
   color: inherit;
   font: 900 30px "Comic Neue", sans-serif;
 }
-
-header h1::before {
+main .main-wrapper header h1::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -181,27 +135,13 @@ header h1::before {
   animation: swirl 7s infinite linear alternate forwards;
   border-left: 4px solid rgb(4, 132, 237);
 }
-
-@keyframes swirl {
-  to {
-    right: -140%;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  header h1 {
-    font-size: 25px;
-  }
-}
-
-header p {
+main .main-wrapper header p {
   text-align: center;
   padding: 5px;
   color: rgb(62, 61, 61);
   font-size: 14px;
 }
-
-.btns {
+main .main-wrapper header .btns {
   width: 96%;
   height: fit-content;
   display: flex;
@@ -210,8 +150,7 @@ header p {
   flex-wrap: wrap;
   margin: 10px auto;
 }
-
-button {
+main .main-wrapper header .btns button {
   width: 150px;
   height: 60px;
   border: 9px solid #ececec;
@@ -219,64 +158,7 @@ button {
   margin: 10px;
   transition: all 0.3s ease;
 }
-
-.btn-1,
-.btn-2 {
-  border-radius: 30px;
-}
-
-.btn-1 {
-  background: rgb(1, 171, 1);
-}
-
-.btn-2 {
-  background: rgb(211, 2, 2);
-}
-
-.btn-large {
-  width: max-content;
-  padding: 0 15px;
-  background: rgb(4, 132, 237);
-  border-radius: 30px;
-}
-
-@media screen and (max-width: 500px) {
-  .btn-large {
-    width: 95%;
-    height: fit-content;
-    padding: 10px 16px;
-  }
-}
-
-button:hover {
-  transform: scale(0.9);
-  background: #ececec;
-  border-radius: 50px;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.123);
-  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.123),
-  inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-    inset 10px 10px 15px rgba(70, 70, 70, 0.123); */
-}
-
-button:hover a {
-  color: green;
-}
-
-.btn-2:hover a {
-  color: crimson;
-}
-
-button:active {
-  transform: scale(0.8);
-}
-
-.btn-large:hover a {
-  color: rgb(4, 132, 237);
-}
-
-button a {
+main .main-wrapper header .btns button a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -288,48 +170,78 @@ button a {
   font: 600 15px "Poppins", "Comic Neue", sans-serif;
   color: white;
 }
-
-.media {
+main .main-wrapper header .btns button:hover {
+  transform: scale(0.9);
+  background: #ececec;
+  border-radius: 50px;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
+  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.123),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.123); */
+}
+main .main-wrapper header .btns button:hover a {
+  color: green;
+}
+main .main-wrapper header .btns button:active {
+  transform: scale(0.8);
+}
+main .main-wrapper header .btns .btn-1,
+main .main-wrapper header .btns .btn-2 {
+  border-radius: 30px;
+}
+main .main-wrapper header .btns .btn-1 {
+  background: rgb(1, 171, 1);
+}
+main .main-wrapper header .btns .btn-2 {
+  background: rgb(211, 2, 2);
+}
+main .main-wrapper header .btns .btn-2:hover a {
+  color: crimson;
+}
+main .main-wrapper header .btns .btn-large {
+  width: max-content;
+  padding: 0 15px;
+  background: rgb(4, 132, 237);
+  border-radius: 30px;
+}
+main .main-wrapper header .btns .btn-large:hover a {
+  color: rgb(4, 132, 237);
+}
+main .main-wrapper header .media {
   width: fit-content;
   height: fit-content;
   margin: auto;
 }
-
-.media button {
+main .main-wrapper header .media button {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   margin: 10px;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.123);
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
 }
-
-.media button a i {
+main .main-wrapper header .media button a i {
   font-size: 25px;
   color: rgb(54, 53, 53);
 }
-
-.media button .beamerTrigger i {
+main .main-wrapper header .media button .beamerTrigger i {
   color: rgb(7, 225, 7);
 }
-
-.animations-2 {
+main .main-wrapper .animations-2 {
   width: auto;
   height: auto;
   position: absolute;
   bottom: 0;
   right: 0;
 }
-
-.animations-1 {
+main .main-wrapper .animations-1 {
   width: auto;
   height: auto;
   position: absolute;
   bottom: 0;
   left: 0;
 }
-
-canvas {
+main .main-wrapper canvas {
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -337,119 +249,100 @@ canvas {
   position: absolute;
   bottom: 0;
 }
-
-.b1,
-.b2,
-.b3,
-.b4 {
+main .main-wrapper .b1,
+main .main-wrapper .b2,
+main .main-wrapper .b3,
+main .main-wrapper .b4 {
   left: 0;
 }
-
-.c1,
-.c2,
-.c3,
-.c4 {
+main .main-wrapper .c1,
+main .main-wrapper .c2,
+main .main-wrapper .c3,
+main .main-wrapper .c4 {
   right: 0;
 }
-
-.b1 {
+main .main-wrapper .b1 {
   animation: b1 5s infinite linear alternate forwards;
   background: tomato;
 }
-
-.b2 {
+main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
   background: rgb(149, 208, 58);
 }
-
-.b3 {
+main .main-wrapper .b3 {
   animation: b3 5s infinite linear alternate forwards;
   background: rgb(5, 153, 241);
 }
-
-.b4 {
+main .main-wrapper .b4 {
   animation: b4 5s infinite linear alternate forwards;
   background: rgb(50, 62, 76);
 }
-
-.c1 {
+main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
   background: tomato;
 }
-
-.c2 {
+main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
   background: rgb(149, 208, 58);
 }
-
-.c3 {
+main .main-wrapper .c3 {
   animation: c3 5s infinite linear alternate forwards;
   background: rgb(5, 153, 241);
 }
-
-.c4 {
+main .main-wrapper .c4 {
   animation: c4 5s infinite linear alternate forwards;
   background: rgb(50, 62, 76);
 }
-
 @keyframes b1 {
   to {
     left: 5vw;
     bottom: 20vh;
   }
 }
-
 @keyframes b2 {
   to {
     left: 5vw;
     bottom: 30;
   }
 }
-
 @keyframes b3 {
   to {
     left: 5vw;
     bottom: 40vh;
   }
 }
-
 @keyframes b4 {
   to {
     left: 0;
     bottom: 60vh;
   }
 }
-
 @keyframes c1 {
   to {
     right: 5vw;
     bottom: 20vh;
   }
 }
-
 @keyframes c2 {
   to {
     right: 5vw;
     bottom: 30;
   }
 }
-
 @keyframes c3 {
   to {
     right: 5vw;
     bottom: 40vh;
   }
 }
-
 @keyframes c4 {
   to {
     right: 0;
     bottom: 60vh;
   }
 }
-
 @media screen and (max-width: 550px) {
-  .media {
+  main .main-wrapper .media {
     width: 90%;
     display: flex;
     justify-content: center;
@@ -457,32 +350,51 @@ canvas {
     flex-wrap: wrap;
   }
 }
-
 @media screen and (max-width: 800px) {
-  .main-wrapper {
+  main .main-wrapper .main-wrapper {
     flex-direction: column;
   }
-
-  .main-wrapper .landing-page,
-  .main-wrapper .card {
+  main .main-wrapper .main-wrapper .landing-page,
+  main .main-wrapper .main-wrapper .card {
     width: 100%;
   }
-
-  .main-wrapper .landing-page {
+  main .main-wrapper .main-wrapper .landing-page {
     height: 70vh;
   }
-
-  .main-wrapper .landing-page.img {
+  main .main-wrapper .main-wrapper .landing-page.img {
     justify-content: flex-start;
   }
-
-  .main-wrapper .landing-page .img img {
+  main .main-wrapper .main-wrapper .landing-page .img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
-  .main-wrapper .card {
+  main .main-wrapper .main-wrapper .card {
     height: fit-content;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
+@keyframes swirl {
+  to {
+    right: -140%;
+  }
+}
+@media screen and (max-width: 400px) {
+  header h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .btn-large {
+    width: 95%;
+    height: fit-content;
+    padding: 10px 16px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
