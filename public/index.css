@@ -9,72 +9,14 @@ main .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ececec;
-}
-main .main-wrapper .landing-page {
-  width: 35%;
-  position: relative;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-main .main-wrapper .landing-page .img {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-main .main-wrapper .landing-page .img img {
-  height: 100%;
-  width: auto;
-  cursor: pointer;
-}
-main .main-wrapper .landing-page a {
-  position: relative;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  height: 60px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #ececec;
-  font-family: "Nunito Sans", "Poppins", sans-serif;
-  text-transform: uppercase;
-  background: rgb(25, 35, 47);
-  margin: 20px auto;
-  border-radius: 4px;
-}
-main .main-wrapper .landing-page .text-wrapper {
-  position: relative;
-  width: 100%;
-}
-main .main-wrapper .landing-page .text-wrapper p {
-  color: #ececec;
-  padding: 10px;
-  text-transform: capitalize;
-  font-size: 14px;
-  text-align: center;
-  font-weight: 600;
-}
-@media screen and (max-width: 800px) {
-  main .main-wrapper .landing-page {
-    display: none;
-  }
+  background: linear-gradient(to bottom, #ececec, rgb(240, 245, 246));
 }
 main .main-wrapper .card {
-  width: 65%;
+  width: 95%;
   min-height: 90vh;
   overflow-y: scroll;
   background: #ececec;
+  background: linear-gradient(to bottom, #ececec, rgb(240, 245, 246));
   border-radius: 3px;
   padding: 10px;
   padding-top: 30px;
@@ -83,11 +25,16 @@ main .main-wrapper .card {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+main .main-wrapper .card .blur-wrapper {
+  display: none;
 }
 main .main-wrapper .card .header {
   width: 100%;
   height: fit-content;
   padding: 10px auto;
+  position: relative;
 }
 main .main-wrapper .card .header .logo {
   width: 110px;
@@ -104,14 +51,14 @@ main .main-wrapper .card .header .logo img {
 }
 main .main-wrapper .card .header h1 {
   text-align: center;
-  color: rgb(4, 132, 237);
-  color: rgb(45, 59, 75);
+  color: rgb(55, 103, 103);
   padding: 10px;
   width: fit-content;
   background: #ececec;
   margin: 10px auto;
   position: relative;
   overflow: hidden;
+  position: relative;
 }
 main .main-wrapper .card .header h1 a {
   text-decoration: none;
@@ -130,9 +77,12 @@ main .main-wrapper .card .header h1::before {
   border-left: 4px solid rgb(45, 59, 75);
 }
 main .main-wrapper .card .header p {
+  width: 90%;
+  margin: 5px auto;
   text-align: center;
+  position: relative;
   padding: 5px;
-  color: rgb(62, 61, 61);
+  color: rgb(14, 44, 38);
   font-size: 14px;
 }
 main .main-wrapper .card .btns {
@@ -143,6 +93,7 @@ main .main-wrapper .card .btns {
   align-items: center;
   flex-wrap: wrap;
   margin: 10px auto;
+  position: relative;
 }
 main .main-wrapper .card .btns button {
   width: 150px;
@@ -165,17 +116,12 @@ main .main-wrapper .card .btns button a {
   color: white;
 }
 main .main-wrapper .card .btns button:hover {
-  transform: scale(0.9);
+  transform: scale(1.1);
   background: #ececec;
   border-radius: 50px;
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
-  /* box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.123),
-  inset -10px -10px 15px rgba(255, 255, 255, 0.5),
-    inset 10px 10px 15px rgba(70, 70, 70, 0.123); */
 }
 main .main-wrapper .card .btns button:hover a {
-  color: green;
   color: tomato;
 }
 main .main-wrapper .card .btns button:active {
@@ -187,24 +133,22 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: rgb(1, 171, 1);
   background: tomato;
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
   padding: 0 15px;
-  background: rgb(4, 132, 237);
-  background: rgb(45, 59, 75);
+  background: linear-gradient(to bottom right, rgb(14, 44, 38), rgb(78, 132, 134));
   border-radius: 30px;
 }
 main .main-wrapper .card .btns .btn-large:hover a {
-  color: rgb(4, 132, 237);
-  color: rgb(45, 59, 75);
+  color: rgb(14, 44, 38);
 }
 main .main-wrapper .card .media {
   width: fit-content;
   min-height: 15%;
   margin: auto;
+  position: relative;
 }
 main .main-wrapper .card .media button {
   width: 50px;
@@ -216,7 +160,7 @@ main .main-wrapper .card .media button {
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
-  color: rgb(54, 53, 53);
+  color: rgb(14, 44, 38);
 }
 main .main-wrapper .card .media button a i:hover {
   color: tomato;
@@ -229,6 +173,39 @@ main .main-wrapper .card .media button .beamerTrigger i {
   main .main-wrapper .card {
     width: 100%;
     height: fit-content;
+    background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .main-wrapper .card .blur-wrapper {
+    display: block;
+    opacity: 0.7;
+  }
+  main .main-wrapper .card .header h1 {
+    background: inherit;
+    color: white;
+  }
+  main .main-wrapper .card .header h1::before {
+    background: inherit;
+    display: none;
+  }
+  main .main-wrapper .card .header p {
+    color: rgb(219, 215, 215);
+  }
+  main .main-wrapper .card .btns button {
+    border: none;
+    width: max-content;
+    height: 45px;
+    padding: 10px 20px;
+  }
+  main .main-wrapper .card .btns button a {
+    padding: 10px;
+  }
+  main .main-wrapper .card .btns button:hover {
+    box-shadow: none;
+  }
+  main .main-wrapper .card .media button {
+    box-shadow: none;
   }
 }
 main .main-wrapper .share-btn {
@@ -394,11 +371,11 @@ main .main-wrapper .c4 {
 main #about {
   width: 100vw;
   height: fit-content;
-  padding-top: 5%;
   background: #ececec;
+  background: rgb(240, 245, 246);
 }
 main #about .about-wrapper {
-  width: 90%;
+  width: 95%;
   min-height: 50vh;
   margin: 25px auto;
   display: flex;
@@ -406,9 +383,20 @@ main #about .about-wrapper {
   align-items: center;
   flex-wrap: wrap;
   padding: 3%;
+  position: relative;
+}
+main #about .about-wrapper .blur-wrapper {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  main #about .about-wrapper .blur-wrapper {
+    display: block;
+    background: rgb(31, 38, 48);
+  }
 }
 main #about .about-wrapper .text-wrapper {
   width: 55%;
+  position: relative;
 }
 main #about .about-wrapper .text-wrapper h1 {
   text-align: left;
@@ -541,7 +529,7 @@ main #about .about-wrapper .image-wrapper .img img {
 main #about .about-wrapper-2 {
   align-items: center;
   background: rgba(255, 99, 71, 0.808);
-  background: linear-gradient(to bottom right, rgb(45, 59, 75), rgb(45, 59, 75), rgb(45, 59, 75));
+  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
   width: 100%;
 }
 main #about .about-wrapper-2 .text-wrapper {
@@ -559,6 +547,11 @@ main #about .about-wrapper-2 .text-wrapper h3 {
 }
 main #about .about-wrapper-2 .text-wrapper p {
   color: rgb(180, 180, 180);
+}
+@media screen and (max-width: 1000px) {
+  main #about .about-wrapper-2 .text-wrapper p {
+    color: rgb(218, 218, 218);
+  }
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
   background: white;
@@ -580,13 +573,29 @@ main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
 main #about .about-wrapper-2 .image-wrapper {
   width: 40%;
 }
-main #about .about-wrapper-2 .image-wrapper img {
-  background: white;
+@media screen and (max-width: 1000px) {
+  main #about .about-wrapper-2 .image-wrapper {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  main #about .about-wrapper-2 .image-wrapper .img {
+    width: 100%;
+    height: 100%;
+  }
+  main #about .about-wrapper-2 .image-wrapper .img img {
+    background: transparent;
+  }
 }
 main #testimonials {
   width: 100%;
   height: fit-content;
   padding: 3% auto;
+  padding-bottom: 5%;
+  margin: 20px auto;
 }
 main #testimonials h1 {
   font-size: 50px;
@@ -621,8 +630,7 @@ main #testimonials .swiper .swiper-wrapper .swiper-slide-active {
   height: 100%;
   border-radius: 5px;
   padding: 20px 10px;
-  background: linear-gradient(to bottom, rgba(255, 99, 71, 0.842), rgba(255, 99, 71, 0.849), rgba(255, 99, 71, 0.548));
-  background: rgb(45, 59, 75);
+  background: linear-gradient(to bottom left, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
 }
 main #testimonials .swiper .swiper-wrapper .img {
   width: 300px;
@@ -648,9 +656,10 @@ main #testimonials .swiper .swiper-wrapper p {
   font-family: "Nunito Sans", sans-serif;
   color: rgb(211, 209, 209);
   font-weight: 600;
+  text-transform: capitalize;
 }
 main #testimonials .swiper .swiper-wrapper .feedback {
-  width: 80%;
+  width: 90%;
   height: fit-content;
   margin: 5px auto;
   background: transparent;
@@ -659,6 +668,11 @@ main #testimonials .swiper .swiper-wrapper .feedback {
 }
 main #testimonials .swiper .swiper-wrapper .feedback p {
   padding: 10px;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 500;
+  width: 95%;
+  margin: 5px auto;
 }
 main #testimonials .swiper .swiper-button-next::after,
 main #testimonials .swiper .swiper-button-prev::after {
@@ -671,17 +685,22 @@ main #testimonials .swiper .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, 5%);
 }
 main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: tomato;
+  background: rgb(247, 150, 35);
   border-radius: 30px;
   padding: 20px auto;
 }
 main #testimonials .swiper .swiper-pagination-progressbar {
-  background: rgb(45, 59, 75);
+  background: rgb(78, 132, 134);
+}
+@media screen and (max-width: 700px) {
+  main #testimonials .swiper {
+    width: 100%;
+  }
 }
 main #services {
   width: 100vw;
   height: fit-content;
-  padding: 30px auto;
+  padding: 10px auto;
   padding-top: 5%;
 }
 main #services h1 {
@@ -693,6 +712,111 @@ main #services h1 {
 main #services p {
   text-align: center;
   padding: 10px;
+}
+main #services .service-wrapper {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 700px) {
+  main #services .service-wrapper .service-content {
+    width: 90%;
+    min-height: 200px;
+    border-radius: 5px;
+    padding: 20px 10px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+  }
+  main #services .service-wrapper .service-content h2 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+  main #services .service-wrapper .service-content p {
+    color: rgb(228, 227, 227);
+  }
+  main #services .service-wrapper .service-content .button {
+    width: 60%;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: rgb(224, 224, 224);
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 701px) {
+  main #services .service-wrapper {
+    gap: 3%;
+    width: 90%;
+    margin: 10px auto;
+  }
+  main #services .service-wrapper .service-content {
+    width: 30%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+    border-radius: 4px;
+    padding: 25px 10px;
+    margin: 25px auto;
+  }
+  main #services .service-wrapper .service-content h2 {
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+  main #services .service-wrapper .service-content p {
+    color: rgb(228, 227, 227);
+  }
+  main #services .service-wrapper .service-content .button {
+    width: 60%;
+    height: 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    background: rgb(224, 224, 224);
+    padding: 10px;
+  }
+  main #services .service-wrapper .service-content:nth-child(even) {
+    background: linear-gradient(to bottom left, rgb(247, 150, 35), rgb(180, 101, 3), rgb(139, 78, 2));
+  }
+}
+main .contact {
+  width: 100vw;
+  height: 40vh;
+  padding: 20px;
+  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+}
+main .contact h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+}
+main .contact h3 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
 }
 
 @keyframes swirl {
