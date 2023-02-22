@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 main {
   width: 100%;
   height: 100vh;
@@ -9,14 +10,15 @@ main .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #ececec, rgb(240, 245, 246));
+  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
+  box-shadow: 0 3px 2px 1px #ececec;
 }
 main .main-wrapper .card {
   width: 95%;
   min-height: 90vh;
   overflow-y: scroll;
   background: #ececec;
-  background: linear-gradient(to bottom, #ececec, rgb(240, 245, 246));
+  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
   border-radius: 3px;
   padding: 10px;
   padding-top: 30px;
@@ -54,7 +56,7 @@ main .main-wrapper .card .header h1 {
   color: rgb(55, 103, 103);
   padding: 10px;
   width: fit-content;
-  background: #ececec;
+  background: inherit;
   margin: 10px auto;
   position: relative;
   overflow: hidden;
@@ -72,9 +74,9 @@ main .main-wrapper .card .header h1::before {
   position: absolute;
   top: 0;
   right: 0;
-  background: #ececec;
+  background: rgb(238, 242, 242);
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid rgb(45, 59, 75);
+  border-left: 4px solid rgb(78, 132, 134);
 }
 main .main-wrapper .card .header p {
   width: 90%;
@@ -122,7 +124,7 @@ main .main-wrapper .card .btns button:hover {
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
 }
 main .main-wrapper .card .btns button:hover a {
-  color: tomato;
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .btns button:active {
   transform: scale(0.8);
@@ -133,7 +135,7 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: tomato;
+  background: rgb(202, 113, 4);
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
@@ -163,11 +165,11 @@ main .main-wrapper .card .media button a i {
   color: rgb(14, 44, 38);
 }
 main .main-wrapper .card .media button a i:hover {
-  color: tomato;
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .media button .beamerTrigger i {
   color: rgb(7, 225, 7);
-  color: tomato;
+  color: rgb(247, 150, 35);
 }
 @media screen and (max-width: 800px) {
   main .main-wrapper .card {
@@ -215,12 +217,12 @@ main .main-wrapper .share-btn {
   color: white;
 }
 main .main-wrapper .share-btn .st-total span {
-  color: white;
+  color: rgb(55, 103, 103);
   font-size: 15px;
 }
 main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
   border-radius: 10%;
-  background: rgba(255, 99, 71, 0.418);
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .animations-2 {
   width: auto;
@@ -240,7 +242,7 @@ main .main-wrapper canvas {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: tomato;
+  background: rgb(247, 150, 35);
   position: absolute;
   bottom: 0;
 }
@@ -258,7 +260,7 @@ main .main-wrapper .c4 {
 }
 main .main-wrapper .b1 {
   animation: b1 5s infinite linear alternate forwards;
-  background: tomato;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
@@ -274,7 +276,7 @@ main .main-wrapper .b4 {
 }
 main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
-  background: tomato;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
@@ -418,13 +420,13 @@ main #about .about-wrapper .text-wrapper h2 span {
   font-size: 60px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  color: tomato;
+  color: rgb(247, 150, 35);
   text-transform: uppercase;
 }
 main #about .about-wrapper .text-wrapper h3 {
   font-size: 20px;
   padding: 10px;
-  color: tomato;
+  color: rgb(247, 150, 35);
   text-transform: capitalize;
   font-weight: 500;
 }
@@ -450,7 +452,7 @@ main #about .about-wrapper .text-wrapper .btns a {
   margin: 10px;
   width: fit-content;
   height: 50px;
-  background: tomato;
+  background: rgb(247, 150, 35);
   color: white;
   border-radius: 4px;
   text-transform: capitalize;
@@ -458,16 +460,16 @@ main #about .about-wrapper .text-wrapper .btns a {
 }
 main #about .about-wrapper .text-wrapper .btns a:hover {
   background: transparent;
-  color: tomato;
-  border: 1px solid tomato;
+  color: rgb(247, 150, 35);
+  border: 1px solid rgb(247, 150, 35);
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child {
   background: transparent;
-  border: 1px solid tomato;
-  color: tomato;
+  border: 1px solid rgb(247, 150, 35);
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
-  background: tomato;
+  background: rgb(247, 150, 35);
   color: white;
 }
 @media screen and (max-width: 1000px) {
@@ -539,7 +541,7 @@ main #about .about-wrapper-2 .text-wrapper h2 {
   color: white;
 }
 main #about .about-wrapper-2 .text-wrapper h2 span {
-  color: tomato;
+  color: rgb(247, 150, 35);
   font-family: "Comic Neue", sans-serif;
 }
 main #about .about-wrapper-2 .text-wrapper h3 {
@@ -554,21 +556,22 @@ main #about .about-wrapper-2 .text-wrapper p {
   }
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
-  background: white;
-  color: tomato;
+  background: transparent;
+  color: white;
+  border: 1px solid rgb(235, 234, 234);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:hover {
-  background: transparent;
-  border: 1px solid #ececec;
-  color: white;
+  background: white;
+  border: 1px solid #dbdbdb;
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child {
-  border: 1px solid #ececec;
-  color: #ececec;
+  border: 1px solid rgb(247, 150, 35);
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
-  background: white;
-  color: tomato;
+  background: rgb(247, 150, 35);
+  color: white;
 }
 main #about .about-wrapper-2 .image-wrapper {
   width: 40%;
@@ -611,7 +614,7 @@ main #testimonials h1 {
 main #testimonials h3 {
   text-align: center;
   text-transform: capitalize;
-  color: rgba(255, 99, 71, 0.74);
+  color: rgb(247, 150, 35);
   padding: 10px;
   font-size: 19px;
 }
@@ -676,7 +679,7 @@ main #testimonials .swiper .swiper-wrapper .feedback p {
 }
 main #testimonials .swiper .swiper-button-next::after,
 main #testimonials .swiper .swiper-button-prev::after {
-  color: tomato;
+  color: rgb(247, 150, 35);
 }
 main #testimonials .swiper .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 5%);
@@ -720,6 +723,59 @@ main #services .service-wrapper {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 3%;
+  width: 90%;
+  margin: 10px auto;
+}
+main #services .service-wrapper .service-content {
+  width: 30%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 0 1px 1px rgb(247, 150, 35);
+  border-radius: 4px;
+  padding: 25px 10px;
+  margin: 25px auto;
+}
+main #services .service-wrapper .service-content h2 {
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: rgb(14, 44, 38);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+main #services .service-wrapper .service-content .icon {
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgb(247, 150, 35);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #services .service-wrapper .service-content .icon i {
+  font-size: 25px;
+  color: rgb(247, 150, 35);
+}
+main #services .service-wrapper .service-content p {
+  color: rgb(49, 49, 49);
+}
+main #services .service-wrapper .service-content .button {
+  width: 60%;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 1px solid rgb(247, 150, 35);
+  padding: 10px;
 }
 @media screen and (max-width: 700px) {
   main #services .service-wrapper .service-content {
@@ -755,50 +811,6 @@ main #services .service-wrapper {
     text-transform: capitalize;
     background: rgb(224, 224, 224);
     padding: 10px;
-  }
-}
-@media screen and (min-width: 701px) {
-  main #services .service-wrapper {
-    gap: 3%;
-    width: 90%;
-    margin: 10px auto;
-  }
-  main #services .service-wrapper .service-content {
-    width: 30%;
-    height: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-    background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
-    border-radius: 4px;
-    padding: 25px 10px;
-    margin: 25px auto;
-  }
-  main #services .service-wrapper .service-content h2 {
-    padding: 10px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  main #services .service-wrapper .service-content p {
-    color: rgb(228, 227, 227);
-  }
-  main #services .service-wrapper .service-content .button {
-    width: 60%;
-    height: 40px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    background: rgb(224, 224, 224);
-    padding: 10px;
-  }
-  main #services .service-wrapper .service-content:nth-child(even) {
-    background: linear-gradient(to bottom left, rgb(247, 150, 35), rgb(180, 101, 3), rgb(139, 78, 2));
   }
 }
 main .contact {

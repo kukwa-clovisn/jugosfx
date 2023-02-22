@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 $primary-col: rgb(14, 44, 38);
 $secondary-col: rgb(55, 103, 103);
 $tertiary-col: rgb(78, 132, 134);
 $basic-col: rgb(240, 245, 246);
 $sub-col: rgb(247, 150, 35);
-$sub-col-1: rgb(180, 101, 3);
+$sub-col-1: rgb(202, 113, 4);
 $sub-col-2: rgb(139, 78, 2);
 
 main {
@@ -17,14 +19,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #ececec, $basic-col);
+    background: linear-gradient(to top, #ececec, $basic-col);
+    box-shadow: 0 3px 2px 1px #ececec;
 
     .card {
       width: 95%;
       min-height: 90vh;
       overflow-y: scroll;
       background: #ececec;
-      background: linear-gradient(to bottom, #ececec, rgb(240, 245, 246));
+      background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
       // box-shadow: 0 0 0.5px 0.5px #ececec, 10px 15px 16px rgba(70, 70, 70, 0.123);
       border-radius: 3px;
       padding: 10px;
@@ -66,7 +69,7 @@ main {
           color: $secondary-col;
           padding: 10px;
           width: fit-content;
-          background: #ececec;
+          background: inherit;
           margin: 10px auto;
           position: relative;
           overflow: hidden;
@@ -85,9 +88,9 @@ main {
             position: absolute;
             top: 0;
             right: 0;
-            background: #ececec;
+            background: rgb(238, 242, 242);
             animation: swirl 7s infinite linear alternate forwards;
-            border-left: 4px solid rgb(45, 59, 75);
+            border-left: 4px solid $tertiary-col;
           }
         }
 
@@ -141,7 +144,7 @@ main {
               10px 10px 15px rgba(70, 70, 70, 0.123);
 
             a {
-              color: tomato;
+              color: $sub-col;
             }
           }
 
@@ -157,7 +160,7 @@ main {
 
         .btn-1,
         .btn-2 {
-          background: tomato;
+          background: $sub-col-1;
         }
 
         .btn-large {
@@ -193,14 +196,14 @@ main {
               color: $primary-col;
 
               &:hover {
-                color: tomato;
+                color: $sub-col;
               }
             }
           }
 
           .beamerTrigger i {
             color: rgb(7, 225, 7);
-            color: tomato;
+            color: $sub-col;
           }
         }
       }
@@ -268,14 +271,14 @@ main {
 
       .st-total {
         span {
-          color: white;
+          color: $secondary-col;
           font-size: 15px;
         }
       }
 
       #st-1 .st-btn[data-network="sharethis"] {
         border-radius: 10%;
-        background: rgba(255, 99, 71, 0.418);
+        background: $sub-col;
       }
     }
 
@@ -299,7 +302,7 @@ main {
       width: 20px;
       height: 20px;
       border-radius: 100%;
-      background: tomato;
+      background: $sub-col;
       position: absolute;
       bottom: 0;
     }
@@ -320,7 +323,7 @@ main {
 
     .b1 {
       animation: b1 5s infinite linear alternate forwards;
-      background: tomato;
+      background: $sub-col;
     }
 
     .b2 {
@@ -340,7 +343,7 @@ main {
 
     .c1 {
       animation: c1 5s infinite linear alternate forwards;
-      background: tomato;
+      background: $sub-col;
     }
 
     .c2 {
@@ -506,7 +509,7 @@ main {
             font-size: 60px;
             font-family: "Poppins", sans-serif;
             letter-spacing: 1px;
-            color: tomato;
+            color: $sub-col;
             text-transform: uppercase;
           }
         }
@@ -514,7 +517,7 @@ main {
         h3 {
           font-size: 20px;
           padding: 10px;
-          color: tomato;
+          color: $sub-col;
           text-transform: capitalize;
           font-weight: 500;
         }
@@ -542,7 +545,7 @@ main {
             margin: 10px;
             width: fit-content;
             height: 50px;
-            background: tomato;
+            background: $sub-col;
             color: white;
             border-radius: 4px;
             text-transform: capitalize;
@@ -550,17 +553,17 @@ main {
 
             &:hover {
               background: transparent;
-              color: tomato;
-              border: 1px solid tomato;
+              color: $sub-col;
+              border: 1px solid $sub-col;
             }
 
             &:last-child {
               background: transparent;
-              border: 1px solid tomato;
-              color: tomato;
+              border: 1px solid $sub-col;
+              color: $sub-col;
 
               &:hover {
-                background: tomato;
+                background: $sub-col;
                 color: white;
               }
             }
@@ -645,7 +648,7 @@ main {
           color: white;
 
           span {
-            color: tomato;
+            color: $sub-col;
             font-family: 'Comic Neue', sans-serif;
           }
         }
@@ -664,22 +667,23 @@ main {
 
         .btns {
           a {
-            background: white;
-            color: tomato;
+            background: transparent;
+            color: white;
+            border: 1px solid rgb(235, 234, 234);
 
             &:hover {
-              background: transparent;
-              border: 1px solid #ececec;
-              color: white;
+              background: white;
+              border: 1px solid #dbdbdb;
+              color: $sub-col;
             }
 
             &:last-child {
-              border: 1px solid #ececec;
-              color: #ececec;
+              border: 1px solid $sub-col;
+              color: $sub-col;
 
               &:hover {
-                background: white;
-                color: tomato;
+                background: $sub-col;
+                color: white;
               }
             }
           }
@@ -734,7 +738,7 @@ main {
     h3 {
       text-align: center;
       text-transform: capitalize;
-      color: rgba(255, 99, 71, 0.74);
+      color: $sub-col;
       padding: 10px;
       font-size: 19px;
     }
@@ -816,7 +820,7 @@ main {
 
       .swiper-button-next::after,
       .swiper-button-prev::after {
-        color: tomato;
+        color: $sub-col;
       }
 
       .swiper-button-next {
@@ -852,10 +856,11 @@ main {
 
     h1 {
       font-size: 35px;
-      // color: tomato;
+      // color: $sub-col;
       text-transform: uppercase;
       text-align: center;
       padding: 20px;
+
     }
 
     p {
@@ -870,6 +875,67 @@ main {
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      gap: 3%;
+      width: 90%;
+      margin: 10px auto;
+
+      .service-content {
+        width: 30%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 0 1px 1px $sub-col;
+        border-radius: 4px;
+        padding: 25px 10px;
+        margin: 25px auto;
+
+        h2 {
+          padding: 10px;
+          text-transform: uppercase;
+          font-family: "Poppins", sans-serif;
+          color: $primary-col;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
+        }
+
+        .icon {
+          width: 60px;
+          height: 60px;
+          border: 3px solid $sub-col;
+          border-radius: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            font-size: 25px;
+            color: $sub-col;
+          }
+        }
+
+        p {
+          color: rgb(49, 49, 49);
+        }
+
+        .button {
+          width: 60%;
+          height: 40px;
+          border-radius: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          text-transform: capitalize;
+          border: 1px solid $sub-col;
+          padding: 10px;
+        }
+
+
+      }
 
       @media screen and (max-width:700px) {
 
@@ -913,54 +979,6 @@ main {
         }
       }
 
-      @media screen and (min-width:701px) {
-        gap: 3%;
-        width: 90%;
-        margin: 10px auto;
-
-        .service-content {
-          width: 30%;
-          height: fit-content;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-          flex-direction: column;
-          background: linear-gradient(to bottom right, $tertiary-col, $secondary-col, $primary-col);
-
-          border-radius: 4px;
-          padding: 25px 10px;
-          margin: 25px auto;
-
-          h2 {
-            padding: 10px;
-            text-transform: uppercase;
-            font-family: "Poppins", sans-serif;
-            color: white;
-          }
-
-          p {
-            color: rgb(228, 227, 227);
-          }
-
-          .button {
-            width: 60%;
-            height: 40px;
-            border-radius: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-transform: capitalize;
-            background: rgb(224, 224, 224);
-            padding: 10px;
-          }
-
-          &:nth-child(even) {
-            background: linear-gradient(to bottom left, $sub-col, $sub-col-1, $sub-col-2);
-          }
-        }
-      }
     }
   }
 
