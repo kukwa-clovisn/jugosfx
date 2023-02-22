@@ -58,6 +58,7 @@ header {
     height: 20vh;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 
     .header-wrapper {
         width: 100%;
@@ -138,15 +139,13 @@ header {
             }
 
             .header-routes {
-                width: 50%;
+                width: 60%;
                 height: 100%;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
 
-                &:last-child {
-                    width: 20%;
-                }
+
 
                 .route {
                     text-decoration: none;
@@ -158,6 +157,10 @@ header {
                         color: tomato;
                     }
                 }
+            }
+
+            .header-routes.small {
+                width: 10%;
             }
 
             @media screen and (max-width:800px) {

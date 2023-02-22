@@ -49,7 +49,7 @@ main .main-wrapper .landing-page a {
   color: #ececec;
   font-family: "Nunito Sans", "Poppins", sans-serif;
   text-transform: uppercase;
-  background: #19232f;
+  background: rgb(25, 35, 47);
   margin: 20px auto;
   border-radius: 4px;
 }
@@ -104,8 +104,8 @@ main .main-wrapper .card .header .logo img {
 }
 main .main-wrapper .card .header h1 {
   text-align: center;
-  color: #0484ed;
-  color: #2d3b4b;
+  color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
   padding: 10px;
   width: fit-content;
   background: #ececec;
@@ -127,12 +127,12 @@ main .main-wrapper .card .header h1::before {
   right: 0;
   background: #ececec;
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid #2d3b4b;
+  border-left: 4px solid rgb(45, 59, 75);
 }
 main .main-wrapper .card .header p {
   text-align: center;
   padding: 5px;
-  color: #3e3d3d;
+  color: rgb(62, 61, 61);
   font-size: 14px;
 }
 main .main-wrapper .card .btns {
@@ -187,19 +187,19 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: #01ab01;
+  background: rgb(1, 171, 1);
   background: tomato;
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
   padding: 0 15px;
-  background: #0484ed;
-  background: #2d3b4b;
+  background: rgb(4, 132, 237);
+  background: rgb(45, 59, 75);
   border-radius: 30px;
 }
 main .main-wrapper .card .btns .btn-large:hover a {
-  color: #0484ed;
-  color: #2d3b4b;
+  color: rgb(4, 132, 237);
+  color: rgb(45, 59, 75);
 }
 main .main-wrapper .card .media {
   width: fit-content;
@@ -216,13 +216,13 @@ main .main-wrapper .card .media button {
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
-  color: #363535;
+  color: rgb(54, 53, 53);
 }
 main .main-wrapper .card .media button a i:hover {
   color: tomato;
 }
 main .main-wrapper .card .media button .beamerTrigger i {
-  color: #07e107;
+  color: rgb(7, 225, 7);
   color: tomato;
 }
 @media screen and (max-width: 800px) {
@@ -285,15 +285,15 @@ main .main-wrapper .b1 {
 }
 main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
-  background: #95d03a;
+  background: rgb(149, 208, 58);
 }
 main .main-wrapper .b3 {
   animation: b3 5s infinite linear alternate forwards;
-  background: #0599f1;
+  background: rgb(5, 153, 241);
 }
 main .main-wrapper .b4 {
   animation: b4 5s infinite linear alternate forwards;
-  background: #323e4c;
+  background: rgb(50, 62, 76);
 }
 main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
@@ -301,15 +301,15 @@ main .main-wrapper .c1 {
 }
 main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
-  background: #95d03a;
+  background: rgb(149, 208, 58);
 }
 main .main-wrapper .c3 {
   animation: c3 5s infinite linear alternate forwards;
-  background: #0599f1;
+  background: rgb(5, 153, 241);
 }
 main .main-wrapper .c4 {
   animation: c4 5s infinite linear alternate forwards;
-  background: #323e4c;
+  background: rgb(50, 62, 76);
 }
 @keyframes b1 {
   to {
@@ -373,7 +373,7 @@ main .main-wrapper .c4 {
     flex-direction: column;
   }
   main .main-wrapper .main-wrapper .landing-page,
-main .main-wrapper .main-wrapper .card {
+  main .main-wrapper .main-wrapper .card {
     width: 100%;
   }
   main .main-wrapper .main-wrapper .landing-page {
@@ -411,11 +411,10 @@ main #about .about-wrapper .text-wrapper {
   width: 55%;
 }
 main #about .about-wrapper .text-wrapper h1 {
-  text-align: right;
+  text-align: left;
   padding: 15px;
   text-transform: uppercase;
   font-size: 21px;
-  color: rgba(255, 99, 71, 0.836);
   font-weight: 800;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -439,6 +438,7 @@ main #about .about-wrapper .text-wrapper h3 {
   padding: 10px;
   color: tomato;
   text-transform: capitalize;
+  font-weight: 500;
 }
 main #about .about-wrapper .text-wrapper p {
   padding: 10px;
@@ -499,8 +499,16 @@ main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 1000px) and (max-width: 600px) {
+  main #about .about-wrapper .text-wrapper h2 {
+    font-size: 23px;
+  }
+  main #about .about-wrapper .text-wrapper h2 span {
+    font-size: 30px;
+  }
+}
 main #about .about-wrapper .image-wrapper {
-  width: 40%;
+  width: 35%;
   height: fit-content;
 }
 main #about .about-wrapper .image-wrapper .img {
@@ -533,16 +541,24 @@ main #about .about-wrapper .image-wrapper .img img {
 main #about .about-wrapper-2 {
   align-items: center;
   background: rgba(255, 99, 71, 0.808);
+  background: linear-gradient(to bottom right, rgb(45, 59, 75), rgb(45, 59, 75), rgb(45, 59, 75));
   width: 100%;
 }
 main #about .about-wrapper-2 .text-wrapper {
   padding-left: 4%;
 }
+main #about .about-wrapper-2 .text-wrapper h2 {
+  color: white;
+}
 main #about .about-wrapper-2 .text-wrapper h2 span {
-  color: rgba(26, 131, 216, 0.911);
+  color: tomato;
+  font-family: "Comic Neue", sans-serif;
 }
 main #about .about-wrapper-2 .text-wrapper h3 {
-  color: #2d3b4b;
+  color: rgb(231, 231, 231);
+}
+main #about .about-wrapper-2 .text-wrapper p {
+  color: rgb(180, 180, 180);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
   background: white;
@@ -562,7 +578,10 @@ main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
   color: tomato;
 }
 main #about .about-wrapper-2 .image-wrapper {
-  width: 35%;
+  width: 40%;
+}
+main #about .about-wrapper-2 .image-wrapper img {
+  background: white;
 }
 main #testimonials {
   width: 100%;
@@ -575,61 +594,105 @@ main #testimonials h1 {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  main #testimonials h1 {
+    font-size: 30px;
+  }
+}
 main #testimonials h3 {
   text-align: center;
   text-transform: capitalize;
-  color: tomato;
+  color: rgba(255, 99, 71, 0.74);
   padding: 10px;
   font-size: 19px;
 }
 main #testimonials .swiper {
-  width: 100%;
+  width: 80%;
   height: fit-content;
-  padding: 20px 10px;
+  margin: 10px auto;
+  border-radius: 8px;
 }
 main #testimonials .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 20px 10px;
+  background: linear-gradient(to bottom, rgba(255, 99, 71, 0.842), rgba(255, 99, 71, 0.849), rgba(255, 99, 71, 0.548));
+  background: rgb(45, 59, 75);
+}
 main #testimonials .swiper .swiper-wrapper .img {
   width: 300px;
   height: 300px;
-  border-radius: 100%;
+  border-radius: 30px;
   overflow: hidden;
   margin: 10px auto;
-  border: 5px solid tomato;
+  border: 5px solid #ececec;
 }
 main #testimonials .swiper .swiper-wrapper .img img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
 }
 main #testimonials .swiper .swiper-wrapper h1 {
   font-size: 23px;
   font-family: "Nunito Sans", sans-serif;
+  color: white;
 }
 main #testimonials .swiper .swiper-wrapper p {
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
+  color: rgb(211, 209, 209);
+  font-weight: 600;
 }
 main #testimonials .swiper .swiper-wrapper .feedback {
   width: 80%;
   height: fit-content;
   margin: 5px auto;
-  background: rgba(255, 99, 71, 0.623);
+  background: transparent;
   padding: 20px;
   border-radius: 5px;
 }
 main #testimonials .swiper .swiper-wrapper .feedback p {
   padding: 10px;
 }
+main #testimonials .swiper .swiper-button-next::after,
+main #testimonials .swiper .swiper-button-prev::after {
+  color: tomato;
+}
+main #testimonials .swiper .swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 5%);
+}
+main #testimonials .swiper .swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 5%);
+}
 main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: tomato;
   border-radius: 30px;
+  padding: 20px auto;
 }
 main #testimonials .swiper .swiper-pagination-progressbar {
-  background: #3a3a3a;
+  background: rgb(45, 59, 75);
+}
+main #services {
+  width: 100vw;
+  height: fit-content;
+  padding: 30px auto;
+  padding-top: 5%;
+}
+main #services h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+main #services p {
+  text-align: center;
+  padding: 10px;
 }
 
 @keyframes swirl {
