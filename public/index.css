@@ -813,22 +813,40 @@ main #services .service-wrapper .service-content .button {
     padding: 10px;
   }
 }
+main #services .contact-btn {
+  width: max-content;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(247, 150, 35);
+  color: white;
+  text-transform: capitalize;
+  padding: 20px;
+}
 main .contact {
   width: 100vw;
   height: 40vh;
   padding: 20px;
+  margin: 20px auto;
   background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
 }
 main .contact h1 {
   color: white;
   text-align: center;
   padding: 20px;
-  font-size: 50px;
+  font-size: 60px;
+  font-family: "Montsarret", sans-serif;
 }
 main .contact h3 {
   font-size: 30px;
   text-align: center;
-  color: white;
+  color: rgb(236, 236, 236);
+  padding: 10px;
+  font-family: "Montsarret", sans-serif;
 }
 main .contact .btns {
   width: fit-content;
@@ -838,13 +856,13 @@ main .contact .btns {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
 }
 main .contact .btns a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   background: white;
   width: max-content;
   height: 45px;
@@ -854,6 +872,22 @@ main .contact .btns a {
   color: rgb(247, 150, 35);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  gap: 10px;
+}
+main .contact .btns a i {
+  color: rgb(247, 150, 35);
+}
+main .contact .btns a:last-child {
+  background: rgb(247, 150, 35);
+  color: white;
+}
+main .contact .btns a:last-child i {
+  color: white;
+}
+main footer {
+  width: 100vw;
+  height: 30vh;
+  background: linear-gradient(to top left, rgb(14, 44, 38), rgb(55, 103, 103), rgb(78, 132, 134));
 }
 
 @keyframes swirl {
