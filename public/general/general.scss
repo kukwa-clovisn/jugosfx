@@ -7,6 +7,10 @@ body {
     scroll-behavior: smooth;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow: hidden;
     overflow-y: scroll;
@@ -20,13 +24,11 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-
 * {
     transition: all 0.3s ease;
     font-family: "Poppins", "Nunito Sans", sans-serif;
     color: rgb(45, 59, 75);
 }
-
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -58,7 +60,6 @@ header {
     height: 20vh;
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
 
     .header-wrapper {
         width: 100%;
@@ -96,9 +97,8 @@ header {
                         font-weight: 600;
                     }
 
-                    @media screen and (max-width:800px) {
+                    @media screen and (max-width: 800px) {
                         font-size: 15px;
-
                     }
                 }
             }
@@ -111,7 +111,6 @@ header {
                 to {
                     transform: translateX(-100%);
                 }
-
             }
         }
 
@@ -125,7 +124,6 @@ header {
             border-bottom: 1px solid #e4e2e2;
             // box-shadow: 9px 10px 0.5px 1px #c7c6c6, 10px 15px 16px rgba(70, 70, 70, 0.123);
 
-
             .logo {
                 width: 30%;
                 height: 100%;
@@ -136,16 +134,22 @@ header {
                 font-size: 50px;
                 font-weight: 800;
                 color: rgb(45, 59, 75);
+
+                @media screen and (max-width: 430px) {
+                    font-size: 20px;
+                }
             }
 
             .header-routes {
-                width: 60%;
+                width: 50%;
                 height: 100%;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
 
-
+                &:last-child {
+                    width: 20%;
+                }
 
                 .route {
                     text-decoration: none;
@@ -159,11 +163,7 @@ header {
                 }
             }
 
-            .header-routes.small {
-                width: 10%;
-            }
-
-            @media screen and (max-width:800px) {
+            @media screen and (max-width: 800px) {
                 .logo {
                     font-size: 30px;
                 }
@@ -174,14 +174,14 @@ header {
                     }
                 }
 
-                @media screen and (max-width:500px) {
+                @media screen and (max-width: 500px) {
                     .logo {
                         font-size: 25px;
                     }
 
                     .header-routes {
                         .route {
-                            font-size: 10px;
+                            font-size: 9px;
                         }
                     }
                 }

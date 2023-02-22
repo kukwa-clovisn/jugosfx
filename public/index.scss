@@ -126,6 +126,10 @@ main {
             text-decoration: none;
             color: inherit;
             font: 700 33px "Nunito Sans", "Comic Neue", sans-serif;
+
+            @media screen and (max-width: 400px) {
+              font-size: 24px;
+            }
           }
 
           &::before {
@@ -578,16 +582,6 @@ main {
           h3 {
             font-size: 20px;
           }
-
-          @media screen and (max-width:600px) {
-            h2 {
-              font-size: 23px;
-
-              span {
-                font-size: 30px;
-              }
-            }
-          }
         }
       }
 
@@ -670,6 +664,10 @@ main {
                 color: tomato;
               }
             }
+
+            @media screen and (max-width: 600px) {
+              width: 90%;
+            }
           }
         }
       }
@@ -694,18 +692,18 @@ main {
       padding: 20px;
       text-transform: uppercase;
       text-align: center;
-
-      @media screen and (max-width:600px) {
-        font-size: 30px;
-      }
     }
 
     h3 {
       text-align: center;
       text-transform: capitalize;
-      color: rgba(255, 99, 71, 0.74);
+      color: tomato;
       padding: 10px;
+      padding: 5px;
       font-size: 19px;
+      width: fit-content;
+      margin: 0 auto;
+      border: 1px solid rgba(255, 99, 71, 0.86);
     }
 
     .swiper {
@@ -743,6 +741,16 @@ main {
             height: auto;
             object-fit: cover;
 
+          }
+
+          @media screen and (max-width: 400px) {
+            width: 200px;
+            height: 200px;
+
+            @media screen and (max-width: 300px) {
+              width: 130px;
+              height: 130px;
+            }
           }
         }
 
