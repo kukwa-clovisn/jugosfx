@@ -1000,6 +1000,33 @@ main {
       text-align: center;
       color: white;
     }
+
+    .btns {
+      width: fit-content;
+      height: fit-content;
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background: white;
+        width: max-content;
+        height: 45px;
+        border-radius: 3px;
+        text-decoration: none;
+        text-transform: capitalize;
+        color: $sub-col;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+      }
+    }
   }
 }
 

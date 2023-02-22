@@ -830,6 +830,31 @@ main .contact h3 {
   text-align: center;
   color: white;
 }
+main .contact .btns {
+  width: fit-content;
+  height: fit-content;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .contact .btns a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  width: max-content;
+  height: 45px;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgb(247, 150, 35);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
 
 @keyframes swirl {
   to {
