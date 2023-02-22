@@ -6,10 +6,6 @@ body {
   scroll-behavior: smooth;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   overflow: hidden;
   overflow-y: scroll;
@@ -59,6 +55,7 @@ header {
   height: 20vh;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 header .header-wrapper {
   width: 100%;
@@ -128,20 +125,12 @@ header .header-wrapper .bottom-header .logo {
   font-weight: 800;
   color: rgb(45, 59, 75);
 }
-@media screen and (max-width: 430px) {
-  header .header-wrapper .bottom-header .logo {
-    font-size: 20px;
-  }
-}
 header .header-wrapper .bottom-header .header-routes {
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-header .header-wrapper .bottom-header .header-routes:last-child {
-  width: 20%;
 }
 header .header-wrapper .bottom-header .header-routes .route {
   text-decoration: none;
@@ -151,6 +140,9 @@ header .header-wrapper .bottom-header .header-routes .route {
 }
 header .header-wrapper .bottom-header .header-routes .route:hover {
   color: tomato;
+}
+header .header-wrapper .bottom-header .header-routes.small {
+  width: 10%;
 }
 @media screen and (max-width: 800px) {
   header .header-wrapper .bottom-header .logo {
@@ -165,7 +157,7 @@ header .header-wrapper .bottom-header .header-routes .route:hover {
     font-size: 25px;
   }
   header .header-wrapper .bottom-header .header-routes .route {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 

@@ -118,11 +118,6 @@ main .main-wrapper .card .header h1 a {
   color: inherit;
   font: 700 33px "Nunito Sans", "Comic Neue", sans-serif;
 }
-@media screen and (max-width: 400px) {
-  main .main-wrapper .card .header h1 a {
-    font-size: 24px;
-  }
-}
 main .main-wrapper .card .header h1::before {
   content: "";
   width: 100%;
@@ -504,6 +499,14 @@ main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 1000px) and (max-width: 600px) {
+  main #about .about-wrapper .text-wrapper h2 {
+    font-size: 23px;
+  }
+  main #about .about-wrapper .text-wrapper h2 span {
+    font-size: 30px;
+  }
+}
 main #about .about-wrapper .image-wrapper {
   width: 35%;
   height: fit-content;
@@ -574,11 +577,6 @@ main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
   background: white;
   color: tomato;
 }
-@media screen and (max-width: 600px) {
-  main #about .about-wrapper-2 .text-wrapper .btns a {
-    width: 90%;
-  }
-}
 main #about .about-wrapper-2 .image-wrapper {
   width: 40%;
 }
@@ -596,16 +594,17 @@ main #testimonials h1 {
   text-transform: uppercase;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  main #testimonials h1 {
+    font-size: 30px;
+  }
+}
 main #testimonials h3 {
   text-align: center;
   text-transform: capitalize;
-  color: tomato;
+  color: rgba(255, 99, 71, 0.74);
   padding: 10px;
-  padding: 5px;
   font-size: 19px;
-  width: fit-content;
-  margin: 0 auto;
-  border: 1px solid rgba(255, 99, 71, 0.86);
 }
 main #testimonials .swiper {
   width: 80%;
@@ -637,18 +636,6 @@ main #testimonials .swiper .swiper-wrapper .img img {
   width: 100%;
   height: auto;
   object-fit: cover;
-}
-@media screen and (max-width: 400px) {
-  main #testimonials .swiper .swiper-wrapper .img {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media screen and (max-width: 400px) and (max-width: 300px) {
-  main #testimonials .swiper .swiper-wrapper .img {
-    width: 130px;
-    height: 130px;
-  }
 }
 main #testimonials .swiper .swiper-wrapper h1 {
   font-size: 23px;
