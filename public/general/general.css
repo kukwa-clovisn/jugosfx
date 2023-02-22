@@ -150,7 +150,7 @@ header .header-wrapper .bottom-header .header-routes .route {
   color: rgb(78, 132, 134);
 }
 header .header-wrapper .bottom-header .header-routes .route:hover {
-  color: tomato;
+  color: rgb(247, 150, 35);
 }
 header .header-wrapper .bottom-header .header-routes.small {
   width: 10%;
