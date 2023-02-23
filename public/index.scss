@@ -23,13 +23,9 @@ main {
     box-shadow: 0 3px 2px 1px #ececec;
 
     .card {
-      width: 95%;
-      min-height: 90vh;
+      height: fit-content;
       overflow-y: scroll;
-      background: #ececec;
-      background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
-      // box-shadow: 0 0 0.5px 0.5px #ececec, 10px 15px 16px rgba(70, 70, 70, 0.123);
-      border-radius: 3px;
+      // background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
       padding: 10px;
       padding-top: 30px;
       display: flex;
@@ -38,10 +34,13 @@ main {
       flex-direction: column;
       gap: 20px;
       position: relative;
+        width: 100%;
+        height: fit-content;
+        background: url(./assets\logo.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
 
-      .blur-wrapper {
-        display: none;
-      }
+     
 
       .header {
         width: 100%;
@@ -91,6 +90,7 @@ main {
             background: rgb(238, 242, 242);
             animation: swirl 7s infinite linear alternate forwards;
             border-left: 4px solid $tertiary-col;
+            display:none;
           }
         }
 
@@ -115,18 +115,23 @@ main {
         margin: 10px auto;
         position: relative;
 
+        
         button {
-          width: 150px;
-          height: 70px;
-          border: 9px solid #ececec;
-          background: #ececec;
-          margin: 10px;
-          transition: all 0.3s ease;
+          border: none;
+           width: max-content;
+           height: 50px;
+           padding: 10px 20px;
+              transition: all 0.3s ease;
+            margin:15px;
+                  
+         
+        
 
           a {
             width: 100%;
             height: 100%;
             display: flex;
+            padding:10px;
             justify-content: center;
             align-items: center;
             text-decoration: none;
@@ -134,14 +139,13 @@ main {
             text-transform: capitalize;
             font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
             color: white;
+           
           }
 
           &:hover {
             transform: scale(1.1);
             background: #ececec;
             border-radius: 50px;
-            box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
-              10px 10px 15px rgba(70, 70, 70, 0.123);
 
             a {
               color: $sub-col;
@@ -187,7 +191,7 @@ main {
           border-radius: 100%;
           border: none;
           margin: 10px;
-          box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+          box-shadow: -10px -10px 15px $tertiary-col,
             10px 10px 15px rgba(70, 70, 70, 0.123);
 
           a {
@@ -211,7 +215,7 @@ main {
       @media screen and (max-width: 800px) {
         width: 100%;
         height: fit-content;
-        background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
+        background: url(./assets\logo.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
 
@@ -567,6 +571,11 @@ main {
                 color: white;
               }
             }
+
+            @media screen and (max-width:500px){
+              width:85%;
+              padding:10px 15px;
+            }
           }
         }
 
@@ -595,6 +604,13 @@ main {
 
               span {
                 font-size: 30px;
+              }
+
+              @media screen and (max-width:430px){
+                font-size:19px;
+                span{
+                  font-size:24px;
+                }
               }
             }
           }
@@ -667,6 +683,7 @@ main {
 
         .btns {
           a {
+            width:200px;
             background: transparent;
             color: white;
             border: 1px solid rgb(235, 234, 234);
@@ -685,6 +702,10 @@ main {
                 background: $sub-col;
                 color: white;
               }
+            }
+
+            @media screen and (max-width:500px){ 
+              width:85%;
             }
           }
         }
@@ -764,32 +785,49 @@ main {
 
           background: linear-gradient(to bottom left, $tertiary-col, $secondary-col, $primary-col);
 
+          .info{
+            width:100%;
+            height:fit-content;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            gap:10px;
+            flex-wrap:wrap;
+            .img {
+              width: 300px;
+              height: 300px;
+              border-radius: 30px;
+              overflow: hidden;
+              border: 5px solid #ececec;
+
+              img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+
+              } 
+              @media screen and (max-width:768px){ 
+                width:200px;
+                height:200px;
+
+                @media screen and (max-width:430px){
+                  width:150px;
+                  height:150px;
+                }
+              }
         }
-
-        .img {
-          width: 300px;
-          height: 300px;
-          border-radius: 30px;
-          overflow: hidden;
-          margin: 10px auto;
-          border: 5px solid #ececec;
-
-          img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-
-          }
-        }
-
+            .info-wrapper{ 
+              width:fit-content;
         h1 {
-          font-size: 23px;
+          font-size: 30px;
           font-family: "Nunito Sans", sans-serif;
           color: white;
         }
 
         p {
-
+          width:90%;
+          margin:5px auto;
+          white-space:wrap;
           font-size: 17px;
           text-align: center;
           font-family: "Nunito Sans", sans-serif;
@@ -797,6 +835,13 @@ main {
           font-weight: 600;
           text-transform: capitalize;
         }
+
+            }
+          }
+
+        }
+
+     
 
         .feedback {
           width: 90%;
@@ -813,6 +858,14 @@ main {
             font-weight: 500;
             width: 95%;
             margin: 5px auto;
+            color:whitesmoke;
+          }
+          @media screen and (max-width:500px){
+            width:96%;
+            padding:0;
+            p{ 
+              padding:10px;
+            }
           }
         }
 
@@ -880,7 +933,7 @@ main {
       margin: 10px auto;
 
       .service-content {
-        width: 30%;
+        width: 300px;
         height: fit-content;
         display: flex;
         justify-content: center;
@@ -900,6 +953,7 @@ main {
           color: $primary-col;
           font-family: 'Montserrat', sans-serif;
           font-weight: 800;
+          text-align:center;
         }
 
         .icon {
@@ -937,45 +991,13 @@ main {
 
       }
 
-      @media screen and (max-width:700px) {
+      @media screen and (max-width:768px) {
 
         .service-content {
-          width: 90%;
+          width: 85%;
           min-height: 200px;
-          border-radius: 5px;
-          padding: 20px 10px;
-          margin: 20px auto;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 7px;
-          flex-direction: column;
-          background: linear-gradient(to bottom right, $tertiary-col, $secondary-col, $primary-col);
+      
 
-
-          h2 {
-            padding: 10px;
-            text-transform: uppercase;
-            font-family: "Poppins", sans-serif;
-            color: white;
-          }
-
-          p {
-            color: rgb(228, 227, 227);
-          }
-
-          .button {
-            width: 60%;
-            height: 40px;
-            border-radius: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            text-transform: capitalize;
-            background: rgb(224, 224, 224);
-            padding: 10px;
-          }
         }
       }
 
@@ -1000,7 +1022,7 @@ main {
 
   .contact {
     width: 100vw;
-    height: 40vh;
+    min-height: 40vh;
     padding: 20px;
     margin: 20px auto;
     background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));

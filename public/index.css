@@ -10,16 +10,12 @@ main .main-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
+  background: linear-gradient(to top, #ececec, #f0f5f6);
   box-shadow: 0 3px 2px 1px #ececec;
 }
 main .main-wrapper .card {
-  width: 95%;
-  min-height: 90vh;
+  height: fit-content;
   overflow-y: scroll;
-  background: #ececec;
-  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
-  border-radius: 3px;
   padding: 10px;
   padding-top: 30px;
   display: flex;
@@ -28,9 +24,11 @@ main .main-wrapper .card {
   flex-direction: column;
   gap: 20px;
   position: relative;
-}
-main .main-wrapper .card .blur-wrapper {
-  display: none;
+  width: 100%;
+  height: fit-content;
+  background: url(./assets\logo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .main-wrapper .card .header {
   width: 100%;
@@ -53,7 +51,7 @@ main .main-wrapper .card .header .logo img {
 }
 main .main-wrapper .card .header h1 {
   text-align: center;
-  color: rgb(55, 103, 103);
+  color: #376767;
   padding: 10px;
   width: fit-content;
   background: inherit;
@@ -74,9 +72,10 @@ main .main-wrapper .card .header h1::before {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgb(238, 242, 242);
+  background: #eef2f2;
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid rgb(78, 132, 134);
+  border-left: 4px solid #4e8486;
+  display: none;
 }
 main .main-wrapper .card .header p {
   width: 90%;
@@ -84,7 +83,7 @@ main .main-wrapper .card .header p {
   text-align: center;
   position: relative;
   padding: 5px;
-  color: rgb(14, 44, 38);
+  color: #0e2c26;
   font-size: 14px;
 }
 main .main-wrapper .card .btns {
@@ -98,17 +97,18 @@ main .main-wrapper .card .btns {
   position: relative;
 }
 main .main-wrapper .card .btns button {
-  width: 150px;
-  height: 70px;
-  border: 9px solid #ececec;
-  background: #ececec;
-  margin: 10px;
+  border: none;
+  width: max-content;
+  height: 50px;
+  padding: 10px 20px;
   transition: all 0.3s ease;
+  margin: 15px;
 }
 main .main-wrapper .card .btns button a {
   width: 100%;
   height: 100%;
   display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -121,10 +121,9 @@ main .main-wrapper .card .btns button:hover {
   transform: scale(1.1);
   background: #ececec;
   border-radius: 50px;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
 }
 main .main-wrapper .card .btns button:hover a {
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main .main-wrapper .card .btns button:active {
   transform: scale(0.8);
@@ -135,16 +134,16 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: rgb(202, 113, 4);
+  background: #ca7104;
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
   padding: 0 15px;
-  background: linear-gradient(to bottom right, rgb(14, 44, 38), rgb(78, 132, 134));
+  background: linear-gradient(to bottom right, #0e2c26, #4e8486);
   border-radius: 30px;
 }
 main .main-wrapper .card .btns .btn-large:hover a {
-  color: rgb(14, 44, 38);
+  color: #0e2c26;
 }
 main .main-wrapper .card .media {
   width: fit-content;
@@ -158,24 +157,24 @@ main .main-wrapper .card .media button {
   border-radius: 100%;
   border: none;
   margin: 10px;
-  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.123);
+  box-shadow: -10px -10px 15px #4e8486, 10px 10px 15px rgba(70, 70, 70, 0.123);
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
-  color: rgb(14, 44, 38);
+  color: #0e2c26;
 }
 main .main-wrapper .card .media button a i:hover {
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main .main-wrapper .card .media button .beamerTrigger i {
-  color: rgb(7, 225, 7);
-  color: rgb(247, 150, 35);
+  color: #07e107;
+  color: #f79623;
 }
 @media screen and (max-width: 800px) {
   main .main-wrapper .card {
     width: 100%;
     height: fit-content;
-    background: url(./assets/WhatsApp\ Image\ 2022-07-10\ at\ 11.40.48\ PM.jpeg);
+    background: url(./assets\logo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -192,7 +191,7 @@ main .main-wrapper .card .media button .beamerTrigger i {
     display: none;
   }
   main .main-wrapper .card .header p {
-    color: rgb(219, 215, 215);
+    color: #dbd7d7;
   }
   main .main-wrapper .card .btns button {
     border: none;
@@ -217,12 +216,12 @@ main .main-wrapper .share-btn {
   color: white;
 }
 main .main-wrapper .share-btn .st-total span {
-  color: rgb(55, 103, 103);
+  color: #376767;
   font-size: 15px;
 }
 main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
   border-radius: 10%;
-  background: rgb(247, 150, 35);
+  background: #f79623;
 }
 main .main-wrapper .animations-2 {
   width: auto;
@@ -242,7 +241,7 @@ main .main-wrapper canvas {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: rgb(247, 150, 35);
+  background: #f79623;
   position: absolute;
   bottom: 0;
 }
@@ -260,35 +259,35 @@ main .main-wrapper .c4 {
 }
 main .main-wrapper .b1 {
   animation: b1 5s infinite linear alternate forwards;
-  background: rgb(247, 150, 35);
+  background: #f79623;
 }
 main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
-  background: rgb(149, 208, 58);
+  background: #95d03a;
 }
 main .main-wrapper .b3 {
   animation: b3 5s infinite linear alternate forwards;
-  background: rgb(5, 153, 241);
+  background: #0599f1;
 }
 main .main-wrapper .b4 {
   animation: b4 5s infinite linear alternate forwards;
-  background: rgb(50, 62, 76);
+  background: #323e4c;
 }
 main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
-  background: rgb(247, 150, 35);
+  background: #f79623;
 }
 main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
-  background: rgb(149, 208, 58);
+  background: #95d03a;
 }
 main .main-wrapper .c3 {
   animation: c3 5s infinite linear alternate forwards;
-  background: rgb(5, 153, 241);
+  background: #0599f1;
 }
 main .main-wrapper .c4 {
   animation: c4 5s infinite linear alternate forwards;
-  background: rgb(50, 62, 76);
+  background: #323e4c;
 }
 @keyframes b1 {
   to {
@@ -352,7 +351,7 @@ main .main-wrapper .c4 {
     flex-direction: column;
   }
   main .main-wrapper .main-wrapper .landing-page,
-  main .main-wrapper .main-wrapper .card {
+main .main-wrapper .main-wrapper .card {
     width: 100%;
   }
   main .main-wrapper .main-wrapper .landing-page {
@@ -374,7 +373,7 @@ main #about {
   width: 100vw;
   height: fit-content;
   background: #ececec;
-  background: rgb(240, 245, 246);
+  background: #f0f5f6;
 }
 main #about .about-wrapper {
   width: 95%;
@@ -393,7 +392,7 @@ main #about .about-wrapper .blur-wrapper {
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper .blur-wrapper {
     display: block;
-    background: rgb(31, 38, 48);
+    background: #1f2630;
   }
 }
 main #about .about-wrapper .text-wrapper {
@@ -420,13 +419,13 @@ main #about .about-wrapper .text-wrapper h2 span {
   font-size: 60px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  color: rgb(247, 150, 35);
+  color: #f79623;
   text-transform: uppercase;
 }
 main #about .about-wrapper .text-wrapper h3 {
   font-size: 20px;
   padding: 10px;
-  color: rgb(247, 150, 35);
+  color: #f79623;
   text-transform: capitalize;
   font-weight: 500;
 }
@@ -452,7 +451,7 @@ main #about .about-wrapper .text-wrapper .btns a {
   margin: 10px;
   width: fit-content;
   height: 50px;
-  background: rgb(247, 150, 35);
+  background: #f79623;
   color: white;
   border-radius: 4px;
   text-transform: capitalize;
@@ -460,17 +459,23 @@ main #about .about-wrapper .text-wrapper .btns a {
 }
 main #about .about-wrapper .text-wrapper .btns a:hover {
   background: transparent;
-  color: rgb(247, 150, 35);
-  border: 1px solid rgb(247, 150, 35);
+  color: #f79623;
+  border: 1px solid #f79623;
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child {
   background: transparent;
-  border: 1px solid rgb(247, 150, 35);
-  color: rgb(247, 150, 35);
+  border: 1px solid #f79623;
+  color: #f79623;
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
-  background: rgb(247, 150, 35);
+  background: #f79623;
   color: white;
+}
+@media screen and (max-width: 500px) {
+  main #about .about-wrapper .text-wrapper .btns a {
+    width: 85%;
+    padding: 10px 15px;
+  }
 }
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper .text-wrapper {
@@ -495,6 +500,14 @@ main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
   }
   main #about .about-wrapper .text-wrapper h2 span {
     font-size: 30px;
+  }
+}
+@media screen and (max-width: 1000px) and (max-width: 600px) and (max-width: 430px) {
+  main #about .about-wrapper .text-wrapper h2 {
+    font-size: 19px;
+  }
+  main #about .about-wrapper .text-wrapper h2 span {
+    font-size: 24px;
   }
 }
 main #about .about-wrapper .image-wrapper {
@@ -531,7 +544,7 @@ main #about .about-wrapper .image-wrapper .img img {
 main #about .about-wrapper-2 {
   align-items: center;
   background: rgba(255, 99, 71, 0.808);
-  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+  background: linear-gradient(to bottom right, #4e8486, #376767, #0e2c26);
   width: 100%;
 }
 main #about .about-wrapper-2 .text-wrapper {
@@ -541,37 +554,43 @@ main #about .about-wrapper-2 .text-wrapper h2 {
   color: white;
 }
 main #about .about-wrapper-2 .text-wrapper h2 span {
-  color: rgb(247, 150, 35);
+  color: #f79623;
   font-family: "Comic Neue", sans-serif;
 }
 main #about .about-wrapper-2 .text-wrapper h3 {
-  color: rgb(231, 231, 231);
+  color: #e7e7e7;
 }
 main #about .about-wrapper-2 .text-wrapper p {
-  color: rgb(180, 180, 180);
+  color: #b4b4b4;
 }
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper-2 .text-wrapper p {
-    color: rgb(218, 218, 218);
+    color: #dadada;
   }
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
+  width: 200px;
   background: transparent;
   color: white;
-  border: 1px solid rgb(235, 234, 234);
+  border: 1px solid #ebeaea;
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:hover {
   background: white;
   border: 1px solid #dbdbdb;
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child {
-  border: 1px solid rgb(247, 150, 35);
-  color: rgb(247, 150, 35);
+  border: 1px solid #f79623;
+  color: #f79623;
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
-  background: rgb(247, 150, 35);
+  background: #f79623;
   color: white;
+}
+@media screen and (max-width: 500px) {
+  main #about .about-wrapper-2 .text-wrapper .btns a {
+    width: 85%;
+  }
 }
 main #about .about-wrapper-2 .image-wrapper {
   width: 40%;
@@ -614,7 +633,7 @@ main #testimonials h1 {
 main #testimonials h3 {
   text-align: center;
   text-transform: capitalize;
-  color: rgb(247, 150, 35);
+  color: #f79623;
   padding: 10px;
   font-size: 19px;
 }
@@ -633,31 +652,57 @@ main #testimonials .swiper .swiper-wrapper .swiper-slide-active {
   height: 100%;
   border-radius: 5px;
   padding: 20px 10px;
-  background: linear-gradient(to bottom left, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+  background: linear-gradient(to bottom left, #4e8486, #376767, #0e2c26);
 }
-main #testimonials .swiper .swiper-wrapper .img {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
   width: 300px;
   height: 300px;
   border-radius: 30px;
   overflow: hidden;
-  margin: 10px auto;
   border: 5px solid #ececec;
 }
-main #testimonials .swiper .swiper-wrapper .img img {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
-main #testimonials .swiper .swiper-wrapper h1 {
-  font-size: 23px;
+@media screen and (max-width: 768px) {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 430px) {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
+    width: 150px;
+    height: 150px;
+  }
+}
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper {
+  width: fit-content;
+}
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper h1 {
+  font-size: 30px;
   font-family: "Nunito Sans", sans-serif;
   color: white;
 }
-main #testimonials .swiper .swiper-wrapper p {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper p {
+  width: 90%;
+  margin: 5px auto;
+  white-space: wrap;
   font-size: 17px;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
-  color: rgb(211, 209, 209);
+  color: #d3d1d1;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -676,10 +721,20 @@ main #testimonials .swiper .swiper-wrapper .feedback p {
   font-weight: 500;
   width: 95%;
   margin: 5px auto;
+  color: whitesmoke;
+}
+@media screen and (max-width: 500px) {
+  main #testimonials .swiper .swiper-wrapper .feedback {
+    width: 96%;
+    padding: 0;
+  }
+  main #testimonials .swiper .swiper-wrapper .feedback p {
+    padding: 10px;
+  }
 }
 main #testimonials .swiper .swiper-button-next::after,
 main #testimonials .swiper .swiper-button-prev::after {
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main #testimonials .swiper .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 5%);
@@ -688,12 +743,12 @@ main #testimonials .swiper .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, 5%);
 }
 main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: rgb(247, 150, 35);
+  background: #f79623;
   border-radius: 30px;
   padding: 20px auto;
 }
 main #testimonials .swiper .swiper-pagination-progressbar {
-  background: rgb(78, 132, 134);
+  background: #4e8486;
 }
 @media screen and (max-width: 700px) {
   main #testimonials .swiper {
@@ -728,7 +783,7 @@ main #services .service-wrapper {
   margin: 10px auto;
 }
 main #services .service-wrapper .service-content {
-  width: 30%;
+  width: 300px;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -736,7 +791,7 @@ main #services .service-wrapper .service-content {
   gap: 10px;
   flex-direction: column;
   background: white;
-  box-shadow: 0 0 1px 1px rgb(247, 150, 35);
+  box-shadow: 0 0 1px 1px #f79623;
   border-radius: 4px;
   padding: 25px 10px;
   margin: 25px auto;
@@ -745,14 +800,15 @@ main #services .service-wrapper .service-content h2 {
   padding: 10px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: rgb(14, 44, 38);
+  color: #0e2c26;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
+  text-align: center;
 }
 main #services .service-wrapper .service-content .icon {
   width: 60px;
   height: 60px;
-  border: 3px solid rgb(247, 150, 35);
+  border: 3px solid #f79623;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -760,10 +816,10 @@ main #services .service-wrapper .service-content .icon {
 }
 main #services .service-wrapper .service-content .icon i {
   font-size: 25px;
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main #services .service-wrapper .service-content p {
-  color: rgb(49, 49, 49);
+  color: #313131;
 }
 main #services .service-wrapper .service-content .button {
   width: 60%;
@@ -774,43 +830,13 @@ main #services .service-wrapper .service-content .button {
   align-items: center;
   text-decoration: none;
   text-transform: capitalize;
-  border: 1px solid rgb(247, 150, 35);
+  border: 1px solid #f79623;
   padding: 10px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   main #services .service-wrapper .service-content {
-    width: 90%;
+    width: 85%;
     min-height: 200px;
-    border-radius: 5px;
-    padding: 20px 10px;
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-    flex-direction: column;
-    background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
-  }
-  main #services .service-wrapper .service-content h2 {
-    padding: 10px;
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  main #services .service-wrapper .service-content p {
-    color: rgb(228, 227, 227);
-  }
-  main #services .service-wrapper .service-content .button {
-    width: 60%;
-    height: 40px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    text-transform: capitalize;
-    background: rgb(224, 224, 224);
-    padding: 10px;
   }
 }
 main #services .contact-btn {
@@ -822,17 +848,17 @@ main #services .contact-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(247, 150, 35);
+  background: #f79623;
   color: white;
   text-transform: capitalize;
   padding: 20px;
 }
 main .contact {
   width: 100vw;
-  height: 40vh;
+  min-height: 40vh;
   padding: 20px;
   margin: 20px auto;
-  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
+  background: linear-gradient(to bottom right, #4e8486, #376767, #0e2c26);
 }
 main .contact h1 {
   color: white;
@@ -844,7 +870,7 @@ main .contact h1 {
 main .contact h3 {
   font-size: 30px;
   text-align: center;
-  color: rgb(236, 236, 236);
+  color: #ececec;
   padding: 10px;
   font-family: "Montsarret", sans-serif;
 }
@@ -869,16 +895,16 @@ main .contact .btns a {
   border-radius: 3px;
   text-decoration: none;
   text-transform: capitalize;
-  color: rgb(247, 150, 35);
+  color: #f79623;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   gap: 10px;
 }
 main .contact .btns a i {
-  color: rgb(247, 150, 35);
+  color: #f79623;
 }
 main .contact .btns a:last-child {
-  background: rgb(247, 150, 35);
+  background: #f79623;
   color: white;
 }
 main .contact .btns a:last-child i {
@@ -887,7 +913,7 @@ main .contact .btns a:last-child i {
 main footer {
   width: 100vw;
   height: 30vh;
-  background: linear-gradient(to top left, rgb(14, 44, 38), rgb(55, 103, 103), rgb(78, 132, 134));
+  background: linear-gradient(to top left, #0e2c26, #376767, #4e8486);
 }
 
 @keyframes swirl {
