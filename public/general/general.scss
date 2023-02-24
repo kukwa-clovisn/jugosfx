@@ -266,12 +266,21 @@ header {
                                 font-size: 190%;
                             }
                         }
+
+                        #menu-close-btn {
+                            display: none;
+
+                            i {
+                                color: $sub-col;
+                            }
+
+                        }
                     }
                 }
             }
         }
 
-        .menu-header {
+        #menu-header {
             width: 100%;
             height: fit-content;
             padding: 10px;
@@ -279,6 +288,7 @@ header {
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            display: none;
 
             .header-routes {
                 width: 100%;
@@ -304,6 +314,10 @@ header {
 
                 }
             }
+        }
+
+        #menu-header.show {
+            display: flex;
         }
     }
 }
@@ -585,7 +599,6 @@ header {
         @media screen and (max-width: 800px) {
             width: 100%;
             height: fit-content;
-            background: url(./assets\logo.jpeg);
             background-repeat: no-repeat;
             background-size: cover;
 

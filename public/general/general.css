@@ -226,8 +226,14 @@ header .header-wrapper .bottom-header .menu-wrapper {
   header .header-wrapper .bottom-header .menu-wrapper button i {
     font-size: 190%;
   }
+  header .header-wrapper .bottom-header .menu-wrapper #menu-close-btn {
+    display: none;
+  }
+  header .header-wrapper .bottom-header .menu-wrapper #menu-close-btn i {
+    color: rgb(247, 150, 35);
+  }
 }
-header .header-wrapper .menu-header {
+header .header-wrapper #menu-header {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -236,8 +242,9 @@ header .header-wrapper .menu-header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  display: none;
 }
-header .header-wrapper .menu-header .header-routes {
+header .header-wrapper #menu-header .header-routes {
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
@@ -247,7 +254,7 @@ header .header-wrapper .menu-header .header-routes {
   flex-wrap: wrap;
   gap: 10px;
 }
-header .header-wrapper .menu-header .header-routes .route {
+header .header-wrapper #menu-header .header-routes .route {
   width: -moz-max-content;
   width: max-content;
   height: -moz-max-content;
@@ -258,8 +265,11 @@ header .header-wrapper .menu-header .header-routes .route {
   font-weight: 600;
   color: rgb(78, 132, 134);
 }
-header .header-wrapper .menu-header .header-routes .route:hover {
+header .header-wrapper #menu-header .header-routes .route:hover {
   color: rgb(247, 150, 35);
+}
+header .header-wrapper #menu-header.show {
+  display: flex;
 }
 
 .main-wrapper {
@@ -505,7 +515,6 @@ header .header-wrapper .menu-header .header-routes .route:hover {
     width: 100%;
     height: -moz-fit-content;
     height: fit-content;
-    background: url(./assetslogo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
   }

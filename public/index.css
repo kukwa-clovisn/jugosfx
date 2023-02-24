@@ -377,6 +377,44 @@ main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide.swiper-slide-a
   text-align: center;
   text-transform: capitalize;
 }
+main #about #about-fx .join-community {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px;
+  border-radius: 3px;
+  margin: 20px auto;
+  background: rgb(202, 113, 4);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+main #about #about-fx .join-community i {
+  color: white;
+  padding: 0 5px;
+  font-size: 1.2em;
+}
+main #about #about-fx .join-community:hover {
+  background: rgb(55, 103, 103);
+}
+main #about #about-fx .join-community:hover::before {
+  content: "⇨";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(14, 44, 38);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: background_slideX 1s 1 alternate forwards;
+}
 main #testimonials {
   width: 100%;
   height: -moz-fit-content;
