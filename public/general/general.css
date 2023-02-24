@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html,
@@ -58,6 +59,31 @@ h1 {
   font-weight: 800;
 }
 
+@keyframes background_swirl {
+  from {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes background_slideX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+@keyframes background_slideY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110%);
+  }
+}
 header {
   width: 100vw;
   height: 20vh;
@@ -198,5 +224,437 @@ header .header-wrapper .bottom-header .menu-wrapper {
   }
   header .header-wrapper .bottom-header .menu-wrapper button i {
     font-size: 190%;
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
+  box-shadow: 0 3px 2px 1px #ececec;
+}
+.main-wrapper .card {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: scroll;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7icpTaeXGgfOfADQABpDsPhxUZqXuLih6rw&usqp=CAU);
+  padding: 20px 10px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-wrapper .card .header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px auto;
+  position: relative;
+}
+.main-wrapper .card .header h1 {
+  text-align: center;
+  color: rgb(55, 103, 103);
+  color: white;
+  padding: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: inherit;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+.main-wrapper .card .header h1 a {
+  text-decoration: none;
+  color: inherit;
+  font: 700 70px "Montserrat", "Nunito Sans", "Comic Neue", sans-serif;
+}
+.main-wrapper .card .header h1 a span {
+  color: rgb(247, 150, 35);
+}
+.main-wrapper .card .header h1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(238, 242, 242);
+  animation: swirl 7s infinite linear alternate forwards;
+  border-left: 4px solid rgb(78, 132, 134);
+  display: none;
+}
+.main-wrapper .card .header p {
+  width: 90%;
+  margin: 5px auto;
+  text-align: center;
+  position: relative;
+  padding: 5px;
+  color: rgb(14, 44, 38);
+  color: white;
+  font-size: 14px;
+}
+.main-wrapper .card .to-academy {
+  width: 260px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin: 20px auto;
+  text-decoration: none;
+  background: rgb(247, 150, 35);
+  border: 2px solid rgb(250, 236, 199);
+  color: white;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.main-wrapper .card .to-academy:hover {
+  border: rgb(247, 150, 35);
+}
+.main-wrapper .card .to-academy:hover::before {
+  content: "lets go ⇨";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(14, 44, 38);
+  animation: background_swirl 1s 1 alternate forwards;
+}
+.main-wrapper .card .btns {
+  width: 96%;
+  min-height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  position: relative;
+}
+.main-wrapper .card .btns button {
+  border: none;
+  width: -moz-max-content;
+  width: max-content;
+  height: 50px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  margin: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.main-wrapper .card .btns button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: transparent;
+  text-transform: capitalize;
+  font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
+  color: white;
+  position: relative;
+}
+.main-wrapper .card .btns button:hover {
+  transform: scale(1.1);
+  background: #ececec;
+  border-radius: 50px;
+}
+.main-wrapper .card .btns button:hover a {
+  color: rgb(247, 150, 35);
+}
+.main-wrapper .card .btns button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(14, 44, 38);
+  animation: background_slideX 2s 1 alternate forwards;
+}
+.main-wrapper .card .btns button:active {
+  transform: scale(0.8);
+}
+.main-wrapper .card .btns .btn-1,
+.main-wrapper .card .btns .btn-2 {
+  border-radius: 30px;
+}
+.main-wrapper .card .btns .btn-1,
+.main-wrapper .card .btns .btn-2 {
+  background: rgb(247, 150, 35);
+}
+.main-wrapper .card .btns .btn-1:hover::before,
+.main-wrapper .card .btns .btn-2:hover::before {
+  background: rgb(247, 150, 35);
+}
+.main-wrapper .card .btns .btn-large {
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 15px;
+  background: linear-gradient(to bottom right, rgb(14, 44, 38), rgb(78, 132, 134));
+  border-radius: 30px;
+}
+.main-wrapper .card .btns .btn-large:hover a {
+  color: rgb(14, 44, 38);
+}
+.main-wrapper .card .media {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-height: 15%;
+  margin: auto;
+  position: relative;
+}
+.main-wrapper .card .media button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  margin: 10px;
+  box-shadow: -10px -10px 15px rgb(78, 132, 134), 10px 10px 15px rgba(70, 70, 70, 0.123);
+  position: relative;
+  overflow: hidden;
+}
+.main-wrapper .card .media button a i {
+  font-size: 25px;
+  color: rgb(14, 44, 38);
+}
+.main-wrapper .card .media button a i:hover {
+  color: rgb(247, 150, 35);
+}
+.main-wrapper .card .media button .beamerTrigger i {
+  color: rgb(7, 225, 7);
+  color: rgb(247, 150, 35);
+}
+.main-wrapper .card .media button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(55, 103, 103);
+  animation: background_slideX 1s 1 alternate forwards;
+}
+@media screen and (max-width: 800px) {
+  .main-wrapper .card {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    background: url(./assetslogo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .main-wrapper .card .blur-wrapper {
+    display: block;
+    opacity: 0.7;
+  }
+  .main-wrapper .card .header h1 {
+    background: inherit;
+    color: white;
+  }
+  .main-wrapper .card .header h1::before {
+    background: inherit;
+    display: none;
+  }
+  .main-wrapper .card .header p {
+    color: rgb(219, 215, 215);
+  }
+  .main-wrapper .card .btns button {
+    border: none;
+    width: -moz-max-content;
+    width: max-content;
+    height: 45px;
+    padding: 10px 20px;
+  }
+  .main-wrapper .card .btns button a {
+    padding: 10px;
+  }
+  .main-wrapper .card .btns button:hover {
+    box-shadow: none;
+  }
+  .main-wrapper .card .media button {
+    box-shadow: none;
+  }
+}
+.main-wrapper .share-btn {
+  position: absolute;
+  right: 5%;
+  top: 1%;
+  color: white;
+}
+.main-wrapper .share-btn .st-total span {
+  color: rgb(247, 150, 35);
+  font-size: 15px;
+}
+.main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
+  border-radius: 10%;
+  background: rgb(247, 150, 35);
+}
+.main-wrapper .animations-2 {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-wrapper .animations-1 {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.main-wrapper canvas {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: rgb(247, 150, 35);
+  position: absolute;
+  bottom: 0;
+}
+.main-wrapper .b1,
+.main-wrapper .b2,
+.main-wrapper .b3,
+.main-wrapper .b4 {
+  left: 0;
+}
+.main-wrapper .c1,
+.main-wrapper .c2,
+.main-wrapper .c3,
+.main-wrapper .c4 {
+  right: 0;
+}
+.main-wrapper .b1 {
+  animation: b1 5s infinite linear alternate forwards;
+  background: rgb(247, 150, 35);
+}
+.main-wrapper .b2 {
+  animation: b2 5s infinite linear alternate forwards;
+  background: rgb(149, 208, 58);
+}
+.main-wrapper .b3 {
+  animation: b3 5s infinite linear alternate forwards;
+  background: rgb(5, 153, 241);
+}
+.main-wrapper .b4 {
+  animation: b4 5s infinite linear alternate forwards;
+  background: rgb(50, 62, 76);
+}
+.main-wrapper .c1 {
+  animation: c1 5s infinite linear alternate forwards;
+  background: rgb(247, 150, 35);
+}
+.main-wrapper .c2 {
+  animation: c2 5s infinite linear alternate forwards;
+  background: rgb(149, 208, 58);
+}
+.main-wrapper .c3 {
+  animation: c3 5s infinite linear alternate forwards;
+  background: rgb(5, 153, 241);
+}
+.main-wrapper .c4 {
+  animation: c4 5s infinite linear alternate forwards;
+  background: rgb(50, 62, 76);
+}
+@keyframes b1 {
+  to {
+    left: 5vw;
+    bottom: 20vh;
+  }
+}
+@keyframes b2 {
+  to {
+    left: 5vw;
+    bottom: 30;
+  }
+}
+@keyframes b3 {
+  to {
+    left: 5vw;
+    bottom: 40vh;
+  }
+}
+@keyframes b4 {
+  to {
+    left: 0;
+    bottom: 60vh;
+  }
+}
+@keyframes c1 {
+  to {
+    right: 5vw;
+    bottom: 20vh;
+  }
+}
+@keyframes c2 {
+  to {
+    right: 5vw;
+    bottom: 30;
+  }
+}
+@keyframes c3 {
+  to {
+    right: 5vw;
+    bottom: 40vh;
+  }
+}
+@keyframes c4 {
+  to {
+    right: 0;
+    bottom: 60vh;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main-wrapper .media {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main-wrapper .main-wrapper {
+    flex-direction: column;
+  }
+  .main-wrapper .main-wrapper .landing-page,
+  .main-wrapper .main-wrapper .card {
+    width: 100%;
+  }
+  .main-wrapper .main-wrapper .landing-page {
+    height: 70vh;
+  }
+  .main-wrapper .main-wrapper .landing-page.img {
+    justify-content: flex-start;
+  }
+  .main-wrapper .main-wrapper .landing-page .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main-wrapper .main-wrapper .card {
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }/*# sourceMappingURL=general.css.map */

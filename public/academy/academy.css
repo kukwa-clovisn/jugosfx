@@ -1,136 +1,57 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Grand+Hotel&family=Jacques+Francois&family=Jacques+Francois+Shadow&family=Noto+Sans:wght@100;300;400;600;700;900&family=Nunito+Sans:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .swiper {
   width: 100%;
-  height: 60vh;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
 }
 .swiper .swiper-wrapper {
   width: 100%;
-  height: 100%;
-  position: relative;
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.swiper .swiper-wrapper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  background: transparent;
+  border-radius: 100%;
+  color: rgb(247, 150, 35);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
-.swiper .swiper-wrapper .swiper-slide .img {
-  display: flex;
+.swiper .swiper-button-next:hover::before,
+.swiper .swiper-button-prev:hover::before {
+  content: "⇨";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-}
-.swiper .swiper-wrapper .swiper-slide .img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.swiper .swiper-wrapper .swiper-slide .slider-content {
-  position: relative;
-  width: 95%;
-  margin: 0 auto;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.swiper .swiper-wrapper .swiper-slide .slider-content h1 {
-  width: 85%;
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(14, 44, 38);
   color: white;
-  text-transform: uppercase;
-  word-spacing: 5px;
-  letter-spacing: 2px;
-  line-height: 80px;
-  font-size: 45px;
-  font-family: "Nunito Sans", sans-serif;
-  margin: 10px auto;
-}
-.swiper .swiper-wrapper .swiper-slide .slider-content .route {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 300px;
-  height: 60px;
-  font-weight: 700;
-  background: linear-gradient(to top left, transparent, white, transparent);
-  margin: 20px auto;
-  color: rgb(36, 36, 48);
-}
-.swiper .swiper-wrapper .swiper-slide .slider-content .link {
-  text-decoration: none;
-  color: rgb(224, 222, 222);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px;
-  height: 35px;
-  font-size: 13px;
-  text-transform: capitalize;
-  margin: 10px auto;
-}
-.swiper .swiper-wrapper .swiper-slide .slider-content p {
-  color: #ececee;
-  text-transform: capitalize;
-  padding: 10px;
-  text-align: center;
-}
-.swiper .swiper-button-next,
-.swiper .swiper-button-prev {
-  position: absolute;
-  top: 90%;
-  left: 30%;
-  width: 50px;
-  height: 50px;
-  font-size: 10px;
-  background: linear-gradient(to top, transparent, white, transparent);
-  border-radius: 100%;
-  color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper .swiper-button-next i,
-.swiper .swiper-button-prev i {
-  color: rgb(51, 44, 44);
-  font-size: 20px;
-  position: absolute;
-  top: auto;
-  left: auto;
+  font-size: 25px;
+  animation: background_slide 1s 1 alternate forwards;
 }
 .swiper .swiper-button-next {
-  left: 60%;
+  left: 90%;
 }
 .swiper .swiper-button-prev {
-  left: 40%;
+  left: 10%;
 }
-.swiper .swiper-button-next[title]:hover::after,
-.swiper .swiper-button-prev[title]:hover::after {
-  content: attr(title);
-  position: absolute;
-  top: -150%;
-  left: 0;
-  color: white;
-  font-size: 9px;
-  visibility: visible;
-  width: 100%;
-  height: 100%;
-  background: rgb(35, 39, 44);
-  padding: 5px;
-  display: flex;
-  font-weight: 400;
-  text-transform: capitalize;
-  justify-content: center;
-  align-items: center;
-  word-spacing: 4px;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
+.swiper .swiper-button-prev:hover::before {
+  content: "⇦";
 }
 .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: rgb(134, 142, 148);
@@ -241,5 +162,30 @@
 @media screen and (max-width: 400px) {
   .swiper-slide .slider-content a {
     width: 90%;
+  }
+}
+@keyframes background_swirl {
+  from {
+    width: 100%;
+    transform: translateX(-100%);
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes background_slideX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+@keyframes background_slideY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110%);
   }
 }/*# sourceMappingURL=academy.css.map */
