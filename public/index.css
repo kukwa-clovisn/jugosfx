@@ -16,17 +16,17 @@ main .main-wrapper {
 main .main-wrapper .card {
   height: fit-content;
   overflow-y: scroll;
-  padding: 10px;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7icpTaeXGgfOfADQABpDsPhxUZqXuLih6rw&usqp=CAU);
+  padding: 20px 10px;
   padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   position: relative;
   width: 100%;
   height: fit-content;
-  background: url(./assets\logo.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -36,23 +36,11 @@ main .main-wrapper .card .header {
   padding: 10px auto;
   position: relative;
 }
-main .main-wrapper .card .header .logo {
-  width: 110px;
-  height: 110px;
-  margin: 15px auto;
-  margin-top: 10px;
-  border-radius: 100%;
-  overflow: hidden;
-  cursor: pointer;
-}
-main .main-wrapper .card .header .logo img {
-  width: 100%;
-  height: auto;
-}
 main .main-wrapper .card .header h1 {
   text-align: center;
   color: #376767;
-  padding: 10px;
+  color: white;
+  padding: 20px;
   width: fit-content;
   background: inherit;
   margin: 10px auto;
@@ -63,7 +51,10 @@ main .main-wrapper .card .header h1 {
 main .main-wrapper .card .header h1 a {
   text-decoration: none;
   color: inherit;
-  font: 700 33px "Nunito Sans", "Comic Neue", sans-serif;
+  font: 700 65px "Montserrat", "Nunito Sans", "Comic Neue", sans-serif;
+}
+main .main-wrapper .card .header h1 a:nth-child(even) {
+  color: #f79623;
 }
 main .main-wrapper .card .header h1::before {
   content: "";
@@ -84,7 +75,42 @@ main .main-wrapper .card .header p {
   position: relative;
   padding: 5px;
   color: #0e2c26;
+  color: white;
   font-size: 14px;
+}
+main .main-wrapper .card .header .to-academy {
+  width: 260px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  margin: 10px auto;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+main .main-wrapper .card .header .to-academy:hover {
+  border: #f79623;
+}
+main .main-wrapper .card .header .to-academy:hover::before {
+  content: "Visit Academy";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: background_swirl 1s 1 alternate forwards;
 }
 main .main-wrapper .card .btns {
   width: 96%;
@@ -103,6 +129,8 @@ main .main-wrapper .card .btns button {
   padding: 10px 20px;
   transition: all 0.3s ease;
   margin: 15px;
+  overflow: hidden;
+  position: relative;
 }
 main .main-wrapper .card .btns button a {
   width: 100%;
@@ -116,6 +144,7 @@ main .main-wrapper .card .btns button a {
   text-transform: capitalize;
   font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
   color: white;
+  position: relative;
 }
 main .main-wrapper .card .btns button:hover {
   transform: scale(1.1);
@@ -124,6 +153,16 @@ main .main-wrapper .card .btns button:hover {
 }
 main .main-wrapper .card .btns button:hover a {
   color: #f79623;
+}
+main .main-wrapper .card .btns button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0e2c26;
+  animation: background_slideX 2s 1 alternate forwards;
 }
 main .main-wrapper .card .btns button:active {
   transform: scale(0.8);
@@ -135,6 +174,10 @@ main .main-wrapper .card .btns .btn-2 {
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
   background: #ca7104;
+}
+main .main-wrapper .card .btns .btn-1:hover::before,
+main .main-wrapper .card .btns .btn-2:hover::before {
+  background: #f79623;
 }
 main .main-wrapper .card .btns .btn-large {
   width: max-content;
@@ -158,6 +201,8 @@ main .main-wrapper .card .media button {
   border: none;
   margin: 10px;
   box-shadow: -10px -10px 15px #4e8486, 10px 10px 15px rgba(70, 70, 70, 0.123);
+  position: relative;
+  overflow: hidden;
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
@@ -169,6 +214,16 @@ main .main-wrapper .card .media button a i:hover {
 main .main-wrapper .card .media button .beamerTrigger i {
   color: #07e107;
   color: #f79623;
+}
+main .main-wrapper .card .media button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #376767;
+  animation: background_slideX 1s 1 alternate forwards;
 }
 @media screen and (max-width: 800px) {
   main .main-wrapper .card {
@@ -216,7 +271,7 @@ main .main-wrapper .share-btn {
   color: white;
 }
 main .main-wrapper .share-btn .st-total span {
-  color: #376767;
+  color: #f79623;
   font-size: 15px;
 }
 main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
@@ -456,11 +511,23 @@ main #about .about-wrapper .text-wrapper .btns a {
   border-radius: 4px;
   text-transform: capitalize;
   padding: 3px 15px;
+  overflow: hidden;
+  position: relative;
 }
 main #about .about-wrapper .text-wrapper .btns a:hover {
   background: transparent;
   color: #f79623;
   border: 1px solid #f79623;
+}
+main #about .about-wrapper .text-wrapper .btns a:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f79623;
+  animation: background_slideX 1s 1 alternate forwards;
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child {
   background: transparent;
@@ -795,6 +862,7 @@ main #services .service-wrapper .service-content {
   border-radius: 4px;
   padding: 25px 10px;
   margin: 25px auto;
+  overflow: hidden;
 }
 main #services .service-wrapper .service-content h2 {
   padding: 10px;
@@ -832,6 +900,40 @@ main #services .service-wrapper .service-content .button {
   text-transform: capitalize;
   border: 1px solid #f79623;
   padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+main #services .service-wrapper .service-content .button:hover::before {
+  content: " Get service";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  color: white;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  animation: background_swirl 1s 1 alternate forwards;
+}
+main #services .service-wrapper .service-content:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom right, #0e2c26, #4e8486, #376767);
+}
+main #services .service-wrapper .service-content:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #4e8486;
+  animation: background_slideY 1.4s 1 alternate forwards;
+}
+main #services .service-wrapper .service-content:hover .icon, main #services .service-wrapper .service-content:hover .button {
+  border: 2px solid #376767;
+  background: #4e8486;
 }
 @media screen and (max-width: 768px) {
   main #services .service-wrapper .service-content {
@@ -848,10 +950,15 @@ main #services .contact-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   background: #f79623;
   color: white;
   text-transform: capitalize;
+  color: white;
   padding: 20px;
+}
+main #services .contact-btn i {
+  color: white;
 }
 main .contact {
   width: 100vw;
@@ -931,6 +1038,33 @@ main footer {
     width: 95%;
     height: fit-content;
     padding: 10px 16px;
+  }
+}
+@keyframes background_swirl {
+  from {
+    width: 100%;
+    background: transparent;
+    transform: translateX(-100%);
+  }
+  to {
+    width: 100%;
+    background: #f79623;
+  }
+}
+@keyframes background_slideX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(110%);
+  }
+}
+@keyframes background_slideY {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(110%);
   }
 }
 
