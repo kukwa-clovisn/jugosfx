@@ -86,7 +86,8 @@ h1 {
 }
 header {
   width: 100vw;
-  height: 20vh;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -226,6 +227,40 @@ header .header-wrapper .bottom-header .menu-wrapper {
     font-size: 190%;
   }
 }
+header .header-wrapper .menu-header {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .header-wrapper .menu-header .header-routes {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+header .header-wrapper .menu-header .header-routes .route {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: rgb(78, 132, 134);
+}
+header .header-wrapper .menu-header .header-routes .route:hover {
+  color: rgb(247, 150, 35);
+}
 
 .main-wrapper {
   width: 100%;
@@ -282,6 +317,16 @@ header .header-wrapper .bottom-header .menu-wrapper {
 }
 .main-wrapper .card .header h1 a span {
   color: rgb(247, 150, 35);
+}
+@media screen and (max-width: 550px) {
+  .main-wrapper .card .header h1 a {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 550px) and (max-width: 400px) {
+  .main-wrapper .card .header h1 a {
+    font-size: 30px;
+  }
 }
 .main-wrapper .card .header h1::before {
   content: "";

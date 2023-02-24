@@ -47,11 +47,26 @@
 .swiper .swiper-button-next {
   left: 90%;
 }
+@media screen and (max-width: 768px) {
+  .swiper .swiper-button-next {
+    left: 80%;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 550px) {
+  .swiper .swiper-button-next {
+    left: 85%;
+  }
+}
 .swiper .swiper-button-prev {
   left: 10%;
 }
 .swiper .swiper-button-prev:hover::before {
   content: "⇦";
+}
+@media screen and (max-width: 550px) {
+  .swiper .swiper-button-prev {
+    left: 5%;
+  }
 }
 .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   background: rgb(134, 142, 148);

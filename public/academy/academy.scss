@@ -61,6 +61,14 @@ $sub-col-2: rgb(247, 150, 35);
 
     .swiper-button-next {
         left: 90%;
+
+        @media screen and (max-width:768px) {
+            left: 80%;
+
+            @media screen and (max-width:550px) {
+                left: 85%;
+            }
+        }
     }
 
     .swiper-button-prev {
@@ -71,6 +79,10 @@ $sub-col-2: rgb(247, 150, 35);
             &::before {
                 content: "\21E6";
             }
+        }
+
+        @media screen and (max-width:550px) {
+            left: 5%;
         }
     }
 

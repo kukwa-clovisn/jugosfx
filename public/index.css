@@ -374,6 +374,8 @@ main #about #about-fx .myswiper .swiper-wrapper .swiper-slide.swiper-slide-activ
 main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide.swiper-slide-active.swiper-slide-visible h2,
 main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide.swiper-slide-active.swiper-slide-visible p {
   color: rgb(14, 44, 38);
+  text-align: center;
+  text-transform: capitalize;
 }
 main #testimonials {
   width: 100%;
@@ -427,7 +429,7 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper {
 }
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .info {
-  width: 320px;
+  width: 40%;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
@@ -439,8 +441,8 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper .info {
 }
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   border-radius: 30px;
   overflow: hidden;
   border: 5px solid #ececec;
@@ -448,23 +450,11 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img img,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img img {
   width: 100%;
-  height: auto;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media screen and (max-width: 768px) {
-  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
-  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
-    width: 200px;
-    height: 200px;
-  }
-}
-@media screen and (max-width: 768px) and (max-width: 430px) {
-  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
-  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
-    width: 150px;
-    height: 150px;
-  }
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .info-wrapper {
@@ -473,7 +463,7 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .info-wrapper {
 }
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback {
-  width: 40%;
+  width: 55%;
   height: -moz-fit-content;
   height: fit-content;
   background: transparent;
@@ -511,14 +501,28 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback p {
   color: whitesmoke;
   text-align: left;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h1,
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h3,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h1,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h3 {
+    margin: 0;
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 550px) {
   main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback,
   main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback {
     width: 96%;
     padding: 0;
   }
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h1,
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h3,
   main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback p,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h1,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h3,
   main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback p {
+    text-align: center;
     padding: 10px;
   }
 }
