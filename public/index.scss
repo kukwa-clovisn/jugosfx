@@ -117,7 +117,7 @@ main {
           border: $sub-col;
 
           &::before {
-            content: "Visit Academy";
+            content: "Visit Academy \21E8";
             width: 100%;
             height: 100%;
             position: absolute;
@@ -127,6 +127,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+            background: $primary-col;
             animation: background_swirl 1s 1 alternate forwards;
           }
         }
@@ -1077,9 +1078,10 @@ main {
           overflow: hidden;
 
           &:hover {
+            border: none;
 
             &::before {
-              content: " Get service";
+              content: " Get service \21E8";
               width: 100%;
               height: 100%;
               position: absolute;
@@ -1090,7 +1092,9 @@ main {
               justify-content: center;
               align-items: center;
               left: 0;
+              background: $secondary-col;
               animation: background_swirl 1s 1 alternate forwards;
+              box-shadow: 0 0 2px 1px $primary-col;
             }
           }
         }
@@ -1131,7 +1135,8 @@ main {
           }
 
           .button {
-            border: 1px solid rgb(224, 224, 224);
+            background: $secondary-col;
+            border: none;
             color: white;
           }
         }
@@ -1169,7 +1174,7 @@ main {
 
       &:hover {
         &::before {
-          content: " browse services";
+          content: "Browse services \21E8";
           width: 100%;
           height: 100%;
           position: absolute;
@@ -1179,8 +1184,9 @@ main {
           color: white;
           top: 0;
           left: 0;
+
+          animation: background_swirl 1s 1 alternate forwards;
           background: $primary-col;
-          animation: background_swirl 2s 1 alternate forwards;
         }
       }
     }
@@ -1237,6 +1243,7 @@ main {
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         gap: 10px;
+        overflow: hidden;
 
         i {
           color: $sub-col;
@@ -1247,6 +1254,31 @@ main {
           color: white;
 
           i {
+            color: white;
+          }
+
+          &:hover {
+
+            &::before {
+              content: "Contact us directly \21E8";
+            }
+          }
+        }
+
+        &:hover {
+
+          &::before {
+            content: "see more services \21E8";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: background_swirl 1s 1 alternate forwards;
+            background: $primary-col;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: white;
           }
         }
@@ -1288,13 +1320,13 @@ main {
 @keyframes background_swirl {
   from {
     width: 100%;
-    background: transparent;
+
     transform: translateX(-100%);
   }
 
   to {
     width: 100%;
-    background: $sub-col;
+    // background: inherit;
     // transform:translateX(100%);
   }
 }
