@@ -6,14 +6,16 @@ main {
 }
 main .main-wrapper {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to top, #ececec, #f0f5f6);
+  background: linear-gradient(to top, #ececec, rgb(240, 245, 246));
   box-shadow: 0 3px 2px 1px #ececec;
 }
 main .main-wrapper .card {
+  height: -moz-fit-content;
   height: fit-content;
   overflow-y: scroll;
   background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7icpTaeXGgfOfADQABpDsPhxUZqXuLih6rw&usqp=CAU);
@@ -32,15 +34,17 @@ main .main-wrapper .card {
 }
 main .main-wrapper .card .header {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px auto;
   position: relative;
 }
 main .main-wrapper .card .header h1 {
   text-align: center;
-  color: #376767;
+  color: rgb(55, 103, 103);
   color: white;
   padding: 20px;
+  width: -moz-fit-content;
   width: fit-content;
   background: inherit;
   margin: 10px auto;
@@ -51,10 +55,10 @@ main .main-wrapper .card .header h1 {
 main .main-wrapper .card .header h1 a {
   text-decoration: none;
   color: inherit;
-  font: 700 65px "Montserrat", "Nunito Sans", "Comic Neue", sans-serif;
+  font: 700 70px "Montserrat", "Nunito Sans", "Comic Neue", sans-serif;
 }
-main .main-wrapper .card .header h1 a:nth-child(even) {
-  color: #f79623;
+main .main-wrapper .card .header h1 a span {
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .header h1::before {
   content: "";
@@ -63,9 +67,9 @@ main .main-wrapper .card .header h1::before {
   position: absolute;
   top: 0;
   right: 0;
-  background: #eef2f2;
+  background: rgb(238, 242, 242);
   animation: swirl 7s infinite linear alternate forwards;
-  border-left: 4px solid #4e8486;
+  border-left: 4px solid rgb(78, 132, 134);
   display: none;
 }
 main .main-wrapper .card .header p {
@@ -74,11 +78,11 @@ main .main-wrapper .card .header p {
   text-align: center;
   position: relative;
   padding: 5px;
-  color: #0e2c26;
+  color: rgb(14, 44, 38);
   color: white;
   font-size: 14px;
 }
-main .main-wrapper .card .header .to-academy {
+main .main-wrapper .card .to-academy {
   width: 260px;
   height: 45px;
   display: flex;
@@ -86,26 +90,25 @@ main .main-wrapper .card .header .to-academy {
   align-items: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  margin: 10px auto;
+  margin: 20px auto;
   text-decoration: none;
-  background: transparent;
-  border: 2px solid white;
+  background: rgb(247, 150, 35);
+  border: 2px solid rgb(250, 236, 199);
   color: white;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
 }
-main .main-wrapper .card .header .to-academy:hover {
-  border: #f79623;
+main .main-wrapper .card .to-academy:hover {
+  border: rgb(247, 150, 35);
 }
-main .main-wrapper .card .header .to-academy:hover::before {
+main .main-wrapper .card .to-academy:hover::before {
   content: "Visit Academy";
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: red;
   color: white;
   display: flex;
   justify-content: center;
@@ -124,6 +127,7 @@ main .main-wrapper .card .btns {
 }
 main .main-wrapper .card .btns button {
   border: none;
+  width: -moz-max-content;
   width: max-content;
   height: 50px;
   padding: 10px 20px;
@@ -152,7 +156,7 @@ main .main-wrapper .card .btns button:hover {
   border-radius: 50px;
 }
 main .main-wrapper .card .btns button:hover a {
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .btns button:hover::before {
   content: "";
@@ -161,7 +165,7 @@ main .main-wrapper .card .btns button:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #0e2c26;
+  background: rgb(14, 44, 38);
   animation: background_slideX 2s 1 alternate forwards;
 }
 main .main-wrapper .card .btns button:active {
@@ -173,22 +177,24 @@ main .main-wrapper .card .btns .btn-2 {
 }
 main .main-wrapper .card .btns .btn-1,
 main .main-wrapper .card .btns .btn-2 {
-  background: #ca7104;
+  background: rgb(202, 113, 4);
 }
 main .main-wrapper .card .btns .btn-1:hover::before,
 main .main-wrapper .card .btns .btn-2:hover::before {
-  background: #f79623;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .card .btns .btn-large {
+  width: -moz-max-content;
   width: max-content;
   padding: 0 15px;
-  background: linear-gradient(to bottom right, #0e2c26, #4e8486);
+  background: linear-gradient(to bottom right, rgb(14, 44, 38), rgb(78, 132, 134));
   border-radius: 30px;
 }
 main .main-wrapper .card .btns .btn-large:hover a {
-  color: #0e2c26;
+  color: rgb(14, 44, 38);
 }
 main .main-wrapper .card .media {
+  width: -moz-fit-content;
   width: fit-content;
   min-height: 15%;
   margin: auto;
@@ -200,20 +206,20 @@ main .main-wrapper .card .media button {
   border-radius: 100%;
   border: none;
   margin: 10px;
-  box-shadow: -10px -10px 15px #4e8486, 10px 10px 15px rgba(70, 70, 70, 0.123);
+  box-shadow: -10px -10px 15px rgb(78, 132, 134), 10px 10px 15px rgba(70, 70, 70, 0.123);
   position: relative;
   overflow: hidden;
 }
 main .main-wrapper .card .media button a i {
   font-size: 25px;
-  color: #0e2c26;
+  color: rgb(14, 44, 38);
 }
 main .main-wrapper .card .media button a i:hover {
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .media button .beamerTrigger i {
-  color: #07e107;
-  color: #f79623;
+  color: rgb(7, 225, 7);
+  color: rgb(247, 150, 35);
 }
 main .main-wrapper .card .media button:hover::before {
   content: "";
@@ -222,14 +228,15 @@ main .main-wrapper .card .media button:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #376767;
+  background: rgb(55, 103, 103);
   animation: background_slideX 1s 1 alternate forwards;
 }
 @media screen and (max-width: 800px) {
   main .main-wrapper .card {
     width: 100%;
+    height: -moz-fit-content;
     height: fit-content;
-    background: url(./assets\logo.jpeg);
+    background: url(./assetslogo.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -246,10 +253,11 @@ main .main-wrapper .card .media button:hover::before {
     display: none;
   }
   main .main-wrapper .card .header p {
-    color: #dbd7d7;
+    color: rgb(219, 215, 215);
   }
   main .main-wrapper .card .btns button {
     border: none;
+    width: -moz-max-content;
     width: max-content;
     height: 45px;
     padding: 10px 20px;
@@ -271,12 +279,12 @@ main .main-wrapper .share-btn {
   color: white;
 }
 main .main-wrapper .share-btn .st-total span {
-  color: #f79623;
+  color: rgb(247, 150, 35);
   font-size: 15px;
 }
 main .main-wrapper .share-btn #st-1 .st-btn[data-network=sharethis] {
   border-radius: 10%;
-  background: #f79623;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .animations-2 {
   width: auto;
@@ -296,7 +304,7 @@ main .main-wrapper canvas {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background: #f79623;
+  background: rgb(247, 150, 35);
   position: absolute;
   bottom: 0;
 }
@@ -314,35 +322,35 @@ main .main-wrapper .c4 {
 }
 main .main-wrapper .b1 {
   animation: b1 5s infinite linear alternate forwards;
-  background: #f79623;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .b2 {
   animation: b2 5s infinite linear alternate forwards;
-  background: #95d03a;
+  background: rgb(149, 208, 58);
 }
 main .main-wrapper .b3 {
   animation: b3 5s infinite linear alternate forwards;
-  background: #0599f1;
+  background: rgb(5, 153, 241);
 }
 main .main-wrapper .b4 {
   animation: b4 5s infinite linear alternate forwards;
-  background: #323e4c;
+  background: rgb(50, 62, 76);
 }
 main .main-wrapper .c1 {
   animation: c1 5s infinite linear alternate forwards;
-  background: #f79623;
+  background: rgb(247, 150, 35);
 }
 main .main-wrapper .c2 {
   animation: c2 5s infinite linear alternate forwards;
-  background: #95d03a;
+  background: rgb(149, 208, 58);
 }
 main .main-wrapper .c3 {
   animation: c3 5s infinite linear alternate forwards;
-  background: #0599f1;
+  background: rgb(5, 153, 241);
 }
 main .main-wrapper .c4 {
   animation: c4 5s infinite linear alternate forwards;
-  background: #323e4c;
+  background: rgb(50, 62, 76);
 }
 @keyframes b1 {
   to {
@@ -406,7 +414,7 @@ main .main-wrapper .c4 {
     flex-direction: column;
   }
   main .main-wrapper .main-wrapper .landing-page,
-main .main-wrapper .main-wrapper .card {
+  main .main-wrapper .main-wrapper .card {
     width: 100%;
   }
   main .main-wrapper .main-wrapper .landing-page {
@@ -418,17 +426,20 @@ main .main-wrapper .main-wrapper .card {
   main .main-wrapper .main-wrapper .landing-page .img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .main-wrapper .main-wrapper .card {
+    height: -moz-fit-content;
     height: fit-content;
   }
 }
 main #about {
   width: 100vw;
+  height: -moz-fit-content;
   height: fit-content;
   background: #ececec;
-  background: #f0f5f6;
+  background: rgb(240, 245, 246);
 }
 main #about .about-wrapper {
   width: 95%;
@@ -447,7 +458,7 @@ main #about .about-wrapper .blur-wrapper {
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper .blur-wrapper {
     display: block;
-    background: #1f2630;
+    background: rgb(31, 38, 48);
   }
 }
 main #about .about-wrapper .text-wrapper {
@@ -474,13 +485,13 @@ main #about .about-wrapper .text-wrapper h2 span {
   font-size: 60px;
   font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
-  color: #f79623;
+  color: rgb(247, 150, 35);
   text-transform: uppercase;
 }
 main #about .about-wrapper .text-wrapper h3 {
   font-size: 20px;
   padding: 10px;
-  color: #f79623;
+  color: rgb(247, 150, 35);
   text-transform: capitalize;
   font-weight: 500;
 }
@@ -490,6 +501,7 @@ main #about .about-wrapper .text-wrapper p {
 }
 main #about .about-wrapper .text-wrapper .btns {
   width: 95%;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 10px auto;
   display: flex;
@@ -504,9 +516,10 @@ main #about .about-wrapper .text-wrapper .btns a {
   justify-content: center;
   align-items: center;
   margin: 10px;
+  width: -moz-fit-content;
   width: fit-content;
   height: 50px;
-  background: #f79623;
+  background: rgb(247, 150, 35);
   color: white;
   border-radius: 4px;
   text-transform: capitalize;
@@ -516,8 +529,8 @@ main #about .about-wrapper .text-wrapper .btns a {
 }
 main #about .about-wrapper .text-wrapper .btns a:hover {
   background: transparent;
-  color: #f79623;
-  border: 1px solid #f79623;
+  color: rgb(247, 150, 35);
+  border: 1px solid rgb(247, 150, 35);
 }
 main #about .about-wrapper .text-wrapper .btns a:hover::before {
   content: "";
@@ -526,16 +539,16 @@ main #about .about-wrapper .text-wrapper .btns a:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #f79623;
+  background: rgb(247, 150, 35);
   animation: background_slideX 1s 1 alternate forwards;
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child {
   background: transparent;
-  border: 1px solid #f79623;
-  color: #f79623;
+  border: 1px solid rgb(247, 150, 35);
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
-  background: #f79623;
+  background: rgb(247, 150, 35);
   color: white;
 }
 @media screen and (max-width: 500px) {
@@ -579,6 +592,7 @@ main #about .about-wrapper .text-wrapper .btns a:last-child:hover {
 }
 main #about .about-wrapper .image-wrapper {
   width: 35%;
+  height: -moz-fit-content;
   height: fit-content;
 }
 main #about .about-wrapper .image-wrapper .img {
@@ -591,7 +605,8 @@ main #about .about-wrapper .image-wrapper .img {
 main #about .about-wrapper .image-wrapper .img img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper .image-wrapper {
@@ -611,7 +626,7 @@ main #about .about-wrapper .image-wrapper .img img {
 main #about .about-wrapper-2 {
   align-items: center;
   background: rgba(255, 99, 71, 0.808);
-  background: linear-gradient(to bottom right, #4e8486, #376767, #0e2c26);
+  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
   width: 100%;
 }
 main #about .about-wrapper-2 .text-wrapper {
@@ -621,37 +636,37 @@ main #about .about-wrapper-2 .text-wrapper h2 {
   color: white;
 }
 main #about .about-wrapper-2 .text-wrapper h2 span {
-  color: #f79623;
+  color: rgb(247, 150, 35);
   font-family: "Comic Neue", sans-serif;
 }
 main #about .about-wrapper-2 .text-wrapper h3 {
-  color: #e7e7e7;
+  color: rgb(231, 231, 231);
 }
 main #about .about-wrapper-2 .text-wrapper p {
-  color: #b4b4b4;
+  color: rgb(180, 180, 180);
 }
 @media screen and (max-width: 1000px) {
   main #about .about-wrapper-2 .text-wrapper p {
-    color: #dadada;
+    color: rgb(218, 218, 218);
   }
 }
 main #about .about-wrapper-2 .text-wrapper .btns a {
   width: 200px;
   background: transparent;
   color: white;
-  border: 1px solid #ebeaea;
+  border: 1px solid rgb(235, 234, 234);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:hover {
   background: white;
   border: 1px solid #dbdbdb;
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child {
-  border: 1px solid #f79623;
-  color: #f79623;
+  border: 1px solid rgb(247, 150, 35);
+  color: rgb(247, 150, 35);
 }
 main #about .about-wrapper-2 .text-wrapper .btns a:last-child:hover {
-  background: #f79623;
+  background: rgb(247, 150, 35);
   color: white;
 }
 @media screen and (max-width: 500px) {
@@ -681,6 +696,7 @@ main #about .about-wrapper-2 .image-wrapper {
 }
 main #testimonials {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 3% auto;
   padding-bottom: 5%;
@@ -700,12 +716,13 @@ main #testimonials h1 {
 main #testimonials h3 {
   text-align: center;
   text-transform: capitalize;
-  color: #f79623;
+  color: rgb(247, 150, 35);
   padding: 10px;
   font-size: 19px;
 }
 main #testimonials .swiper {
   width: 80%;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 10px auto;
   border-radius: 8px;
@@ -714,74 +731,96 @@ main #testimonials .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper {
   width: 100%;
   height: 100%;
   border-radius: 5px;
   padding: 20px 10px;
-  background: linear-gradient(to bottom left, #4e8486, #376767, #0e2c26);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background: linear-gradient(to bottom left, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info {
-  width: 100%;
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .info {
+  width: 320px;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 10px;
   flex-wrap: wrap;
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
   width: 300px;
   height: 300px;
   border-radius: 30px;
   overflow: hidden;
   border: 5px solid #ececec;
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img img {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img img,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 768px) {
-  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
     width: 200px;
     height: 200px;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 430px) {
-  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
     width: 150px;
     height: 150px;
   }
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .info-wrapper {
+  width: -moz-fit-content;
   width: fit-content;
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper h1 {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback {
+  width: 40%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: transparent;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h1,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h1 {
   font-size: 30px;
   font-family: "Nunito Sans", sans-serif;
   color: white;
+  text-align: left;
 }
-main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper p {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback h3,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback h3 {
   width: 90%;
   margin: 5px auto;
   white-space: wrap;
   font-size: 17px;
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
-  color: #d3d1d1;
+  color: rgb(211, 209, 209);
   font-weight: 600;
   text-transform: capitalize;
+  text-align: left;
 }
-main #testimonials .swiper .swiper-wrapper .feedback {
-  width: 90%;
-  height: fit-content;
-  margin: 5px auto;
-  background: transparent;
-  padding: 20px;
-  border-radius: 5px;
-}
-main #testimonials .swiper .swiper-wrapper .feedback p {
+main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback p,
+main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback p {
   padding: 10px;
   font-size: 15px;
   line-height: 23px;
@@ -789,19 +828,22 @@ main #testimonials .swiper .swiper-wrapper .feedback p {
   width: 95%;
   margin: 5px auto;
   color: whitesmoke;
+  text-align: left;
 }
 @media screen and (max-width: 500px) {
-  main #testimonials .swiper .swiper-wrapper .feedback {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback {
     width: 96%;
     padding: 0;
   }
-  main #testimonials .swiper .swiper-wrapper .feedback p {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .feedback p,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .feedback p {
     padding: 10px;
   }
 }
 main #testimonials .swiper .swiper-button-next::after,
 main #testimonials .swiper .swiper-button-prev::after {
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main #testimonials .swiper .swiper-button-next {
   right: var(--swiper-navigation-sides-offset, 5%);
@@ -810,12 +852,12 @@ main #testimonials .swiper .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, 5%);
 }
 main #testimonials .swiper .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #f79623;
+  background: rgb(247, 150, 35);
   border-radius: 30px;
   padding: 20px auto;
 }
 main #testimonials .swiper .swiper-pagination-progressbar {
-  background: #4e8486;
+  background: rgb(78, 132, 134);
 }
 @media screen and (max-width: 700px) {
   main #testimonials .swiper {
@@ -824,6 +866,7 @@ main #testimonials .swiper .swiper-pagination-progressbar {
 }
 main #services {
   width: 100vw;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px auto;
   padding-top: 5%;
@@ -840,6 +883,7 @@ main #services p {
 }
 main #services .service-wrapper {
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -851,6 +895,7 @@ main #services .service-wrapper {
 }
 main #services .service-wrapper .service-content {
   width: 300px;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -858,7 +903,7 @@ main #services .service-wrapper .service-content {
   gap: 10px;
   flex-direction: column;
   background: white;
-  box-shadow: 0 0 1px 1px #f79623;
+  box-shadow: 0 0 1px 1px rgb(247, 150, 35);
   border-radius: 4px;
   padding: 25px 10px;
   margin: 25px auto;
@@ -868,7 +913,7 @@ main #services .service-wrapper .service-content h2 {
   padding: 10px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #0e2c26;
+  color: rgb(14, 44, 38);
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   text-align: center;
@@ -876,18 +921,19 @@ main #services .service-wrapper .service-content h2 {
 main #services .service-wrapper .service-content .icon {
   width: 60px;
   height: 60px;
-  border: 3px solid #f79623;
+  border: 3px solid rgb(247, 150, 35);
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 main #services .service-wrapper .service-content .icon i {
   font-size: 25px;
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main #services .service-wrapper .service-content p {
-  color: #313131;
+  color: rgb(49, 49, 49);
 }
 main #services .service-wrapper .service-content .button {
   width: 60%;
@@ -898,7 +944,7 @@ main #services .service-wrapper .service-content .button {
   align-items: center;
   text-decoration: none;
   text-transform: capitalize;
-  border: 1px solid #f79623;
+  border: 1px solid rgb(247, 150, 35);
   padding: 10px;
   position: relative;
   overflow: hidden;
@@ -919,7 +965,13 @@ main #services .service-wrapper .service-content .button:hover::before {
 }
 main #services .service-wrapper .service-content:hover {
   transform: scale(1.1);
-  background: linear-gradient(to bottom right, #0e2c26, #4e8486, #376767);
+  background: linear-gradient(to bottom right, rgb(14, 44, 38), rgb(78, 132, 134), rgb(55, 103, 103));
+}
+main #services .service-wrapper .service-content:hover h2 {
+  color: white;
+}
+main #services .service-wrapper .service-content:hover p {
+  color: rgb(230, 226, 226);
 }
 main #services .service-wrapper .service-content:hover::before {
   content: "";
@@ -928,12 +980,19 @@ main #services .service-wrapper .service-content:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  background: #4e8486;
+  background: rgb(78, 132, 134);
   animation: background_slideY 1.4s 1 alternate forwards;
 }
-main #services .service-wrapper .service-content:hover .icon, main #services .service-wrapper .service-content:hover .button {
-  border: 2px solid #376767;
-  background: #4e8486;
+main #services .service-wrapper .service-content:hover .icon {
+  border: 2px solid rgb(253, 219, 180);
+  background: rgb(78, 132, 134);
+}
+main #services .service-wrapper .service-content:hover .icon i {
+  color: white;
+}
+main #services .service-wrapper .service-content:hover .button {
+  border: 1px solid rgb(224, 224, 224);
+  color: white;
 }
 @media screen and (max-width: 768px) {
   main #services .service-wrapper .service-content {
@@ -942,6 +1001,7 @@ main #services .service-wrapper .service-content:hover .icon, main #services .se
   }
 }
 main #services .contact-btn {
+  width: -moz-max-content;
   width: max-content;
   height: 50px;
   margin: 20px auto;
@@ -951,21 +1011,37 @@ main #services .contact-btn {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background: #f79623;
+  background: rgb(247, 150, 35);
   color: white;
   text-transform: capitalize;
   color: white;
   padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
 main #services .contact-btn i {
   color: white;
+}
+main #services .contact-btn:hover::before {
+  content: " browse services";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  top: 0;
+  left: 0;
+  background: rgb(14, 44, 38);
+  animation: background_swirl 2s 1 alternate forwards;
 }
 main .contact {
   width: 100vw;
   min-height: 40vh;
   padding: 20px;
   margin: 20px auto;
-  background: linear-gradient(to bottom right, #4e8486, #376767, #0e2c26);
+  background: linear-gradient(to bottom right, rgb(78, 132, 134), rgb(55, 103, 103), rgb(14, 44, 38));
 }
 main .contact h1 {
   color: white;
@@ -977,12 +1053,14 @@ main .contact h1 {
 main .contact h3 {
   font-size: 30px;
   text-align: center;
-  color: #ececec;
+  color: rgb(236, 236, 236);
   padding: 10px;
   font-family: "Montsarret", sans-serif;
 }
 main .contact .btns {
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 10px auto;
   display: flex;
@@ -997,21 +1075,22 @@ main .contact .btns a {
   align-items: center;
   padding: 10px 20px;
   background: white;
+  width: -moz-max-content;
   width: max-content;
   height: 45px;
   border-radius: 3px;
   text-decoration: none;
   text-transform: capitalize;
-  color: #f79623;
+  color: rgb(247, 150, 35);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   gap: 10px;
 }
 main .contact .btns a i {
-  color: #f79623;
+  color: rgb(247, 150, 35);
 }
 main .contact .btns a:last-child {
-  background: #f79623;
+  background: rgb(247, 150, 35);
   color: white;
 }
 main .contact .btns a:last-child i {
@@ -1020,7 +1099,7 @@ main .contact .btns a:last-child i {
 main footer {
   width: 100vw;
   height: 30vh;
-  background: linear-gradient(to top left, #0e2c26, #376767, #4e8486);
+  background: linear-gradient(to top left, rgb(14, 44, 38), rgb(55, 103, 103), rgb(78, 132, 134));
 }
 
 @keyframes swirl {
@@ -1036,6 +1115,7 @@ main footer {
 @media screen and (max-width: 500px) {
   .btn-large {
     width: 95%;
+    height: -moz-fit-content;
     height: fit-content;
     padding: 10px 16px;
   }
@@ -1048,7 +1128,7 @@ main footer {
   }
   to {
     width: 100%;
-    background: #f79623;
+    background: rgb(247, 150, 35);
   }
 }
 @keyframes background_slideX {
@@ -1066,6 +1146,4 @@ main footer {
   to {
     transform: translateY(110%);
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

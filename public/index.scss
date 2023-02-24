@@ -48,7 +48,7 @@ main {
         h1 {
           text-align: center;
           color: $secondary-col;
-          color:white;
+          color: white;
           padding: 20px;
           width: fit-content;
           background: inherit;
@@ -56,15 +56,15 @@ main {
           position: relative;
           overflow: hidden;
           position: relative;
-          
+
 
           a {
             text-decoration: none;
             color: inherit;
-            font: 700 65px "Montserrat","Nunito Sans", "Comic Neue", sans-serif;
+            font: 700 70px "Montserrat", "Nunito Sans", "Comic Neue", sans-serif;
 
-          &:nth-child(even){ 
-              color:$sub-col;
+            span {
+              color: $sub-col;
             }
           }
 
@@ -89,47 +89,47 @@ main {
           position: relative;
           padding: 5px;
           color: $primary-col;
-          color:white;
+          color: white;
           font-size: 14px;
         }
 
-        .to-academy{
-          width:260px;
-          height:45px;
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          text-transform:uppercase;
-          font-family:'Montserrat',sans-serif;
-          margin:10px auto;
-          text-decoration:none;
-          background:transparent;
-          border:2px solid white;
-          color:white;
-          border-radius:30px;
-          position:relative;
-          overflow:hidden;
 
-          &:hover{
-          border:$sub-col;
+      }
 
-            &::before{ 
-              content:"Visit Academy";
-              width:100%;
-              height:100%;
-              position:absolute;
-              top:0;
-              left:0;
-              background:red;
-              color:white;
-              display:flex;
-              justify-content:center;
-              align-items:center;
-                animation:background_swirl 1s 1 alternate forwards;
-            }
+      .to-academy {
+        width: 260px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        margin: 20px auto;
+        text-decoration: none;
+        background: $sub-col;
+        border: 2px solid rgb(250, 236, 199);
+        color: white;
+        border-radius: 30px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+          border: $sub-col;
+
+          &::before {
+            content: "Visit Academy";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: background_swirl 1s 1 alternate forwards;
           }
         }
-
       }
 
       .btns {
@@ -149,8 +149,8 @@ main {
           padding: 10px 20px;
           transition: all 0.3s ease;
           margin: 15px;
-          overflow:hidden;
-          position:relative;
+          overflow: hidden;
+          position: relative;
 
           a {
             width: 100%;
@@ -164,7 +164,7 @@ main {
             text-transform: capitalize;
             font: 500 13px "Nunito Sans", "Poppins", "Comic Neue", sans-serif;
             color: white;
-            position:relative;
+            position: relative;
           }
 
           &:hover {
@@ -175,19 +175,20 @@ main {
             a {
               color: $sub-col;
 
-          
+
 
             }
-              &::before{ 
-                content:"";
-                width:100%;
-                height:100%;
-                position:absolute;
-                top:0;
-                left:0;
-                background:$primary-col;
-                    animation:background_slideX 2s 1 alternate forwards;
-              }
+
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: $primary-col;
+              animation: background_slideX 2s 1 alternate forwards;
+            }
           }
 
           &:active {
@@ -204,10 +205,10 @@ main {
         .btn-2 {
           background: $sub-col-1;
 
-          &:hover{ 
+          &:hover {
 
-            &::before{
-              background:$sub-col;
+            &::before {
+              background: $sub-col;
             }
           }
         }
@@ -215,11 +216,9 @@ main {
         .btn-large {
           width: max-content;
           padding: 0 15px;
-          background: linear-gradient(
-            to bottom right,
-            $primary-col,
-            $tertiary-col
-          );
+          background: linear-gradient(to bottom right,
+              $primary-col,
+              $tertiary-col );
           border-radius: 30px;
 
           &:hover a {
@@ -242,8 +241,8 @@ main {
           margin: 10px;
           box-shadow: -10px -10px 15px $tertiary-col,
             10px 10px 15px rgba(70, 70, 70, 0.123);
-            position:relative;
-            overflow:hidden;
+          position: relative;
+          overflow: hidden;
 
           a {
             i {
@@ -261,16 +260,16 @@ main {
             color: $sub-col;
           }
 
-          &:hover{ 
-            &::before{ 
-              content:"";
-              width:100%;
-              height:100%;
-              position:absolute;
-              top:0;
-              left:0;
-              background:$secondary-col;
-              animation:background_slideX 1s 1 alternate forwards;
+          &:hover {
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: $secondary-col;
+              animation: background_slideX 1s 1 alternate forwards;
             }
           }
         }
@@ -616,23 +615,23 @@ main {
             border-radius: 4px;
             text-transform: capitalize;
             padding: 3px 15px;
-            overflow:hidden;
-            position:relative;
+            overflow: hidden;
+            position: relative;
 
             &:hover {
               background: transparent;
               color: $sub-col;
               border: 1px solid $sub-col;
 
-              &::before{
-                content:"";
-                width:100%;
-                height:100%;
-                position:absolute;
-                top:0;
-                left:0;
-                background:$sub-col;
-                animation:background_slideX 1s 1 alternate forwards;
+              &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $sub-col;
+                animation: background_slideX 1s 1 alternate forwards;
               }
             }
 
@@ -683,6 +682,7 @@ main {
 
               @media screen and (max-width: 430px) {
                 font-size: 19px;
+
                 span {
                   font-size: 24px;
                 }
@@ -727,12 +727,10 @@ main {
     .about-wrapper-2 {
       align-items: center;
       background: rgba(255, 99, 71, 0.808);
-      background: linear-gradient(
-        to bottom right,
-        $tertiary-col,
-        $secondary-col,
-        $primary-col
-      );
+      background: linear-gradient(to bottom right,
+          $tertiary-col,
+          $secondary-col,
+          $primary-col );
 
       width: 100%;
 
@@ -850,27 +848,33 @@ main {
         width: 100%;
         height: 100%;
 
-        .swiper-slide-active {
+        .swiper-slide-active,
+        .slide-wrapper {
           width: 100%;
           height: 100%;
           border-radius: 5px;
           padding: 20px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-direction: row;
+          background: linear-gradient(to bottom left,
+              $tertiary-col,
+              $secondary-col,
+              $primary-col );
 
-          background: linear-gradient(
-            to bottom left,
-            $tertiary-col,
-            $secondary-col,
-            $primary-col
-          );
 
           .info {
-            width: 100%;
+            width: 320px;
             height: fit-content;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             gap: 10px;
             flex-wrap: wrap;
+
             .img {
               width: 300px;
               height: 300px;
@@ -883,6 +887,7 @@ main {
                 height: auto;
                 object-fit: cover;
               }
+
               @media screen and (max-width: 768px) {
                 width: 200px;
                 height: 200px;
@@ -893,54 +898,64 @@ main {
                 }
               }
             }
+
             .info-wrapper {
               width: fit-content;
-              h1 {
-                font-size: 30px;
-                font-family: "Nunito Sans", sans-serif;
-                color: white;
-              }
 
-              p {
-                width: 90%;
-                margin: 5px auto;
-                white-space: wrap;
-                font-size: 17px;
-                text-align: center;
-                font-family: "Nunito Sans", sans-serif;
-                color: rgb(211, 209, 209);
-                font-weight: 600;
-                text-transform: capitalize;
-              }
+
             }
           }
-        }
 
-        .feedback {
-          width: 90%;
-          height: fit-content;
-          margin: 5px auto;
-          background: transparent;
-          padding: 20px;
-          border-radius: 5px;
+          .feedback {
+            width: 40%;
+            height: fit-content;
+            background: transparent;
+            padding: 20px 10px;
+            border-radius: 5px;
 
-          p {
-            padding: 10px;
-            font-size: 15px;
-            line-height: 23px;
-            font-weight: 500;
-            width: 95%;
-            margin: 5px auto;
-            color: whitesmoke;
-          }
-          @media screen and (max-width: 500px) {
-            width: 96%;
-            padding: 0;
+            h1 {
+              font-size: 30px;
+              font-family: "Nunito Sans", sans-serif;
+              color: white;
+              text-align: left;
+            }
+
+            h3 {
+              width: 90%;
+              margin: 5px auto;
+              white-space: wrap;
+              font-size: 17px;
+              text-align: center;
+              font-family: "Nunito Sans", sans-serif;
+              color: rgb(211, 209, 209);
+              font-weight: 600;
+              text-transform: capitalize;
+              text-align: left;
+            }
+
             p {
               padding: 10px;
+              font-size: 15px;
+              line-height: 23px;
+              font-weight: 500;
+              width: 95%;
+              margin: 5px auto;
+              color: whitesmoke;
+              text-align: left;
+            }
+
+            @media screen and (max-width: 500px) {
+              width: 96%;
+              padding: 0;
+
+              p {
+                padding: 10px;
+              }
             }
           }
         }
+
+
       }
 
       .swiper-button-next::after,
@@ -1015,7 +1030,7 @@ main {
         border-radius: 4px;
         padding: 25px 10px;
         margin: 25px auto;
-        overflow:hidden;
+        overflow: hidden;
 
         h2 {
           padding: 10px;
@@ -1035,6 +1050,7 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
 
           i {
             font-size: 25px;
@@ -1057,47 +1073,66 @@ main {
           text-transform: capitalize;
           border: 1px solid $sub-col;
           padding: 10px;
-          position:relative;
-          overflow:hidden;
+          position: relative;
+          overflow: hidden;
 
-          &:hover{ 
+          &:hover {
 
-            &::before{ 
-              content:" Get service";
-              width:100%;
-              height:100%;
-              position:absolute;
-              top:0;
-              color:white;
-              text-transform:capitalize;
-              display:flex;
-              justify-content:center;
-              align-items:center;
-              left:0;
-              animation:background_swirl 1s 1 alternate forwards;
+            &::before {
+              content: " Get service";
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              color: white;
+              text-transform: capitalize;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              left: 0;
+              animation: background_swirl 1s 1 alternate forwards;
             }
           }
         }
 
-        &:hover{ 
-          transform:scale(1.1);
-          background:linear-gradient(to bottom right, $primary-col, $tertiary-col, $secondary-col);
-          &::before{ 
-            content:"";
-            width:100%;
-            height:100%;
-            position:absolute;
-            top:0;
-            left:0;
-            background:$tertiary-col;
-            animation:background_slideY 1.4s 1 alternate forwards;
+        &:hover {
+          transform: scale(1.1);
+          background: linear-gradient(to bottom right, $primary-col, $tertiary-col, $secondary-col);
+
+          h2 {
+            color: white;
+
           }
 
-          .icon, .button{ 
-            border:2px solid $secondary-col;
-            background:$tertiary-col;
+          p {
+            color: rgb(230, 226, 226);
+          }
 
-          
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $tertiary-col;
+            animation: background_slideY 1.4s 1 alternate forwards;
+          }
+
+          .icon {
+            border: 2px solid rgb(253, 219, 180);
+            background: $tertiary-col;
+
+            i {
+              color: white;
+            }
+
+
+          }
+
+          .button {
+            border: 1px solid rgb(224, 224, 224);
+            color: white;
           }
         }
       }
@@ -1119,15 +1154,34 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap:10px;
+      gap: 10px;
       background: $sub-col;
       color: white;
       text-transform: capitalize;
-color:white;
+      color: white;
       padding: 20px;
+      position: relative;
+      overflow: hidden;
 
-      i{ 
-        color:white;
+      i {
+        color: white;
+      }
+
+      &:hover {
+        &::before {
+          content: " browse services";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          top: 0;
+          left: 0;
+          background: $primary-col;
+          animation: background_swirl 2s 1 alternate forwards;
+        }
       }
     }
   }
@@ -1137,12 +1191,10 @@ color:white;
     min-height: 40vh;
     padding: 20px;
     margin: 20px auto;
-    background: linear-gradient(
-      to bottom right,
-      rgb(78, 132, 134),
-      rgb(55, 103, 103),
-      rgb(14, 44, 38)
-    );
+    background: linear-gradient(to bottom right,
+        rgb(78, 132, 134),
+        rgb(55, 103, 103),
+        rgb(14, 44, 38));
 
     h1 {
       color: white;
@@ -1205,12 +1257,10 @@ color:white;
   footer {
     width: 100vw;
     height: 30vh;
-    background: linear-gradient(
-      to top left,
-      $primary-col,
-      $secondary-col,
-      $tertiary-col
-    );
+    background: linear-gradient(to top left,
+        $primary-col,
+        $secondary-col,
+        $tertiary-col );
   }
 }
 
@@ -1235,34 +1285,38 @@ color:white;
 }
 
 
-        @keyframes background_swirl{
-          from{
-            width:100%;
-            background:transparent;
-            transform:translateX(-100%);
-          }
+@keyframes background_swirl {
+  from {
+    width: 100%;
+    background: transparent;
+    transform: translateX(-100%);
+  }
 
-          to{
-            width:100%;
-            background:$sub-col;
-            // transform:translateX(100%);
-          }
-        }
-        @keyframes background_slideX{ 
-          from{ 
-            transform:translateX(0);
+  to {
+    width: 100%;
+    background: $sub-col;
+    // transform:translateX(100%);
+  }
+}
 
-          }
-          to{ 
-            transform:translateX(110%);
-          }
-        }
-           @keyframes background_slideY{ 
-          from{ 
-            transform:translateY(0);
+@keyframes background_slideX {
+  from {
+    transform: translateX(0);
 
-          }
-          to{ 
-            transform:translateY(110%);
-          }
-        }
+  }
+
+  to {
+    transform: translateX(110%);
+  }
+}
+
+@keyframes background_slideY {
+  from {
+    transform: translateY(0);
+
+  }
+
+  to {
+    transform: translateY(110%);
+  }
+}
