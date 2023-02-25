@@ -149,12 +149,11 @@
           </h2>
           <h3>about us</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            neque nostrum nihil eos cumque error eum itaque voluptatem sit.
-            Optio similique quis illum ea quia impedit repudiandae voluptatem
-            mollitia ullam maiores ipsam vero, modi voluptatum quod, voluptas,
-            esse voluptatibus cum maxime dolorum assumenda consequatur quo?
-            Dolorum, facilis. Quas, illum assumenda.
+            Welcome to Jugosexchange, a platform and community where your crytpo transactions are safe and secure.
+            we deal with buying and selling of crypto as well and sending and receiving money from within and outside
+            the country. <br />
+            We're a community and trust is what we've built on and for sure your monetary and crypto transactions are
+            safe and secure with us.
           </p>
           <div class="btns">
             <a href="#" data-aos="zoom-in-left">contact us for your crypto exchangs</a>
@@ -178,10 +177,9 @@
           <h2>we <span>buy</span> and <span>sell</span> crypto</h2>
           <h3>must trusted and secure crypto buyers and sellers.</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit
-            quaerat assumenda inventore vel, sequi magnam voluptatem
-            reiciendis illum a esse neque consequuntur aliquam odio. Cumque
-            quam molestias rerum odio obcaecati.
+            We buy crypto (all amounts) and also sell crypto (all amounts).
+            we're tested and trusted with a super large growing community. Do your transactions with us today and get
+            the best experience you've ever had.
           </p>
           <div class="btns">
             <a href="https://wa.link/xcwkgu">buy crypto</a>
@@ -352,7 +350,7 @@
             <i class="fa-solid fa-bitcoin-sign"></i>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eaque explicabo, fuga unde deleniti alias.</p>
+          <p>We buy all your cryptos at a very very good rate that'll surprise you.</p>
           <a href="#" class="button">join training</a>
         </div>
         <div class="service-content" data-aos="zoom-in-left">
@@ -361,7 +359,8 @@
             <i class="fa-solid fa-bitcoin-sign"></i>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eaque explicabo, fuga unde deleniti alias.</p>
+          <p>We sell cryptos at a pretty cheap and understandable rate. Our clients satisfaction is out top priority.
+          </p>
           <a href="#" class="button">join training</a>
         </div>
         <div class="service-content" data-aos="zoom-out">
@@ -370,7 +369,8 @@
             <i class="fa-solid fa-chart-line"></i>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eaque explicabo, fuga unde deleniti alias.</p>
+          <p>We offer forex trading lessons, tutorials, trainings and mentorship. We're the best community you'll want
+            to start your forex trading journey with. <br /> Hit us up let's get things running.</p>
           <a href="#" class="button">join training</a>
         </div>
         <div class="service-content" data-aos="zoom-down">
@@ -379,7 +379,8 @@
             <i class="fa-solid fa-landmark"></i>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eaque explicabo, fuga unde deleniti alias.</p>
+          <p>Investing is the most secure way of becoming a millionaire in our economy today. We help you invest into
+            real estate securely.</p>
           <a href="#" class="button">join training</a>
         </div>
         <div class="service-content" data-aos="zoom-down">
@@ -388,7 +389,8 @@
             <i class="fa-solid fa-landmark"></i>
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A eaque explicabo, fuga unde deleniti alias.</p>
+          <p>Bring your desings, posters, flyers, business cards, video animations and all that has to do with graphics.
+            We're at your service to provide and ensure that you get the best experience.</p>
           <a href="#" class="button">join training</a>
         </div>
         <div class="service-content" data-aos="zoom-down">
@@ -426,12 +428,15 @@
       <h2>leave a feedback width us</h2>
       <p>Tell us how we've been and how our services have helped and impacted you.</p>
       <div class="form-wrapper">
-        <h2>jugosexchange testimonials form</h2>
-        <form action="index.js" method="post">
+
+        <form id="form" enctype="multipart/form-data">
+          <h2>jugosexchange testimonials form</h2>
+          <p>Tell us how we've been and how our services have helped and impacted you.</p>
+
           <div class="form-wrapper">
             <div class="form-content">
               <label for="email">user email</label>
-              <input type="email" name="email" id="emial" placeholder="Enter Email Address...">
+              <input type="email" name="email" id="email" placeholder="Enter Email Address...">
             </div>
             <div class="form-content">
               <label for="message">Tell us your testimony</label>
@@ -439,7 +444,16 @@
             </div>
             <div class="form-content">
               <label for="show-testimony">Should we display your testimonial to others?</label>
-              <input type="checkbox" name="show-testimonial" id="show-testimonial">
+              <input type="checkbox" name="showTestimonial" id="show-testimonial">
+            </div>
+            <div class="form-content">
+              <label for="image">photo</label>
+              <input type="file" name="image" id="image">
+            </div>
+            <div class="form-button">
+              <button type="submit" id="formBtn">submit
+                testimonial</button>
+              <button type="reset">reset form</button>
             </div>
           </div>
 
@@ -470,6 +484,7 @@
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
@@ -479,16 +494,24 @@
     const firebaseConfig = {
       apiKey: "AIzaSyD9xMu6mf_82oJT5kZPKyr7FRIwWqJ4vaw",
       authDomain: "jugosexchange.firebaseapp.com",
+      databaseURL: "https://jugosexchange-default-rtdb.firebaseio.com",
       projectId: "jugosexchange",
       storageBucket: "jugosexchange.appspot.com",
       messagingSenderId: "848597305499",
       appId: "1:848597305499:web:4c9d795e6ac0e665e91e3e",
-      measurementId: "G-M3W8P31Z1X",
+      measurementId: "G-M3W8P31Z1X"
     };
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
+
+    const db = getFirestore(app);
+    console.log(db)
+
+    // db._settings({
+    //   timestampsInSnapshots: true
+    // })
   </script>
   <script>
     var beamer_config = {
@@ -513,8 +536,11 @@
 
     });
   </script>
-  <script src="./index.js"></script>
+
   <script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
+  <script src="./app.js"></script>
+  <script src="./index.js"></script>
+
 </body>
 
 </html>
