@@ -779,12 +779,23 @@ main .contact h1 {
   font-size: 60px;
   font-family: "Montsarret", sans-serif;
 }
+main .contact h2 {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  text-transform: uppercase;
+}
 main .contact h3 {
   font-size: 30px;
   text-align: center;
   color: rgb(236, 236, 236);
   padding: 10px;
   font-family: "Montsarret", sans-serif;
+}
+main .contact p {
+  padding: 10px;
+  text-align: center;
+  color: rgb(240, 245, 246);
 }
 main .contact .btns {
   width: -moz-fit-content;
@@ -842,6 +853,13 @@ main .contact .btns a:hover::before {
   justify-content: center;
   align-items: center;
   color: white;
+}
+main .contact .form-wrapper {
+  width: 80%;
+  height: 60vh;
+  background: white;
+  box-shadow: 0 0 3px 1px rgb(240, 245, 246);
+  margin: 20px auto;
 }
 main footer {
   width: 100vw;
