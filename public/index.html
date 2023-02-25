@@ -481,38 +481,7 @@
 
 
   </script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyD9xMu6mf_82oJT5kZPKyr7FRIwWqJ4vaw",
-      authDomain: "jugosexchange.firebaseapp.com",
-      databaseURL: "https://jugosexchange-default-rtdb.firebaseio.com",
-      projectId: "jugosexchange",
-      storageBucket: "jugosexchange.appspot.com",
-      messagingSenderId: "848597305499",
-      appId: "1:848597305499:web:4c9d795e6ac0e665e91e3e",
-      measurementId: "G-M3W8P31Z1X"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-
-    const db = getFirestore(app);
-    console.log(db)
-
-    // db._settings({
-    //   timestampsInSnapshots: true
-    // })
-  </script>
   <script>
     var beamer_config = {
       product_id: "SBIDuMft46308", //DO NOT CHANGE: This is your product code on Beamer
@@ -536,7 +505,9 @@
 
     });
   </script>
-
+  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js"></script>
   <script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
   <script src="./app.js"></script>
   <script src="./index.js"></script>
