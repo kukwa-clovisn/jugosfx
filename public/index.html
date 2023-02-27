@@ -435,17 +435,22 @@
 
           <div class="form-wrapper">
             <div class="form-content">
+              <label for="name">user name</label>
+              <input type="text" name="name" id="name" placeholder="Enter user name">
+            </div>
+            <div class="form-content">
               <label for="email">user email</label>
               <input type="email" name="email" id="email" placeholder="Enter Email Address...">
+            </div>
+            <div class="form-content">
+              <label for="occupation">user occupation</label>
+              <input type="text" name="occupation" id="occupation" placeholder="Enter occupation(what you do)">
             </div>
             <div class="form-content">
               <label for="message">Tell us your testimony</label>
               <textarea name="message" id="message" cols="30" rows="10" placeholder="Tell us your testimony"></textarea>
             </div>
-            <div class="form-content">
-              <label for="show-testimony">Should we display your testimonial to others?</label>
-              <input type="checkbox" name="showTestimonial" id="show-testimonial">
-            </div>
+
             <div class="form-content">
               <label for="image">photo</label>
               <input type="file" name="image" id="image">
@@ -505,9 +510,9 @@
 
     });
   </script>
-  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js"></script>
+  <script type="modi" src="https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js"></script>
   <script type="text/javascript" src="https://app.getbeamer.com/js/beamer-embed.js" defer="defer"></script>
   <script type="module" src="./app.js"></script>
   <script type="module" src="./index.js"></script>

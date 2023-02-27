@@ -21,33 +21,3 @@ menuCloseBtn.addEventListener('click', () => {
 })
 
 
-
-const formEl = document.querySelector('#form');
-
-formEl.addEventListener('submit', event => {
-    event.preventDefault();
-
-    const formData = new FormData(formEl);
-
-    const data = Object.fromEntries(formData)
-    console.log(data)
-
-    let jsonData = {
-        id: Math.random(9).toString(30),
-        email: data.email,
-        message: data.message,
-        imageUrl: data.image,
-        checked: true ? data.showTestimonials : false
-    }
-
-    fetch('http://localhost:3000/Testimonials', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(jsonData)
-    }
-    ).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err))
-})
-
-
