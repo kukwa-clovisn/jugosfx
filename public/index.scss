@@ -535,7 +535,20 @@ main {
                 object-fit: contain;
               }
 
+              @media screen and (max-width:550px) {
+                border-radius: 100%;
+                height: 200px;
+                width: 200px;
 
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+
+
+                }
+
+              }
             }
 
             .info-wrapper {

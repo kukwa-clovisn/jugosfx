@@ -494,6 +494,21 @@ main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@media screen and (max-width: 550px) {
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+  }
+  main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .img img,
+  main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 main #testimonials .swiper .swiper-wrapper .swiper-slide-active .info .info-wrapper,
 main #testimonials .swiper .swiper-wrapper .slide-wrapper .info .info-wrapper {
   width: -moz-fit-content;
