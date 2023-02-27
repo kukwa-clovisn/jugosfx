@@ -993,6 +993,28 @@ main .contact form .form-wrapper .form-button button:hover::before {
 main .contact form .form-wrapper .form-button button:last-child {
   background: rgb(247, 150, 35);
 }
+@media screen and (max-width: 550px) {
+  main .contact form {
+    width: 90%;
+  }
+  main .contact form .form-content {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 550px) and (max-width: 450px) {
+  main .contact form {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px 15px;
+  }
+}
+@media screen and (max-width: 550px) {
+  main .contact {
+    padding: 20px 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
 main footer {
   width: 100vw;
   height: 30vh;

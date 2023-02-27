@@ -1,13 +1,21 @@
-import { app, db } from './firebaseConfig.js';
+import { firebaseApp, db } from './firebaseConfig.js';
 
 import { collection, getDocs, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
 
 
-const colREf = db.collection('Testimonials');
-const snapshot = await colREf.get();
-snapshot.forEach(doc => {
-    console.log(doc.id, '=>', doc.data());
-});
+// const colREf = db.collection('Testimonials');
+
+// const snapshot = await colREf.get();
+// snapshot.forEach(doc => {
+//     console.log(doc.id, '=>', doc.data());
+// });
+
+const TestimonialsArr = getDocs(collection(db, 'Testimonials')).then(res => {
+    res.docs.forEach(item => {
+        return console.log(item.data());
+    })
+}).catch(err => console.log(err))
+
 
 // collecting data from form input for testimonials.
 

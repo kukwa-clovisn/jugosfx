@@ -39,7 +39,7 @@
           <a href="../index.html#services" class="route">services</a>
         </nav>
         <nav class="header-routes small">
-          <a href="#" class="route">contact</a>
+          <a href="../index.html#form" class="route">contact</a>
         </nav>
         <nav class="menu-wrapper">
           <button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
@@ -54,7 +54,7 @@
           <a href="#services" class="route">services</a>
         </nav>
         <nav class="header-routes small">
-          <a href="#" class="route">contact</a>
+          <a href="../index.html/#form" class="route">contact</a>
         </nav>
       </div>
     </div>
@@ -121,7 +121,7 @@
                 <i class="fa-brands fa-instagram"></i></a>
             </button>
             <button>
-              <a href="/#contact" class="beamerTrigger"><i class="fa-solid fa-bell"></i></a>
+              <a href="" target="_self" class="beamerTrigger"><i class="fa-solid fa-bell"></i></a>
             </button>
           </div>
         </div>
@@ -260,65 +260,12 @@
     <div class="swiper-pagination"></div>
   </div> -->
   <div id="app">
-    <h1 class="animate__animated animate__bounce animate_slower animate_repeat-4">JUGOSFX COMMUNITY</h1>
-    <div class="app-wrapper">
 
-      <div class="left-content">
-
-      </div>
-      <div class="right-content">
-      </div>
-    </div>
-    <div id="courses" data-aos="fade-in-up">
-      <h2 data-aos="slide-in-left" data-aos-anchor-placement="top-bottom">What you'll learn...</h2>
-      <p data-aos="zoom-down" data-aos-offset="120">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-        consequatur amet
-        inventore quibusdam, quas
-        dolorum dolore doloremque? Aut natus, ab architecto obcaecati veritatis minima, libero quibusdam eveniet dolorem
-        quo cupiditate distinctio qui accusantium ratione fuga accusamus sunt dicta nam dolores dolor dolorum, est
-        doloremque hic vel? Molestiae praesentium numquam, magnam quaerat temporibus ex pariatur velit, hic ducimus in
-        corporis dolorem ea mollitia qui consectetur necessitatibus voluptatum provident, odio corrupti! Dolorem
-        quisquam pariatur amet minima sapiente quidem, porro beatae voluptates fugiat eos, sequi voluptatem debitis
-        vitae quo nihil molestias id tempora reprehenderit. Ducimus, sint. Non, optio ad tenetur architecto
-        necessitatibus molestiae!</p>
-    </div>
-    <div class="app-wrapper">
-      <div class="app-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rUfEB8satw0" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-      <div class="app-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dm4Xk6WqWSE" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-      <div class="app-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Quj39bm2vog" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-      <div class="app-video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cgtGzyxQYkQ" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
-      </div>
-    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="importmap">
-      {
-        "imports": {
-          "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-        }
-      }
-    </script>
+
 
 
   <script>
@@ -331,9 +278,7 @@
       mirrow: false
     });
   </script>
-
-  <script type="module">
-    import { createApp } from "vue";
+  <script>
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       effect: "fade",
@@ -346,18 +291,6 @@
         prevEl: ".swiper-button-prev",
       },
     })
-    createApp({
-      data() {
-        return {};
-      },
-
-      methods: {
-
-
-      }
-    }
-
-    ).mount("#app");
   </script>
   <script src="../index.js"></script>
 </body>
