@@ -3,6 +3,7 @@ import { firebaseApp, db } from './firebaseConfig.js';
 import { collection, getDocs, addDoc, doc } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
 
 
+
 // const colREf = db.collection('Testimonials');
 
 // const snapshot = await colREf.get();
@@ -10,11 +11,20 @@ import { collection, getDocs, addDoc, doc } from "https://www.gstatic.com/fireba
 //     console.log(doc.id, '=>', doc.data());
 // });
 
-const TestimonialsArr = getDocs(collection(db, 'Testimonials')).then(res => {
-    res.docs.forEach(item => {
-        return console.log(item.data());
-    })
-}).catch(err => console.log(err))
+export const getTestimonials = () => {
+
+    return getDocs(collection(db, 'Testimonials')).then(res => {
+        res.docs.map(item => {
+            return item.data();
+        })
+
+
+    }).catch(err => console.log(err))
+
+}
+
+getTestimonials()
+
 
 
 // collecting data from form input for testimonials.

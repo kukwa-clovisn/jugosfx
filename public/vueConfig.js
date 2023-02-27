@@ -1,16 +1,33 @@
 
 
 import { createApp } from "vue";
+import { getTestimonials } from "./app.js";
 
-createApp({
+const vueApp = createApp({
     data() {
-        return {};
+        return {
+            TestimonialsArr: []
+        };
     },
-
+    mounted() {
+        myfunction(getTestimonials());
+    },
     methods: {
+        async myfunction(arr) {
+            try {
+                this.TestimonialsArr = arr;
 
+            }
+            catch (err) {
+                console.log(err)
+            }
+
+
+        }
 
     }
 }
 
-).mount("#app");
+);
+
+vueApp.mount("#testimonials");
