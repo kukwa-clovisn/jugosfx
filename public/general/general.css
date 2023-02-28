@@ -130,11 +130,12 @@ header .header-wrapper .top-header .text-wrapper p a {
 @media screen and (max-width: 800px) {
   header .header-wrapper .top-header .text-wrapper p {
     font-size: 15px;
+    animation-duration: 20s;
   }
 }
 @keyframes headline {
   from {
-    transform: translateX(90%);
+    transform: translateX(100%);
   }
   to {
     transform: translateX(-100%);

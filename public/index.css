@@ -377,6 +377,19 @@ main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide.swiper-slide-a
   text-align: center;
   text-transform: capitalize;
 }
+main #about #about-fx .myswiper .swiper-wrapper .swiper-slide-next,
+main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide-next {
+  width: 360px;
+  opacity: 0;
+  transform: translate3d(-360px, 0px, 0px);
+}
+main #about #about-fx .myswiper .swiper-wrapper .swiper-slide-prev,
+main #about #about-fx .myCardSwiper .swiper-wrapper .swiper-slide-prev {
+  width: 360px;
+  opacity: 1;
+  transform: translate3d(-360px, 0px, 0px);
+  transition-duration: 0ms;
+}
 main #about #about-fx .join-community {
   display: block;
   text-decoration: none;
@@ -767,7 +780,7 @@ main #services .contact-btn i {
   color: white;
 }
 main #services .contact-btn:hover::before {
-  content: "Browse services ⇨";
+  content: "Back To Top ⇧";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -862,7 +875,7 @@ main .contact .btns a:last-child:hover::before {
   content: "Contact us directly ⇨";
 }
 main .contact .btns a:hover::before {
-  content: "see more services ⇨";
+  content: "services ⇧";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1008,17 +1021,28 @@ main .contact form .form-wrapper .form-button button:last-child {
     padding: 20px 15px;
   }
 }
+main .contact footer {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+main .contact footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
 @media screen and (max-width: 550px) {
   main .contact {
     padding: 20px 0;
     margin-bottom: 0;
     padding-bottom: 0;
   }
-}
-main footer {
-  width: 100vw;
-  height: 30vh;
-  background: linear-gradient(to top left, rgb(14, 44, 38), rgb(55, 103, 103), rgb(78, 132, 134));
 }
 
 @keyframes swirl {

@@ -11,7 +11,12 @@ import { collection, getDocs } from "https://www.gstatic.com/firebasejs/9.9.0/fi
 const vueApp = createApp({
     data() {
         return {
-            TestimonialsArr: []
+            TestimonialsArr: [],
+            width: 360,
+            transition: 0,
+            opacity: 1,
+            transform: 0,
+            index: 0
         };
     },
     beforeMount() {
@@ -22,6 +27,28 @@ const vueApp = createApp({
 
 
         }).catch(err => console.log(err))
+    },
+    watch: {
+        // whenever index changes, this funtion will run
+        index(newIndex, prevIndex) {
+            if (this.index === 0) {
+
+                this.width = 360;
+                this.transform = 'translate3d(0px, 0px, 0px)';
+
+                this.opacity = 1;
+            } else if (this.index === 1) {
+                this.width = 360;
+                this.transform = 'translate3d(-360px, 0px, 0px)';
+
+                this.opacity = 0;
+            } else if (this.index === 2) {
+                this.width = 360;
+                this.transform = 'translate3d(0px, 0px, 0px)';
+
+                this.opacity = 1;
+            }
+        }
     },
     methods: {
         myfunction() {

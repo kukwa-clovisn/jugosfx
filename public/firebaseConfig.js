@@ -5,7 +5,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
 
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
+// import { getFirestore } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,11 +27,11 @@ export const firebaseApp = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(firebaseApp);
 
 
-const db = getFirestore(firebaseApp);
+// const db = getFirestore(firebaseApp);
 
-db.settings = {
-    timestampsInSnapshots: true,
-};
-export {
-    db
-}
+// db.settings = {
+//     timestampsInSnapshots: true,
+// };
+// export {
+//     db
+// }
