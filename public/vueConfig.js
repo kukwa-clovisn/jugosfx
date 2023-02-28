@@ -14,7 +14,7 @@ const vueApp = createApp({
             TestimonialsArr: []
         };
     },
-    mounted() {
+    beforeMount() {
         getDocs(collection(db, 'Testimonials')).then(res => {
             res.docs.map(item => {
                 return this.TestimonialsArr.push(item.data());
@@ -24,9 +24,9 @@ const vueApp = createApp({
         }).catch(err => console.log(err))
     },
     methods: {
-        myfunction(arr) {
+        myfunction() {
 
-            this.TestimonialsArr = arr;
+
         }
 
     }

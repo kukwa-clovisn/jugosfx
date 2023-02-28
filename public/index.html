@@ -73,7 +73,7 @@
 
           <h1 title="Go to JUGOSFX ACADEMY">
 
-            <a href="./academy/academy.html" class="academy-route">J<span>U</span>G<span>O</span>S
+            <a href="#about" class="academy-route">J<span>U</span>G<span>O</span>S
               <span>E</span>X<span>C</span>H<span>A</span>N<span>G</span>E<span></span></a>
           </h1>
           <p>
@@ -81,7 +81,7 @@
             send money from Qatar and USA to Cameroon safely.
           </p>
 
-        </div> <a href="./academy/academy.html" title="Visit Academy" class="to-academy">visit Academy </a>
+        </div> <a href="#about" title="Visit Academy" class="to-academy">Get started </a>
         <div class="btns">
           <button class="btn-1" title="Buy crypto now ">
             <a href="https://wa.link/xcwkgu" class="route">
@@ -253,8 +253,9 @@
 
       <div class="swiper mySwiper " data-aos="zoom-in">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="slide-wrapper" v-for="(testimonial,index) in TestimonialsArr" :key="index">
+          <div class="swiper-slide" v-for="(testimonial,index) in TestimonialsArr" :key="index"
+            :data-swiper-slide-index="index" :aria-label="index +1  + '/' + TestimonialsArr.length">
+            <div class="slide-wrapper">
               <div class="info">
 
                 <div class="img">
